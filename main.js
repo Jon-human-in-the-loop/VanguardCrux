@@ -68,6 +68,8 @@ const menuLinks = document.querySelectorAll('.menu-link');
 function toggleMenu() {
     const isHidden = menuOverlay.classList.contains('hidden');
     if (isHidden) {
+        // Open menu
+        menuBtn.classList.add('active');
         menuOverlay.classList.remove('hidden');
         setTimeout(() => {
             menuOverlay.classList.remove('opacity-0');
@@ -75,12 +77,14 @@ function toggleMenu() {
             document.body.style.overflow = 'hidden';
         }, 10);
     } else {
+        // Close menu
+        menuBtn.classList.remove('active');
         menuOverlay.classList.add('opacity-0');
         menuContent.classList.add('translate-x-full');
         document.body.style.overflow = '';
         setTimeout(() => {
             menuOverlay.classList.add('hidden');
-        }, 300);
+        }, 400);
     }
 }
 
@@ -267,13 +271,13 @@ function setLanguage(lang) {
             element.placeholder = translations[lang][key];
         }
     });
-    const buttons = document.querySelectorAll('#language-switcher button');
-    buttons.forEach(button => {
-        button.classList.remove('font-bold', 'text-accent');
-        button.classList.add('hover:text-accent');
-        if (button.textContent.toLowerCase() === lang) {
-            button.classList.add('font-bold', 'text-accent');
-            button.classList.remove('hover:text-accent');
+    
+    // Update all language switcher buttons (both desktop and mobile)
+    document.querySelectorAll('.language-btn').forEach(button => {
+        button.classList.remove('active');
+        const buttonLang = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+        if (buttonLang === lang) {
+            button.classList.add('active');
         }
     });
 }
