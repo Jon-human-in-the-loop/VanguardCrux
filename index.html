@@ -31,17 +31,22 @@
                 
                 <!-- Language Switcher & Mobile Menu -->
                 <div class="flex items-center space-x-4">
-                    <div id="language-switcher" class="hidden sm:flex space-x-2">
-                        <button onclick="setLanguage('en')" class="text-sm hover:text-accent font-bold text-accent">EN</button>
-                        <span class="text-gray-500">|</span>
-                        <button onclick="setLanguage('pt')" class="text-sm hover:text-accent">PT</button>
-                        <span class="text-gray-500">|</span>
-                        <button onclick="setLanguage('es')" class="text-sm hover:text-accent">ES</button>
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn active">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
                     </div>
-                    <button id="menu-btn" class="md:hidden text-accent">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                    <button id="menu-btn" class="menu-btn md:hidden text-accent">
+                        <div class="hamburger"></div>
                     </button>
                 </div>
             </div>
@@ -52,12 +57,19 @@
     <div id="menu-overlay" class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 opacity-0">
         <div id="menu-content" class="fixed right-0 top-0 h-full w-80 bg-light-navy transform translate-x-full">
             <div class="p-6">
-                <div id="language-switcher" class="flex space-x-2 mb-8">
-                    <button onclick="setLanguage('en')" class="text-sm hover:text-accent font-bold text-accent">EN</button>
-                    <span class="text-gray-500">|</span>
-                    <button onclick="setLanguage('pt')" class="text-sm hover:text-accent">PT</button>
-                    <span class="text-gray-500">|</span>
-                    <button onclick="setLanguage('es')" class="text-sm hover:text-accent">ES</button>
+                <div class="language-switcher">
+                    <button onclick="setLanguage('en')" class="language-btn active">
+                        <div class="flag-icon flag-en"></div>
+                        <span>EN</span>
+                    </button>
+                    <button onclick="setLanguage('pt')" class="language-btn">
+                        <div class="flag-icon flag-pt"></div>
+                        <span>PT</span>
+                    </button>
+                    <button onclick="setLanguage('es')" class="language-btn">
+                        <div class="flag-icon flag-es"></div>
+                        <span>ES</span>
+                    </button>
                 </div>
                 <nav class="flex flex-col space-y-6">
                     <a href="#philosophy" class="menu-link text-lg hover:text-accent transition-colors" data-lang="navPhilosophy">Our Approach</a>
