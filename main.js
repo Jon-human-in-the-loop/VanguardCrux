@@ -1,23 +1,63 @@
-AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true
-});
+// Simple animation replacement for AOS
+function initAnimations() {
+    const animateElements = document.querySelectorAll('[data-aos]');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    });
+    
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out';
+        observer.observe(el);
+    });
+}
 
-const swiper = new Swiper('.project-swiper', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 40
-        }
+// Simple swiper replacement
+function initProjectSwiper() {
+    const swiper = document.querySelector('.project-swiper');
+    const wrapper = swiper.querySelector('.swiper-wrapper');
+    const slides = wrapper.querySelectorAll('.swiper-slide');
+    const pagination = swiper.querySelector('.swiper-pagination');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    // Create pagination bullets
+    for (let i = 0; i < totalSlides; i++) {
+        const bullet = document.createElement('span');
+        bullet.className = 'swiper-pagination-bullet';
+        if (i === 0) bullet.classList.add('swiper-pagination-bullet-active');
+        bullet.addEventListener('click', () => goToSlide(i));
+        pagination.appendChild(bullet);
     }
+    
+    function goToSlide(index) {
+        currentSlide = index;
+        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update pagination
+        pagination.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, i) => {
+            bullet.classList.toggle('swiper-pagination-bullet-active', i === currentSlide);
+        });
+    }
+    
+    // Auto-advance slides
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    }, 5000);
+}
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initAnimations();
+    initProjectSwiper();
 });
 
 const menuBtn = document.getElementById('menu-btn');

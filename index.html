@@ -1,1 +1,322 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <link rel="stylesheet" href="styles.css">\n    <title>Digital Pulse</title>\n</head>\n<body>\n    <h1>Welcome to Digital Pulse</h1>\n    <script src="main.js"></script>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="metaTitle">Digital Pulse | AI & Automation Marketing Agency in Porto</title>
+    <meta name="description" data-lang="metaDescription" content="Digital Pulse is a digital growth agency in Porto, Portugal, specializing in AI marketing, business process automation, and performance strategies to scale your revenue.">
+    <meta name="keywords" data-lang="metaKeywords" content="digital agency porto, ai marketing, business automation, performance marketing, growth agency portugal, marketing automation, digital strategy, seo agency">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="font-display font-bold text-xl text-accent">
+                    Digital Pulse
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#philosophy" class="hover:text-accent transition-colors" data-lang="navPhilosophy">Our Approach</a>
+                    <a href="#solutions" class="hover:text-accent transition-colors" data-lang="navSolutions">Services</a>
+                    <a href="#case-studies" class="hover:text-accent transition-colors" data-lang="navCaseStudies">Projects</a>
+                    <a href="#about" class="hover:text-accent transition-colors" data-lang="navAbout">About Us</a>
+                    <a href="#team" class="hover:text-accent transition-colors" data-lang="navTeam">The Team</a>
+                    <a href="#contact" class="hover:text-accent transition-colors" data-lang="navContact">Contact</a>
+                </nav>
+                
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="hidden sm:flex space-x-2">
+                        <button onclick="setLanguage('en')" class="text-sm hover:text-accent font-bold text-accent">EN</button>
+                        <span class="text-gray-500">|</span>
+                        <button onclick="setLanguage('pt')" class="text-sm hover:text-accent">PT</button>
+                        <span class="text-gray-500">|</span>
+                        <button onclick="setLanguage('es')" class="text-sm hover:text-accent">ES</button>
+                    </div>
+                    <button id="menu-btn" class="md:hidden text-accent">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 z-40 hidden bg-black bg-opacity-50 opacity-0">
+        <div id="menu-content" class="fixed right-0 top-0 h-full w-80 bg-light-navy transform translate-x-full">
+            <div class="p-6">
+                <div id="language-switcher" class="flex space-x-2 mb-8">
+                    <button onclick="setLanguage('en')" class="text-sm hover:text-accent font-bold text-accent">EN</button>
+                    <span class="text-gray-500">|</span>
+                    <button onclick="setLanguage('pt')" class="text-sm hover:text-accent">PT</button>
+                    <span class="text-gray-500">|</span>
+                    <button onclick="setLanguage('es')" class="text-sm hover:text-accent">ES</button>
+                </div>
+                <nav class="flex flex-col space-y-6">
+                    <a href="#philosophy" class="menu-link text-lg hover:text-accent transition-colors" data-lang="navPhilosophy">Our Approach</a>
+                    <a href="#solutions" class="menu-link text-lg hover:text-accent transition-colors" data-lang="navSolutions">Services</a>
+                    <a href="#case-studies" class="menu-link text-lg hover:text-accent transition-colors" data-lang="navCaseStudies">Projects</a>
+                    <a href="#about" class="menu-link text-lg hover:text-accent transition-colors" data-lang="navAbout">About Us</a>
+                    <a href="#team" class="menu-link text-lg hover:text-accent transition-colors" data-lang="navTeam">The Team</a>
+                    <a href="#contact" class="menu-link text-lg hover:text-accent transition-colors" data-lang="navContact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl mb-6" data-lang="heroTitle" data-aos="fade-up">
+                The <span class="text-accent">Global Agency</span> that Turns Data into Growth.
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto text-gray-300" data-lang="heroSubtitle" data-aos="fade-up" data-aos-delay="200">
+                We are Digital Pulse, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.
+            </p>
+            <a href="#contact" class="btn-primary inline-block" data-lang="heroCTA" data-aos="fade-up" data-aos-delay="400">
+                Claim My Free Audit
+            </a>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="text-accent text-sm font-semibold tracking-wide uppercase mb-4" data-lang="philosophyTag" data-aos="fade-up">
+                Our Growth Approach
+            </div>
+            <h2 class="section-title mb-8" data-lang="philosophyTitle" data-aos="fade-up" data-aos-delay="200">
+                We don't just sell services. We build growth partnerships.
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-lang="philosophyDesc" data-aos="fade-up" data-aos-delay="400">
+                Our success is measured by your increased revenue. We focus on implementing performance marketing and automation that delivers a clear ROI, ensuring our collaboration is a profitable long-term investment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title text-center mb-16" data-lang="solutionsTitle" data-aos="fade-up">
+                Digital Growth Services
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 rounded-lg bg-dark hover:bg-opacity-80 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-4" data-lang="sol1Title">Performance Marketing & SEO</h3>
+                    <p class="text-gray-300" data-lang="sol1Desc">We attract and convert high-value customers with data-driven SEO and paid media campaigns on Meta & Google, focused on maximizing your ROI.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="p-8 rounded-lg bg-dark hover:bg-opacity-80 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-4" data-lang="sol2Title">AI & Business Automation</h3>
+                    <p class="text-gray-300" data-lang="sol2Desc">We optimize your operations with custom AI assistants and process automation (Make/N8N) to increase efficiency and reduce costs.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="p-8 rounded-lg bg-dark hover:bg-opacity-80 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-4" data-lang="sol3Title">Branding & Content Strategy</h3>
+                    <p class="text-gray-300" data-lang="sol3Desc">We build memorable brands that connect with their audience. Includes visual identity design and high-performance content marketing strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title text-center mb-16" data-lang="caseStudiesTitle" data-aos="fade-up">
+                Proven Results, Not Promises.
+            </h2>
+            <div class="swiper project-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Case Study 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-light-navy p-8 rounded-lg h-full">
+                            <div class="h-48 bg-gradient-to-br from-accent to-blue-400 rounded-lg mb-6 flex items-center justify-center">
+                                <span class="text-dark font-display font-bold text-2xl">KA</span>
+                            </div>
+                            <h3 class="font-display font-bold text-xl mb-4" data-lang="case1Title">Kultur Atelier, Hamburg</h3>
+                            <p class="text-gray-300" data-lang="case1Desc">Developed a cohesive graphic identity to boost the visibility of their cultural events, increasing community engagement through strategic branding.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-light-navy p-8 rounded-lg h-full">
+                            <div class="h-48 bg-gradient-to-br from-green-400 to-accent rounded-lg mb-6 flex items-center justify-center">
+                                <span class="text-dark font-display font-bold text-2xl">TI</span>
+                            </div>
+                            <h3 class="font-display font-bold text-xl mb-4" data-lang="case2Title">Tasca do Infante, Porto</h3>
+                            <p class="text-gray-300" data-lang="case2Desc">A local performance marketing strategy that increased online bookings by 40% in 3 months through targeted social media ads.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="section-title mb-8" data-lang="aboutTitle">
+                        We think outside the box. We act inside your goals.
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8" data-lang="aboutSubtitle">
+                        Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Hamburg and Dubai, and has led us to establish our European hub in Porto.
+                    </p>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-display font-bold text-lg mb-2" data-lang="aboutPillar1Title">Global Perspective, Local Execution</h3>
+                            <p class="text-gray-300" data-lang="aboutPillar1Desc">Our team across continents allows us to apply the best global strategies with a deep understanding of the local market.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-lg mb-2" data-lang="aboutPillar2Title">AI at the Core</h3>
+                            <p class="text-gray-300" data-lang="aboutPillar2Desc">We use AI and automation not as an add-on, but as the central engine to optimize every marketing process and decision.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="aspect-square bg-gradient-to-br from-accent to-blue-400 rounded-full opacity-20 absolute inset-0"></div>
+                    <div class="relative z-10 aspect-square bg-dark rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-12 h-12 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div class="font-display font-bold text-xl text-accent">Digital Pulse</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="section-title mb-8" data-lang="teamTitle" data-aos="fade-up">
+                Meet Our Global Team
+            </h2>
+            <p class="text-xl text-gray-300 mb-16" data-lang="teamSubtitle" data-aos="fade-up" data-aos-delay="200">
+                Strategists, creators, and developers distributed across the world, united by a passion for delivering results.
+            </p>
+            <div class="flex justify-center">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-32 h-32 bg-gradient-to-br from-accent to-blue-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-dark font-display font-bold text-2xl">JM</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg mb-1">Jon Martinez</h3>
+                    <p class="text-accent" data-lang="jonRole">AI Strategist | Porto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="section-title mb-8" data-lang="contactTitle" data-aos="fade-up">
+                    Ready to scale your business?
+                </h2>
+                <p class="text-xl text-gray-300" data-lang="contactSubtitle" data-aos="fade-up" data-aos-delay="200">
+                    Fill out the form with your website URL. In 48 hours, our team will send you a <strong class="text-accent">free, personalized Growth Potential Audit</strong> identifying the top 3 opportunities for your business using AI and automation.
+                </p>
+            </div>
+            
+            <form class="space-y-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" data-lang-placeholder="contactNamePlaceholder" placeholder="Your Name" class="w-full px-4 py-3 bg-dark border border-gray-600 rounded-lg focus:border-accent focus:outline-none">
+                    <input type="email" data-lang-placeholder="contactEmailPlaceholder" placeholder="Your Email" class="w-full px-4 py-3 bg-dark border border-gray-600 rounded-lg focus:border-accent focus:outline-none">
+                </div>
+                <input type="url" data-lang-placeholder="contactUrlPlaceholder" placeholder="Your Website URL" class="w-full px-4 py-3 bg-dark border border-gray-600 rounded-lg focus:border-accent focus:outline-none">
+                <textarea rows="4" data-lang-placeholder="contactMessagePlaceholder" placeholder="Tell us about your biggest digital challenge..." class="w-full px-4 py-3 bg-dark border border-gray-600 rounded-lg focus:border-accent focus:outline-none resize-none"></textarea>
+                <div class="text-center">
+                    <button type="submit" class="btn-primary" data-lang="contactButton">
+                        Claim My Free Audit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company -->
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4" data-lang="footerCompany">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-accent transition-colors" data-lang="navAbout">About Us</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-accent transition-colors" data-lang="navTeam">The Team</a></li>
+                        <li><a href="#case-studies" class="text-gray-400 hover:text-accent transition-colors" data-lang="navCaseStudies">Projects</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Solutions -->
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4" data-lang="footerSolutions">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-400" data-lang="sol1TitleFoot">Performance & Growth</span></li>
+                        <li><span class="text-gray-400" data-lang="sol2TitleFoot">Tech & Automation</span></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4" data-lang="footerLegal">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors" data-lang="footerPrivacy">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors" data-lang="footerTerms">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors" data-lang="footerCookies">Cookies Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4" data-lang="footerContact">Get in Touch</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-400">Porto, Portugal</p>
+                        <a href="mailto:hello@digitalpulse.agency" class="text-accent hover:text-lightest transition-colors">hello@digitalpulse.agency</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <div class="font-display font-bold text-xl text-accent mb-2">Digital Pulse</div>
+                <p class="text-gray-400 text-sm">© 2024 Digital Pulse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
