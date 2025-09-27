@@ -9,6 +9,8 @@ class ParticleSystem {
         this.particles = [];
         this.mouse = { x: 0, y: 0, isMoving: false };
         this.mouseTimeout = null;
+        this.lastFrameTime = null;
+        this.frameRate = 60;
         
         // Configuration
         this.config = {
@@ -167,8 +169,21 @@ class ParticleSystem {
     }
     
     animate() {
-        // Clear canvas with subtle trail effect
-        this.ctx.fillStyle = this.config.backgroundColor + '10';
+        // Performance monitoring
+        const now = performance.now();
+        if (this.lastFrameTime) {
+            const deltaTime = now - this.lastFrameTime;
+            this.frameRate = 1000 / deltaTime;
+            
+            // Adaptive quality based on performance
+            if (this.frameRate < 30 && this.particles.length > 40) {
+                this.particles = this.particles.slice(0, Math.floor(this.particles.length * 0.9));
+            }
+        }
+        this.lastFrameTime = now;
+        
+        // Clear canvas with subtle trail effect for smoother animations
+        this.ctx.fillStyle = this.config.backgroundColor + '05';
         this.ctx.fillRect(0, 0, this.width, this.height);
         
         this.updateParticles();

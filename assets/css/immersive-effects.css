@@ -215,15 +215,46 @@
 .section-wave path {
     fill: var(--accent);
     opacity: 0.1;
-    animation: waveAnimation 6s ease-in-out infinite;
+    animation: waveAnimation 8s ease-in-out infinite;
+    transform-origin: center;
 }
 
 @keyframes waveAnimation {
     0%, 100% {
-        d: path("M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z");
+        transform: scaleX(1) translateY(0);
+        opacity: 0.1;
+    }
+    25% {
+        transform: scaleX(1.02) translateY(-2px);
+        opacity: 0.15;
     }
     50% {
-        d: path("M0,60 C300,0 900,120 1200,60 L1200,120 L0,120 Z");
+        transform: scaleX(0.98) translateY(2px);
+        opacity: 0.08;
+    }
+    75% {
+        transform: scaleX(1.01) translateY(-1px);
+        opacity: 0.12;
+    }
+}
+
+/* Alternative wave animation for different sections */
+#solutions .section-wave path {
+    animation: waveAnimation2 6s ease-in-out infinite;
+}
+
+@keyframes waveAnimation2 {
+    0%, 100% {
+        transform: scaleY(1) skewX(0deg);
+        opacity: 0.1;
+    }
+    33% {
+        transform: scaleY(1.1) skewX(1deg);
+        opacity: 0.15;
+    }
+    66% {
+        transform: scaleY(0.9) skewX(-1deg);
+        opacity: 0.08;
     }
 }
 
