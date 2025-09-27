@@ -1,5 +1,13 @@
-// Simple animation replacement for AOS
+// Premium Animation System Integration
+// Disable basic animations in favor of GSAP-powered system
 function initAnimations() {
+    // Check if advanced animations are available
+    if (typeof gsap !== 'undefined') {
+        console.log('Premium GSAP animations loaded');
+        return; // Advanced animations will handle everything
+    }
+    
+    // Fallback to basic animations if GSAP fails to load
     const animateElements = document.querySelectorAll('[data-aos]');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -58,7 +66,109 @@ function initProjectSwiper() {
 document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initProjectSwiper();
+    initPremiumFeatures();
 });
+
+// Initialize premium immersive features
+function initPremiumFeatures() {
+    // Initialize ripple effects for buttons
+    initRippleEffects();
+    
+    // Initialize magnetic hover effects
+    initMagneticEffects();
+    
+    // Initialize scroll-triggered animations for elements without GSAP
+    initScrollAnimations();
+    
+    // Performance monitoring
+    monitorPerformance();
+}
+
+function initRippleEffects() {
+    const buttons = document.querySelectorAll('.btn-primary, button');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple-effect');
+            
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+}
+
+function initMagneticEffects() {
+    const magneticElements = document.querySelectorAll('.magnetic-element');
+    
+    magneticElements.forEach(element => {
+        element.addEventListener('mousemove', (e) => {
+            const rect = element.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            element.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        });
+        
+        element.addEventListener('mouseleave', () => {
+            element.style.transform = 'translate(0, 0)';
+        });
+    });
+}
+
+function initScrollAnimations() {
+    // Only run if GSAP is not available
+    if (typeof gsap !== 'undefined') return;
+    
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    animateElements.forEach(el => observer.observe(el));
+}
+
+function monitorPerformance() {
+    // Monitor frame rate for particle system optimization
+    let lastTime = performance.now();
+    let frameCount = 0;
+    let fps = 60;
+    
+    function checkPerformance() {
+        const currentTime = performance.now();
+        frameCount++;
+        
+        if (currentTime - lastTime >= 1000) {
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+            frameCount = 0;
+            lastTime = currentTime;
+            
+            // Reduce particle count if performance is poor
+            if (fps < 30 && window.particleSystem) {
+                window.particleSystem.config.particleCount = Math.max(20, window.particleSystem.config.particleCount * 0.8);
+            }
+        }
+        
+        requestAnimationFrame(checkPerformance);
+    }
+    
+    checkPerformance();
+}
 
 const menuBtn = document.getElementById('menu-btn');
 const menuOverlay = document.getElementById('menu-overlay');
