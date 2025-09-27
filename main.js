@@ -204,8 +204,8 @@ menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
 const translations = {
     en: {
-        metaTitle: "Digital Pulse | AI & Automation Marketing Agency in Porto",
-        metaDescription: "Digital Pulse is a digital growth agency in Porto, Portugal, specializing in AI marketing, business process automation, and performance strategies to scale your revenue.",
+        metaTitle: "HELIX | AI & Automation Marketing Agency in Porto",
+        metaDescription: "HELIX is a digital growth agency in Porto, Portugal, specializing in AI marketing, business process automation, and performance strategies to scale your revenue.",
         metaKeywords: "digital agency porto, ai marketing, business automation, performance marketing, growth agency portugal, marketing automation, digital strategy, seo agency",
         navSolutions: "Services",
         navPhilosophy: "Our Approach",
@@ -214,7 +214,7 @@ const translations = {
         navContact: "Contact",
         navAbout: "About Us",
         heroTitle: 'The <span class="text-accent">Global Agency</span> that Turns Data into Growth.',
-        heroSubtitle: "We are Digital Pulse, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.",
+        heroSubtitle: "We are HELIX, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.",
         heroCTA: "Claim My Free Audit",
         philosophyTag: "Our Growth Approach",
         philosophyTitle: "We don't just sell services. We build growth partnerships.",
@@ -258,8 +258,8 @@ const translations = {
         sol2TitleFoot: "Tech & Automation"
     },
     es: {
-        metaTitle: "Digital Pulse | Agencia de Marketing con IA y Automatización en Porto",
-        metaDescription: "Digital Pulse es una agencia de crecimiento digital en Porto, Portugal, especializada en marketing con IA, automatización de procesos de negocio y estrategias de performance para escalar tu facturación.",
+        metaTitle: "HELIX | Agencia de Marketing con IA y Automatización en Porto",
+        metaDescription: "HELIX es una agencia de crecimiento digital en Porto, Portugal, especializada en marketing con IA, automatización de procesos de negocio y estrategias de performance para escalar tu facturación.",
         metaKeywords: "agencia digital porto, marketing con ia, automatización de negocios, marketing de performance, agencia de crecimiento portugal, automatización de marketing, estrategia digital, agencia seo",
         navSolutions: "Servicios",
         navPhilosophy: "Nuestro Enfoque",
@@ -268,7 +268,7 @@ const translations = {
         navContact: "Contacto",
         navAbout: "Nosotros",
         heroTitle: 'La <span class="text-accent">Agencia Global</span> que Convierte Datos en Facturación.',
-        heroSubtitle: "Somos Digital Pulse, una agencia global de marketing de performance. Implementamos estrategias de IA y automatización para dar a tu negocio una ventaja competitiva real en Portugal y más allá.",
+        heroSubtitle: "Somos HELIX, una agencia global de marketing de performance. Implementamos estrategias de IA y automatización para dar a tu negocio una ventaja competitiva real en Portugal y más allá.",
         heroCTA: "Reclamar mi Auditoría Gratuita",
         philosophyTag: "Nuestro Enfoque de Crecimiento",
         philosophyTitle: "No solo entregamos servicios. Creamos alianzas enfocadas en la facturación.",
@@ -312,8 +312,8 @@ const translations = {
         sol2TitleFoot: "Tecnología y Automatización"
     },
     pt: {
-        metaTitle: "Digital Pulse | Agência de Marketing com IA e Automação no Porto",
-        metaDescription: "A Digital Pulse é uma agência de crescimento digital no Porto, Portugal, especializada em marketing com IA, automação de processos de negócio e estratégias de performance para escalar a sua faturação.",
+        metaTitle: "HELIX | Agência de Marketing com IA e Automação no Porto",
+        metaDescription: "A HELIX é uma agência de crescimento digital no Porto, Portugal, especializada em marketing com IA, automação de processos de negócio e estratégias de performance para escalar a sua faturação.",
         metaKeywords: "agência digital porto, marketing com ia, automação de negócios, marketing de performance, agência de crescimento portugal, automação de marketing, estratégia digital, agência seo",
         navSolutions: "Serviços",
         navPhilosophy: "A Nossa Abordagem",
@@ -322,7 +322,7 @@ const translations = {
         navContact: "Contacto",
         navAbout: "Sobre Nós",
         heroTitle: 'A <span class="text-accent">Agência Global</span> que Transforma Dados em Faturação.',
-        heroSubtitle: "Somos a Digital Pulse, uma agência global de marketing de performance. Implementamos estratégias de IA e automação para dar ao seu negócio uma vantagem competitiva real em Portugal e além.",
+        heroSubtitle: "Somos a HELIX, uma agência global de marketing de performance. Implementamos estratégias de IA e automação para dar ao seu negócio uma vantagem competitiva real em Portugal e além.",
         heroCTA: "Reivindicar a Minha Auditoria Gratuita",
         philosophyTag: "A Nossa Abordagem de Crescimento",
         philosophyTitle: "Não entregamos apenas serviços. Construímos parcerias focadas na faturação.",
