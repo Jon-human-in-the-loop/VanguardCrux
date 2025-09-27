@@ -398,8 +398,24 @@ header {
 
 /* Flag specific styles */
 .flag-icon.flag-en {
-    background: linear-gradient(45deg, #012169 33%, #fff 33%, #fff 66%, #C8102E 66%);
-    background-size: 100% 100%;
+    background: #012169;
+    position: relative;
+}
+
+.flag-icon.flag-en::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        /* White cross */
+        linear-gradient(90deg, transparent 40%, #fff 40%, #fff 60%, transparent 60%),
+        linear-gradient(0deg, transparent 40%, #fff 40%, #fff 60%, transparent 60%),
+        /* Red cross (smaller) */
+        linear-gradient(90deg, transparent 46%, #C8102E 46%, #C8102E 54%, transparent 54%),
+        linear-gradient(0deg, transparent 46%, #C8102E 46%, #C8102E 54%, transparent 54%);
 }
 
 .flag-icon.flag-pt {
