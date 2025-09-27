@@ -1,0 +1,260 @@
+/**
+ * Background Music Controls
+ * Floating music control button with modern design
+ */
+
+/* Main music control button */
+.music-control {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--accent), rgba(100, 255, 218, 0.8));
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(100, 255, 218, 0.3);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(100, 255, 218, 0.5);
+}
+
+.music-control:active {
+    transform: scale(0.95);
+}
+
+/* Music control icon */
+.music-control-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--bg-dark);
+    transition: all 0.3s ease;
+}
+
+/* Music control states */
+.music-control.playing .play-icon {
+    display: none;
+}
+
+.music-control.playing .pause-icon {
+    display: block;
+}
+
+.music-control.paused .play-icon {
+    display: block;
+}
+
+.music-control.paused .pause-icon {
+    display: none;
+}
+
+.music-control.muted {
+    opacity: 0.6;
+    background: linear-gradient(135deg, #6b7280, rgba(107, 114, 128, 0.8));
+}
+
+/* Volume control panel */
+.volume-control {
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    background: rgba(17, 34, 64, 0.95);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 1rem;
+    padding: 1rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    min-width: 200px;
+}
+
+.volume-control.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.volume-control h4 {
+    color: var(--accent);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    text-align: center;
+}
+
+/* Volume slider */
+.volume-slider {
+    width: 100%;
+    height: 4px;
+    background: rgba(100, 255, 218, 0.2);
+    border-radius: 2px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(100, 255, 218, 0.4);
+    transition: all 0.2s ease;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 3px 8px rgba(100, 255, 218, 0.6);
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(100, 255, 218, 0.4);
+    transition: all 0.2s ease;
+}
+
+.volume-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 3px 8px rgba(100, 255, 218, 0.6);
+}
+
+/* Volume control buttons */
+.volume-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.volume-btn {
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: var(--text-light);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.volume-btn:hover {
+    background: rgba(100, 255, 218, 0.2);
+    color: var(--accent);
+}
+
+/* Audio visualization */
+.audio-visualizer {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 120px;
+    height: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+.audio-visualizer.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.visualizer-bars {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2px;
+}
+
+.visualizer-bar {
+    width: 3px;
+    background: linear-gradient(to top, var(--accent), rgba(100, 255, 218, 0.3));
+    border-radius: 2px;
+    transition: height 0.1s ease;
+    min-height: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .music-control {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .music-control-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .volume-control {
+        bottom: 4rem;
+        right: 1.5rem;
+        min-width: 160px;
+        padding: 0.75rem;
+    }
+    
+    .audio-visualizer {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        width: 100px;
+        height: 32px;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .music-control,
+    .volume-control,
+    .visualizer-bar {
+        transition: none;
+    }
+    
+    .audio-visualizer {
+        display: none;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+.music-control:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.volume-slider:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.volume-btn:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
