@@ -31,6 +31,34 @@ class BackgroundMusicSystem {
             // Create audio context
             this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
             
+            // Try to load user's MP3 file first
+            const mp3Paths = [
+                'assets/audio/background.mp3',
+                'assets/music/background.mp3',
+                'assets/background.mp3'
+            ];
+            
+            for (const path of mp3Paths) {
+                try {
+                    console.log(`🎵 Attempting to load user music file from: ${path}`);
+                    const response = await fetch(path);
+                    
+                    if (response.ok) {
+                        const arrayBuffer = await response.arrayBuffer();
+                        this.audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
+                        console.log('✓ User music file loaded successfully!');
+                        return; // Success - exit early
+                    } else {
+                        console.log(`⚠ User music file not found at ${path} (status: ${response.status})`);
+                    }
+                } catch (error) {
+                    console.log(`⚠ Error loading user music from ${path}:`, error.message);
+                }
+            }
+            
+            // Fallback: Create synthetic ambient audio (existing code)
+            console.log('🎼 No user music file found, generating synthetic ambient audio...');
+            
             // Create a synthetic ambient soundtrack
             const duration = 60; // 60 seconds loop
             const sampleRate = this.audioContext.sampleRate;
@@ -68,9 +96,9 @@ class BackgroundMusicSystem {
                 }
             }
             
-            console.log('✓ Ambient audio created successfully');
+            console.log('✓ Synthetic ambient audio created successfully');
         } catch (error) {
-            console.error('Error creating ambient audio:', error);
+            console.error('Error creating audio:', error);
         }
     }
     
