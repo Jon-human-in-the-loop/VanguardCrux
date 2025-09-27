@@ -336,12 +336,14 @@ header {
 
 #menu-content .menu-link {
     position: relative;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
     font-weight: 500;
     letter-spacing: 0.025em;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(100, 255, 218, 0.05);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
     display: block;
+    color: var(--text-lightest);
+    text-decoration: none;
 }
 
 #menu-content .menu-link:last-child {
@@ -367,6 +369,7 @@ header {
 #menu-content .menu-link:hover {
     color: var(--accent);
     transform: translateX(0.5rem);
+    border-bottom-color: rgba(100, 255, 218, 0.3);
 }
 
 /* Enhanced Language Switcher */
