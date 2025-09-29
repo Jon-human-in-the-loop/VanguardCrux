@@ -283,22 +283,61 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="section-title mb-8" data-lang="teamTitle" data-aos="fade-up">
-                Meet Our Global Team
-            </h2>
-            <p class="text-xl text-gray-300 mb-16" data-lang="teamSubtitle" data-aos="fade-up" data-aos-delay="200">
-                Strategists, creators, and developers distributed across the world, united by a passion for delivering results.
-            </p>
-            <div class="flex justify-center">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-32 h-32 bg-gradient-to-br from-accent to-blue-400 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span class="text-dark font-display font-bold text-2xl">JM</span>
+    <!-- Team Section - 360° Interactive Team Videos -->
+    <section class="helix-team-360" id="team">
+        <div class="container">
+            <h2 class="section-title" data-lang="teamTitle">Meet the HELIX Team</h2>
+            <p class="section-subtitle" data-lang="teamSubtitle">Experience our team in 360° - Interactive Innovation</p>
+            
+            <div class="team-360-grid">
+                <!-- Jon Flores -->
+                <div class="team-member-360" data-member="jon">
+                    <div class="video-360-container">
+                        <video class="team-360-video" loop muted playsinline>
+                            <source src="assets/videos/team/jon-360-transparent.mp4" type="video/mp4">
+                            <source src="assets/videos/team/jon-360-transparent.webm" type="video/webm">
+                        </video>
+                        <div class="member-info-overlay">
+                            <h3 data-lang="jonName">Jon Flores</h3>
+                            <p class="role" data-lang="jonRole">AI Strategist</p>
+                            <p class="location" data-lang="jonLocation">Porto, Portugal</p>
+                            <div class="member-skills">
+                                <span class="skill" data-lang="jonSkill1">AI Strategy</span>
+                                <span class="skill" data-lang="jonSkill2">Automation</span>
+                                <span class="skill" data-lang="jonSkill3">Data Analytics</span>
+                            </div>
+                        </div>
+                        <div class="rotation-controls">
+                            <button class="rotate-btn" data-direction="left">←</button>
+                            <button class="auto-rotate-btn">Auto</button>
+                            <button class="rotate-btn" data-direction="right">→</button>
+                        </div>
                     </div>
-                    <h3 class="font-display font-bold text-lg mb-1">Jon Martinez</h3>
-                    <p class="text-accent" data-lang="jonRole">AI Strategist | Porto</p>
+                </div>
+
+                <!-- José Aluz -->
+                <div class="team-member-360" data-member="jose">
+                    <div class="video-360-container">
+                        <video class="team-360-video" loop muted playsinline>
+                            <source src="assets/videos/team/jose-360-transparent.mp4" type="video/mp4">
+                            <source src="assets/videos/team/jose-360-transparent.webm" type="video/webm">
+                        </video>
+                        <div class="member-info-overlay">
+                            <h3 data-lang="joseName">José Aluz</h3>
+                            <p class="role" data-lang="joseRole">Content Strategist</p>
+                            <p class="location" data-lang="joseLocation">Mendoza, Argentina</p>
+                            <div class="member-skills">
+                                <span class="skill" data-lang="joseSkill1">Content Strategy</span>
+                                <span class="skill" data-lang="joseSkill2">Brand Narrative</span>
+                                <span class="skill" data-lang="joseSkill3">Creative Direction</span>
+                            </div>
+                        </div>
+                        <div class="rotation-controls">
+                            <button class="rotate-btn" data-direction="left">←</button>
+                            <button class="auto-rotate-btn">Auto</button>
+                            <button class="rotate-btn" data-direction="right">→</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -385,5 +424,6 @@
     <script src="assets/js/advanced-animations.js"></script>
     <script src="assets/js/cursor-effects.js"></script>
     <script src="assets/js/background-music.js"></script>
+    <script src="assets/js/helix-team-360.js"></script>
 </body>
 </html>
