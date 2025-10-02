@@ -647,3 +647,340 @@ input:focus, textarea:focus {
         color: rgba(230, 241, 255, 0.95) !important; /* Slightly more opaque */
     }
 }
+
+/* 360° Team Section Styles */
+.helix-team-360 {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light-navy) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.helix-team-360::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(100, 255, 218, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(100, 255, 218, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.team-360-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.team-member-360 {
+    background: linear-gradient(145deg, rgba(100, 255, 218, 0.05) 0%, rgba(17, 34, 64, 0.8) 100%);
+    border-radius: 2rem;
+    padding: 2rem;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member-360::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+    animation: rotate-background 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.team-member-360:hover::before {
+    opacity: 1;
+}
+
+@keyframes rotate-background {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.team-member-360.hovered {
+    transform: translateY(-1rem);
+    box-shadow: 
+        0 2rem 4rem rgba(100, 255, 218, 0.2),
+        0 0 0 1px rgba(100, 255, 218, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-color: rgba(100, 255, 218, 0.4);
+}
+
+.video-360-container {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(17, 34, 64, 0.9));
+    z-index: 3;
+}
+
+.team-360-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    transition: filter 0.3s ease;
+}
+
+.team-member-360:hover .team-360-video {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+.member-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10, 25, 47, 0.95));
+    padding: 2rem;
+    color: white;
+    border-radius: 0 0 1.5rem 1.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member-360:hover .member-info-overlay {
+    transform: translateY(0);
+}
+
+.member-info-overlay h3 {
+    font-size: 1.8rem;
+    color: #64FFDA;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.member-info-overlay .role {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.member-info-overlay .location {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.member-info-overlay .location::before {
+    content: '📍';
+    font-size: 0.9rem;
+}
+
+.member-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill {
+    background: rgba(100, 255, 218, 0.2);
+    color: #64FFDA;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    background: rgba(100, 255, 218, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(100, 255, 218, 0.2);
+}
+
+.rotation-controls {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member-360:hover .rotation-controls {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rotate-btn, .auto-rotate-btn {
+    background: rgba(10, 25, 47, 0.8);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    color: #64FFDA;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 0.9rem;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.rotate-btn::before, .auto-rotate-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(100, 255, 218, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.rotate-btn:hover, .auto-rotate-btn:hover {
+    background: rgba(100, 255, 218, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+}
+
+.rotate-btn:hover::before, .auto-rotate-btn:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.rotate-btn:active, .auto-rotate-btn:active {
+    transform: scale(0.95);
+}
+
+.auto-rotate-btn {
+    font-size: 0.7rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+}
+
+/* Enhanced section titles for team section */
+.helix-team-360 .section-title {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.helix-team-360 .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 3;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .helix-team-360 {
+        padding: 4rem 0;
+    }
+    
+    .team-360-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .team-member-360 {
+        padding: 1.5rem;
+    }
+    
+    .member-info-overlay {
+        padding: 1rem;
+        transform: translateY(0); /* Always show on mobile */
+        background: linear-gradient(transparent 0%, rgba(10, 25, 47, 0.95) 30%);
+    }
+    
+    .member-info-overlay h3 {
+        font-size: 1.5rem;
+    }
+    
+    .member-info-overlay .role {
+        font-size: 1rem;
+    }
+    
+    .rotation-controls {
+        opacity: 1;
+        transform: translateY(0);
+        top: 0.5rem;
+        right: 0.5rem;
+        gap: 0.3rem;
+    }
+    
+    .rotate-btn, .auto-rotate-btn {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+    
+    .auto-rotate-btn {
+        width: 2.5rem;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-360-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .team-member-360 {
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
+    
+    .video-360-container {
+        border-radius: 1rem;
+    }
+    
+    .member-skills {
+        gap: 0.3rem;
+    }
+    
+    .skill {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.7rem;
+    }
+}
+}
