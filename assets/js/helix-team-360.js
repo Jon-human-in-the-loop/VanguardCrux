@@ -1,5 +1,5 @@
 /**
- * HELIX Team 360° Interactive Video System
+ * Vanguard Crux Team 360° Interactive Video System
  * Revolutionary 360° rotating team videos with transparent backgrounds
  */
 class HelixTeam360 {
