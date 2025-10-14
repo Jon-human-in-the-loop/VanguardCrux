@@ -65,6 +65,8 @@ class AdvancedAnimations {
     
     initHeroAnimations() {
         const heroTitle = document.querySelector('.hero-title');
+        const heroSlogan = document.querySelector('.hero-slogan');
+        const heroTagline = document.querySelector('.hero-tagline');
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const heroCTA = document.querySelector('.hero-cta');
         
@@ -79,6 +81,28 @@ class AdvancedAnimations {
             }, 500);
         }
         
+        if (heroSlogan) {
+            heroSlogan.style.opacity = '0';
+            heroSlogan.style.transform = 'translateY(60px)';
+            heroSlogan.style.transition = 'opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1)';
+            
+            setTimeout(() => {
+                heroSlogan.style.opacity = '1';
+                heroSlogan.style.transform = 'translateY(0)';
+            }, 700);
+        }
+        
+        if (heroTagline) {
+            heroTagline.style.opacity = '0';
+            heroTagline.style.transform = 'translateY(50px)';
+            heroTagline.style.transition = 'opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1)';
+            
+            setTimeout(() => {
+                heroTagline.style.opacity = '1';
+                heroTagline.style.transform = 'translateY(0)';
+            }, 850);
+        }
+        
         if (heroSubtitle) {
             heroSubtitle.style.opacity = '0';
             heroSubtitle.style.transform = 'translateY(50px)';
@@ -87,7 +111,7 @@ class AdvancedAnimations {
             setTimeout(() => {
                 heroSubtitle.style.opacity = '1';
                 heroSubtitle.style.transform = 'translateY(0)';
-            }, 700);
+            }, 1000);
         }
         
         if (heroCTA) {
@@ -98,7 +122,7 @@ class AdvancedAnimations {
             setTimeout(() => {
                 heroCTA.style.opacity = '1';
                 heroCTA.style.transform = 'translateY(0) scale(1)';
-            }, 1000);
+            }, 1200);
         }
     }
     

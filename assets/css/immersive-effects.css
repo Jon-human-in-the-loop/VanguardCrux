@@ -90,6 +90,17 @@
     }
 }
 
+/* Hero Slogan Styling */
+.hero-slogan {
+    text-shadow: 0 0 30px rgba(100, 255, 218, 0.4);
+    position: relative;
+}
+
+/* Hero Tagline Styling */
+.hero-tagline {
+    position: relative;
+}
+
 /* Premium Service Cards */
 .service-card {
     position: relative;
