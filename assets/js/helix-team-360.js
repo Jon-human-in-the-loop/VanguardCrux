@@ -6,7 +6,7 @@ class HelixTeam360 {
     constructor() {
         this.members = document.querySelectorAll('.team-member-360');
         this.autoRotateInterval = null;
-        this.rotationSpeed = 0.5;
+        this.rotationSpeed = 1.5; // Increased from 0.5 to 1.5 for faster rotation
         this.initializeTeamVideos();
     }
 
@@ -15,9 +15,29 @@ class HelixTeam360 {
             const video = member.querySelector('.team-360-video');
             const autoRotateBtn = member.querySelector('.auto-rotate-btn');
             const rotateButtons = member.querySelectorAll('.rotate-btn');
+            const container = member.querySelector('.video-360-container');
             
-            // Auto-play video on load
-            this.setupVideoPlayback(video);
+            // Add loading class to container
+            container.classList.add('loading');
+            
+            // Lazy load videos when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.load(); // Start loading only when visible
+                        this.setupVideoPlayback(video);
+                        
+                        // Remove loading class when video is loaded
+                        video.addEventListener('loadeddata', () => {
+                            container.classList.remove('loading');
+                        }, { once: true });
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(member);
             
             // Setup rotation controls
             this.setupRotationControls(member, video, autoRotateBtn, rotateButtons);
@@ -30,6 +50,7 @@ class HelixTeam360 {
     setupVideoPlayback(video) {
         // Ensure video plays automatically when loaded
         video.addEventListener('loadeddata', () => {
+            video.playbackRate = 1.5; // Speed up playback to 1.5x for faster rotation
             video.play().catch(e => console.log('Video autoplay blocked:', e));
         });
         
@@ -175,7 +196,7 @@ class HelixTeam360 {
 
     manualRotate(video, direction) {
         if (video.tagName === 'VIDEO') {
-            const rotateAmount = 0.1; // Seconds to skip
+            const rotateAmount = 0.5; // Faster jumps - increased from 0.1 to 0.5
             if (direction === 'right') {
                 video.currentTime += rotateAmount;
                 if (video.currentTime >= video.duration) {
@@ -184,7 +205,7 @@ class HelixTeam360 {
             } else {
                 video.currentTime -= rotateAmount;
                 if (video.currentTime < 0) {
-                    video.currentTime = video.duration - 0.1;
+                    video.currentTime = video.duration - 0.5;
                 }
             }
         }
