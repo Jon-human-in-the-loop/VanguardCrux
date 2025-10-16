@@ -772,6 +772,9 @@ input:focus, textarea:focus {
     mix-blend-mode: multiply; /* This will make white background transparent */
     filter: contrast(1.2) brightness(1.1);
     transition: filter 0.3s ease;
+    /* Alternative approach if multiply affects the person too much:
+       Remove mix-blend-mode and use: filter: brightness(1.05) contrast(1.15) saturate(1.1);
+       And change .video-360-container background to: background: #0A192F; (solid) */
 }
 
 .team-member-360:hover .team-360-video {
