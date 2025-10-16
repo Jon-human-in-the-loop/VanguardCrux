@@ -778,14 +778,14 @@ input:focus, textarea:focus {
 .team-360-video {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Keep this to show full video */
+    object-fit: cover; /* Changed from contain to cover - fills container */
+    object-position: center; /* Keep person centered */
     border-radius: 1.5rem;
     position: relative;
     z-index: 2;
-    /* Remove mix-blend-mode: multiply - it darkens everything */
-    /* Add subtle filters to enhance visibility */
     filter: brightness(1.05) contrast(1.1) saturate(1.15);
     transition: filter 0.3s ease;
+    background: linear-gradient(135deg, #1a2942 0%, #0f1923 100%);
 }
 
 .team-member-360:hover .team-360-video {
@@ -1027,5 +1027,25 @@ input:focus, textarea:focus {
         padding: 0.2rem 0.6rem;
         font-size: 0.7rem;
     }
+}
+
+/* Loading state for videos */
+.video-360-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    border: 3px solid rgba(100, 255, 218, 0.2);
+    border-top-color: #64FFDA;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 10;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
 }

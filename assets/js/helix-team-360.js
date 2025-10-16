@@ -6,7 +6,8 @@ class HelixTeam360 {
     constructor() {
         this.members = document.querySelectorAll('.team-member-360');
         this.autoRotateInterval = null;
-        this.rotationSpeed = 0.5;
+        this.rotationSpeed = 1.5; // Increased from 0.5 to 1.5 for faster rotation
+        this.MANUAL_ROTATION_AMOUNT = 0.5; // Seconds to skip on manual rotation
         this.initializeTeamVideos();
     }
 
@@ -15,9 +16,37 @@ class HelixTeam360 {
             const video = member.querySelector('.team-360-video');
             const autoRotateBtn = member.querySelector('.auto-rotate-btn');
             const rotateButtons = member.querySelectorAll('.rotate-btn');
+            const container = member.querySelector('.video-360-container');
             
-            // Auto-play video on load
-            this.setupVideoPlayback(video);
+            // Add loading class to container
+            container.classList.add('loading');
+            
+            // Lazy load videos when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Check if video hasn't been loaded yet
+                        if (video.readyState === 0) {
+                            video.load(); // Start loading only when visible
+                        }
+                        
+                        // Only setup video playback once
+                        if (!video.dataset.playbackSetup) {
+                            this.setupVideoPlayback(video);
+                            video.dataset.playbackSetup = 'true';
+                        }
+                        
+                        // Remove loading class when video is loaded
+                        video.addEventListener('loadeddata', () => {
+                            container.classList.remove('loading');
+                        }, { once: true });
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(member);
             
             // Setup rotation controls
             this.setupRotationControls(member, video, autoRotateBtn, rotateButtons);
@@ -30,6 +59,7 @@ class HelixTeam360 {
     setupVideoPlayback(video) {
         // Ensure video plays automatically when loaded
         video.addEventListener('loadeddata', () => {
+            video.playbackRate = 1.5; // Speed up playback to 1.5x for faster rotation
             video.play().catch(e => console.log('Video autoplay blocked:', e));
         });
         
@@ -175,16 +205,19 @@ class HelixTeam360 {
 
     manualRotate(video, direction) {
         if (video.tagName === 'VIDEO') {
-            const rotateAmount = 0.1; // Seconds to skip
             if (direction === 'right') {
-                video.currentTime += rotateAmount;
+                video.currentTime += this.MANUAL_ROTATION_AMOUNT;
                 if (video.currentTime >= video.duration) {
                     video.currentTime = 0;
                 }
             } else {
-                video.currentTime -= rotateAmount;
+                video.currentTime -= this.MANUAL_ROTATION_AMOUNT;
                 if (video.currentTime < 0) {
-                    video.currentTime = video.duration - 0.1;
+                    // Wrap to end of video, handling short videos properly
+                    video.currentTime = video.duration + video.currentTime;
+                    if (video.currentTime < 0) {
+                        video.currentTime = 0;
+                    }
                 }
             }
         }
