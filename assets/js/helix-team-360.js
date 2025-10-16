@@ -7,6 +7,7 @@ class HelixTeam360 {
         this.members = document.querySelectorAll('.team-member-360');
         this.autoRotateInterval = null;
         this.rotationSpeed = 1.5; // Increased from 0.5 to 1.5 for faster rotation
+        this.MANUAL_ROTATION_AMOUNT = 0.5; // Seconds to skip on manual rotation
         this.initializeTeamVideos();
     }
 
@@ -28,7 +29,12 @@ class HelixTeam360 {
                         if (video.readyState === 0) {
                             video.load(); // Start loading only when visible
                         }
-                        this.setupVideoPlayback(video);
+                        
+                        // Only setup video playback once
+                        if (!video.dataset.playbackSetup) {
+                            this.setupVideoPlayback(video);
+                            video.dataset.playbackSetup = 'true';
+                        }
                         
                         // Remove loading class when video is loaded
                         video.addEventListener('loadeddata', () => {
@@ -199,16 +205,15 @@ class HelixTeam360 {
 
     manualRotate(video, direction) {
         if (video.tagName === 'VIDEO') {
-            const rotateAmount = 0.5; // Faster jumps - increased from 0.1 to 0.5
             if (direction === 'right') {
-                video.currentTime += rotateAmount;
+                video.currentTime += this.MANUAL_ROTATION_AMOUNT;
                 if (video.currentTime >= video.duration) {
                     video.currentTime = 0;
                 }
             } else {
-                video.currentTime -= rotateAmount;
+                video.currentTime -= this.MANUAL_ROTATION_AMOUNT;
                 if (video.currentTime < 0) {
-                    video.currentTime = Math.max(0, video.duration - 0.5);
+                    video.currentTime = Math.max(0, video.duration - this.MANUAL_ROTATION_AMOUNT);
                 }
             }
         }
