@@ -24,7 +24,10 @@ class HelixTeam360 {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        video.load(); // Start loading only when visible
+                        // Check if video hasn't been loaded yet
+                        if (video.readyState === 0) {
+                            video.load(); // Start loading only when visible
+                        }
                         this.setupVideoPlayback(video);
                         
                         // Remove loading class when video is loaded
@@ -205,7 +208,7 @@ class HelixTeam360 {
             } else {
                 video.currentTime -= rotateAmount;
                 if (video.currentTime < 0) {
-                    video.currentTime = video.duration - 0.5;
+                    video.currentTime = Math.max(0, video.duration - 0.5);
                 }
             }
         }
