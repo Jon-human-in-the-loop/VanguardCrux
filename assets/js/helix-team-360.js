@@ -213,7 +213,11 @@ class HelixTeam360 {
             } else {
                 video.currentTime -= this.MANUAL_ROTATION_AMOUNT;
                 if (video.currentTime < 0) {
-                    video.currentTime = Math.max(0, video.duration - this.MANUAL_ROTATION_AMOUNT);
+                    // Wrap to end of video, handling short videos properly
+                    video.currentTime = video.duration + video.currentTime;
+                    if (video.currentTime < 0) {
+                        video.currentTime = 0;
+                    }
                 }
             }
         }
