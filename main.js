@@ -425,6 +425,64 @@ function setLanguage(lang) {
     });
 }
 
+// Auto-detect browser language on first visit
+function detectBrowserLanguage() {
+    // Check if user has already selected a language (stored in localStorage)
+    const savedLang = localStorage.getItem('userLanguage');
+    if (savedLang) {
+        return savedLang;
+    }
+    
+    // Get browser language
+    const browserLang = navigator.language || navigator.userLanguage;
+    
+    // Extract the main language code (e.g., 'es-ES' -> 'es')
+    const langCode = browserLang.split('-')[0].toLowerCase();
+    
+    // Map browser language to our supported languages
+    if (langCode === 'es') {
+        return 'es'; // Spanish
+    } else if (langCode === 'pt') {
+        return 'pt'; // Portuguese
+    } else {
+        return 'en'; // Default to English for all other languages
+    }
+}
+
+// Modified setLanguage function to save preference
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    
+    // Save language preference
+    localStorage.setItem('userLanguage', lang);
+    
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+    document.querySelectorAll('[data-lang-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-lang-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+    
+    // Update all language switcher buttons (both desktop and mobile)
+    document.querySelectorAll('.language-btn').forEach(button => {
+        button.classList.remove('active');
+        const buttonLang = button.getAttribute('onclick').match(/'([^']+)'/)[1];
+        if (buttonLang === lang) {
+            button.classList.add('active');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('en');
+    // Detect and set language automatically
+    const detectedLang = detectBrowserLanguage();
+    setLanguage(detectedLang);
+    
+    console.log('Language detected:', detectedLang); // For debugging
 });
