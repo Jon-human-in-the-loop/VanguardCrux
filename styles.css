@@ -1030,8 +1030,8 @@ input:focus, textarea:focus {
     }
 }
 
-/* Loading state for videos */
-.video-360-container.loading::before {
+/* Loading spinner - only visible when loading class is present */
+.video-360-container.loading::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -1039,16 +1039,14 @@ input:focus, textarea:focus {
     width: 50px;
     height: 50px;
     margin: -25px 0 0 -25px;
-    border: 3px solid rgba(100, 255, 218, 0.2);
+    border: 3px solid rgba(100, 255, 218, 0.3);
     border-top-color: #64FFDA;
     border-radius: 50%;
     animation: spin 1s linear infinite;
-    z-index: 10;
+    z-index: 100; /* High z-index to appear above video */
 }
 
 @keyframes spin {
     to { transform: rotate(360deg); }
-}
-
 }
 
