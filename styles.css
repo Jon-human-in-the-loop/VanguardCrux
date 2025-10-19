@@ -1030,23 +1030,28 @@ input:focus, textarea:focus {
     }
 }
 
-/* Loading spinner - only visible when loading class is present */
-.video-360-container.loading::after {
-    content: '';
+/* Loading spinner element - hidden by default */
+.loading-spinner {
+    display: none;
+}
+
+/* Show spinner only when container has loading class */
+.video-360-container.loading .loading-spinner {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     width: 50px;
     height: 50px;
     margin: -25px 0 0 -25px;
-    border: 3px solid rgba(100, 255, 218, 0.3);
+    border: 4px solid rgba(100, 255, 218, 0.2);
     border-top-color: #64FFDA;
     border-radius: 50%;
     animation: spin 1s linear infinite;
-    z-index: 100; /* High z-index to appear above video */
+    z-index: 100;
+    pointer-events: none;
 }
 
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
-
