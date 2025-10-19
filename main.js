@@ -486,3 +486,23 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('Language detected:', detectedLang); // For debugging
 });
+// Dynamic legal pages language redirection
+document.addEventListener('DOMContentLoaded', () => {
+    const legalLinks = document.querySelectorAll('.legal-link');
+    
+    legalLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = link.getAttribute('data-page');
+            const currentLang = localStorage.getItem('userLanguage') || detectBrowserLanguage();
+            
+            // Build URL based on language
+            let url = page + '.html';
+            if (currentLang !== 'en') {
+                url = page + '-' + currentLang + '.html';
+            }
+            
+            window.location.href = url;
+        });
+    });
+});
