@@ -744,6 +744,7 @@ input:focus, textarea:focus {
     position: relative;
     width: 100%;
     aspect-ratio: 1;
+    min-height: 400px; /* ← AGREGA ESTA LÍNEA */
     /* Use a gradient that transitions from dark blue to darker gray */
     background: linear-gradient(135deg, #1a2942 0%, #0f1923 100%);
     border-radius: 1.5rem;
@@ -1050,3 +1051,4 @@ input:focus, textarea:focus {
 }
 
 }
+
