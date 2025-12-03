@@ -213,7 +213,7 @@ const translations = {
         navCaseStudies: "Projects",
         navContact: "Contact",
         navAbout: "About Us",
-        heroTitle: 'The <span class="text-accent">Global Agency</span> that Turns Data into Growth.',
+        heroTitle: 'Your <span class="text-accent">Your Data Into</span> Revenue',
         heroSlogan: "Unlock Your Unfair Advantage.",
         heroTagline: "AI Architecture. Creative Minds Solving the Impossible.",
         heroSubtitle: "We are Vanguard Crux, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.",
@@ -506,3 +506,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
