@@ -605,6 +605,11 @@ input:focus, textarea:focus {
 }
 
 /* Mobile Hero Text Contrast Improvements */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
 @media (max-width: 768px) {
     /* Stronger background overlay for mobile */
     .hero-section::after {
