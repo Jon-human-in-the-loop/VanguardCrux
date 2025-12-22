@@ -231,8 +231,8 @@ const translations = {
         caseStudiesTitle: "Proven results, Not promises.",
         case1Title: "Kultur Atelier, Hamburg",
         case1Desc: "Developed a cohesive graphic identity to boost the visibility of their cultural events, increasing community engagement through strategic branding.",
-        case2Title: "Tasca do Infante, Porto",
-        case2Desc: "A local performance marketing strategy that increased online bookings by 40% in 3 months through targeted social media ads.",
+        case2Title: "Roobi · Modular AI-Driven Content Production System",
+        case2Desc: "A modular AI-powered content production architecture designed to scale from 40 to hundreds of videos per month, reducing operational workload and freeing teams to focus on strategic tasks.",
         aboutTitle: "We think outside the box. We act inside your goals.",
         aboutSubtitle: "Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Hamburg and Dubai, and has led us to establish our European hub in Porto.",
         aboutPillar1Title: "Global perspective, local execution",
@@ -296,8 +296,8 @@ const translations = {
         caseStudiesTitle: "Resultados Demostrados, No Promesas.",
         case1Title: "Kultur Atelier, Hamburgo",
         case1Desc: "Desarrollo de una identidad gráfica cohesiva para potenciar la visibilidad de sus eventos culturales, aumentando la participación de la comunidad a través de un branding estratégico.",
-        case2Title: "Tasca do Infante, Porto",
-        case2Desc: "Una estrategia local de marketing de performance que incrementó las reservas online en un 40% en 3 meses a través de anuncios segmentados en redes sociales.",
+        case2Title: "Roobi · Sistema Modular de Producción de Contenido con IA",
+        case2Desc: "Arquitectura modular de producción de contenido con IA diseñada para escalar de 40 a cientos de videos mensuales, reduciendo la carga operativa y liberando al equipo para tareas estratégicas.",
         aboutTitle: "Pensamos fuera de la caja. Actuamos dentro de tus objetivos.",
         aboutSubtitle: "Nuestra historia es una sin fronteras. Nacida de la colaboración de expertos digitales de distintas partes de Argentina, desde Paraná hasta Mendoza, nuestra trayectoria nos llevó a desarrollar proyectos en Hamburgo y Dubái, y nos ha llevado a establecer nuestro hub europeo en Porto.",
         aboutPillar1Title: "Perspectiva Global, Ejecución Local",
@@ -361,8 +361,8 @@ const translations = {
         caseStudiesTitle: "Resultados Comprovados, Não Promessas.",
         case1Title: "Kultur Atelier, Hamburgo",
         case1Desc: "Desenvolvimento de uma identidade gráfica coesa para impulsionar a visibilidade dos seus eventos culturais, aumentando o envolvimento da comunidade através de branding estratégico.",
-        case2Title: "Tasca do Infante, Porto",
-        case2Desc: "Uma estratégia local de marketing de performance que aumentou as reservas online em 40% em 3 meses através de anúncios segmentados nas redes sociais.",
+        case2Title: "Roobi · Sistema Modular de Produção de Conteúdo com IA",
+        case2Desc: "Arquitetura modular de produção de conteúdo com IA projetada para escalar de 40 para centenas de vídeos por mês, reduzindo a carga operacional e libertando a equipa para tarefas estratégicas.",
         aboutTitle: "Pensamos fora da caja. Atuamos dentro dos seus objetivos.",
         aboutSubtitle: "A nossa história não tem fronteiras. Nascida da colaboração de especialistas digitais de diferentes partes da Argentina, de Paraná a Mendoza, a nossa jornada levou-nos a desenvolver projetos em Hamburgo e no Dubai, e levou-nos a estabelecer o nosso centro europeu no Porto.",
         aboutPillar1Title: "Perspetiva Global, Execução Local",
@@ -466,4 +466,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('Vanguard Crux Engine Initialized. Lang:', initialLang);
 });
+
 
