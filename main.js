@@ -58,9 +58,10 @@ function initProjectSwiper() {
     // Auto-advance slides
     if (window.innerWidth < 768) {
     setInterval(() => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        goToSlide(currentSlide);
-    }, 5000);
+        setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    goToSlide(currentSlide);
+}, 5000);
 }
 
 // Initialize animations when DOM is loaded
@@ -507,6 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
