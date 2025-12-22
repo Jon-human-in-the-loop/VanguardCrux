@@ -113,42 +113,66 @@ if (menuBtn) {
 const translations = {
     en: {
         navSolutions: "Services",
-        navPhilosophy: "Our Approach",
-        navTeam: "The Team",
+        navPhilosophy: "Our approach",
+        navTeam: "The team",
         navCaseStudies: "Projects",
         navContact: "Contact",
-        footerPrivacy: "Privacy Policy",
-        footerTerms: "Terms & Conditions",
-        footerCookies: "Cookies Policy",
-        contactEmailPlaceholder: "Your Business Email",
-        contactUrlPlaceholder: "Your Website URL"
+        heroTitle: "The <span class='text-accent'>global agency</span> that turns <span class='text-accent'>data</span> into growth.",
+        heroSlogan: "Unlock your unfair advantage.",
+        heroTagline: "AI Architecture. Creative minds solving the impossible.",
+        heroSubtitle: "We implement AI and automation strategies to give your business a competitive edge.",
+        heroCTA: "Claim my Free audit",
+        philosophyTitle: "We don't just sell services. We build growth partnerships.",
+        philosophyDesc: "Our success is measured by your increased revenue. ROI-driven growth partnerships.",
+        solutionsTitle: "Digital growth services",
+        // Agrega más claves necesarias según el contenido.
+        contactTitle: "Ready to scale your business?",
+        contactSubtitle: "Get a FREE AI-powered analysis of your business!",
+        contactButton: "Get my Free business analysis",
+        contactEmailPlaceholder: "Your business email",
+        contactUrlPlaceholder: "Your website URL"
     },
     es: {
         navSolutions: "Servicios",
-        navPhilosophy: "Nuestro Enfoque",
-        navTeam: "El Equipo",
+        navPhilosophy: "Nuestra Filosofía",
+        navTeam: "El equipo",
         navCaseStudies: "Proyectos",
         navContact: "Contacto",
-        footerPrivacy: "Política de Privacidad",
-        footerTerms: "Términos y Condiciones",
-        footerCookies: "Política de Cookies",
-        contactEmailPlaceholder: "Tu email profesional",
+        heroTitle: "La <span class='text-accent'>agencia global</span> que convierte <span class='text-accent'>datos</span> en crecimiento.",
+        heroSlogan: "Desbloquea tu ventaja competitiva.",
+        heroTagline: "Arquitectura AI. Mentes creativas solucionando lo imposible.",
+        heroSubtitle: "Implementamos estrategias de AI para dar ventaja competitiva a tu negocio.",
+        heroCTA: "Obtén mi auditoría gratuita",
+        philosophyTitle: "No vendemos servicios. Construimos asociaciones duraderas.",
+        philosophyDesc: "Nuestro éxito se mide por tu aumento de ingresos. Asociaciones ROI-driven.",
+        solutionsTitle: "Servicios digitales de crecimiento",
+        contactTitle: "¿Listo para escalar tu negocio?",
+        contactSubtitle: "Obtén GRATIS un análisis con AI de tu negocio.",
+        contactButton: "Obtén mi análisis Gratis",
+        contactEmailPlaceholder: "Tu correo electrónico profesional",
         contactUrlPlaceholder: "URL de tu sitio web"
     },
     pt: {
         navSolutions: "Serviços",
-        navPhilosophy: "A Nossa Abordagem",
-        navTeam: "A Equipa",
+        navPhilosophy: "Nossa abordagem",
+        navTeam: "A equipa",
         navCaseStudies: "Projetos",
-        navContact: "Contacto",
-        footerPrivacy: "Política de Privacidade",
-        footerTerms: "Termos e Condições",
-        footerCookies: "Política de Cookies",
+        navContact: "Contato",
+        heroTitle: "A <span class='text-accent'>agência global</span> que transforma <span class='text-accent'>dados</span> em crescimento.",
+        heroSlogan: "Desbloqueie aua vantagem competitiva.",
+        heroTagline: "Arquitetura AI. Mentes criativas resolvendo o impossível.",
+        heroSubtitle: "Implementamos estratégias de AI para dar vantagem competitiva ao seu negócio.",
+        heroCTA: "Solicite minha auditoria Gratuita",
+        philosophyTitle: "Não vendemos serviços. Construímos parcerias de crescimento.",
+        philosophyDesc: "O nosso sucesso é medido pelo aumento da sua receita. Parcerias ROI-driven.",
+        solutionsTitle: "Serviços de crescimento digital",
+        contactTitle: "Pronto para escalar seu negócio?",
+        contactSubtitle: "Receba uma análise GRATUITA da sua empresa com IA.",
+        contactButton: "Receba minha análise Gratuita",
         contactEmailPlaceholder: "Seu email profissional",
         contactUrlPlaceholder: "URL do seu site"
     }
 };
-
 function detectBrowserLanguage() {
     const saved = localStorage.getItem('userLanguage');
     if (saved) return saved;
@@ -161,6 +185,7 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
     localStorage.setItem('userLanguage', lang);
 
+    // Traducción de elementos con `data-lang` (texto HTML)
     document.querySelectorAll('[data-lang]').forEach(el => {
         const key = el.dataset.lang;
         if (translations[lang]?.[key]) {
@@ -168,6 +193,7 @@ function setLanguage(lang) {
         }
     });
 
+    // Traducción de placeholders (`data-lang-placeholder`)
     document.querySelectorAll('[data-lang-placeholder]').forEach(el => {
         const key = el.dataset.langPlaceholder;
         if (translations[lang]?.[key]) {
@@ -175,6 +201,7 @@ function setLanguage(lang) {
         }
     });
 
+    // Actualiza botones activos
     updateLanguageButtons(lang);
 }
 
@@ -211,3 +238,4 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Language applied to full DOM:', detectedLang);
     });
 });
+
