@@ -1172,6 +1172,24 @@ input:focus, textarea:focus {
 .project-swiper .swiper-slide {
     height: 100%;
 }
+/* =========================================
+   FIX CRÍTICO – CIERRE DE SECCIÓN PORTFOLIO
+   ========================================= */
+
+#portfolio {
+    position: relative;
+    overflow: hidden; /* ← CLAVE */
+}
+
+#portfolio .project-swiper {
+    overflow: hidden;
+}
+#portfolio::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 
 
 
