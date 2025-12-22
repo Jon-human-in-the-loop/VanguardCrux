@@ -69,13 +69,8 @@ function initProjectSwiper() {
     }
     
     function startAutoAdvance() {
-        autoAdvanceInterval = setInterval(() => {
-            if (!userHasInteracted) {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                goToSlide(currentSlide);
-            }
-        }, 5000);
-    }
+    // Autoplay desactivado para mejor UX en desktop
+}
 
     function stopAutoAdvance() {
         clearInterval(autoAdvanceInterval);
@@ -471,3 +466,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('Vanguard Crux Engine Initialized. Lang:', initialLang);
 });
+
