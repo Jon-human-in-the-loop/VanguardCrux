@@ -76,21 +76,12 @@ function initProjectSwiper() {
    ========================================================= */
 
 function initRippleEffects() {
-    document.querySelectorAll('.btn-primary, button').forEach(btn => {
-        btn.addEventListener('click', e => {
-            const ripple = document.createElement('span');
-            const rect = btn.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-
-            ripple.style.width = ripple.style.height = size + 'px';
-            ripple.style.left = e.clientX - rect.left - size / 2 + 'px';
-            ripple.style.top = e.clientY - rect.top - size / 2 + 'px';
-            ripple.className = 'ripple-effect';
-
-            btn.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 600);
-        });
-    });
+    document.querySelectorAll('.language-btn').forEach(btn => {
+    btn.classList.toggle(
+        'active',
+        btn.dataset.lang === lang
+    );
+});
 }
 
 /* =========================================================
@@ -211,3 +202,4 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Language applied to full DOM:', detectedLang);
     });
 });
+
