@@ -49,30 +49,14 @@ function initProjectSwiper() {
         currentSlide = index;
         wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
         
-        // Update pagination
-        pagination.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, i) => {
-            bullet.classList.toggle('swiper-pagination-bullet-active', i === currentSlide);
-        });
-    }
-    
-    // Auto-advance slides
-    if (window.innerWidth < 768) {
+        // Auto-advance slides (solo mobile)
+if (window.innerWidth < 768) {
     setInterval(() => {
-        setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    goToSlide(currentSlide);
-}, 5000);
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    }, 5000);
 }
 
-// Initialize animations when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initAnimations();
-    initProjectSwiper();
-    initPremiumFeatures();
-});
-
-// Initialize premium immersive features
-function initPremiumFeatures() {
     // Initialize ripple effects for buttons
     initRippleEffects();
     
@@ -508,6 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
