@@ -155,7 +155,7 @@ const translations = {
         heroSubtitle: "Implementamos estrategias de AI para dar ventaja competitiva a tu negocio",
         heroCTA: "Obtén mi auditoría gratuita",
         philosophyTitle: "No vendemos servicios Construimos asociaciones duraderas",
-        philosophyDesc: "Nuestro éxito se mide por tu aumento de ingresos. Asociaciones ROI-driven.",
+        philosophyDesc: "Nuestro éxito se mide por tu aumento de ingresos. Asociaciones ROI-driven",
         solutionsTitle: "Servicios digitales de crecimiento",
         sol1Title: "Marketing de rendimiento & SEO",
         sol1Desc: "Atraemos y convertimos clientes valiosos con campañas de seo impulsadas por datos y medios pagados.",
@@ -273,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Language applied to full DOM:', detectedLang);
     });
 });
+
 
 
 
