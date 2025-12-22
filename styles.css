@@ -656,7 +656,6 @@ input:focus, textarea:focus {
         width: clamp(280px, 24vw, 360px);
     }
 }
-}
 /* Mobile Hero Text Contrast Improvements */
 @media (max-width: 768px) {
     /* Stronger background overlay for mobile */
@@ -1189,6 +1188,7 @@ input:focus, textarea:focus {
     display: block;
     clear: both;
 }
+
 
 
 
