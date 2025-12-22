@@ -1142,6 +1142,37 @@ input:focus, textarea:focus {
 .gallery-nav-hint {
     display: none;
 }
+/* =========================================
+   FIX – PORTFOLIO CARD HEIGHT
+   ========================================= */
+
+.project-swiper .swiper-slide {
+    display: flex;
+    height: auto;
+}
+
+.project-swiper .swiper-slide > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Limitar descripción */
+.project-description,
+[data-lang="case2Desc"] {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;   /* ← máximo 3 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.project-swiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.project-swiper .swiper-slide {
+    height: 100%;
+}
+
 
 
 
