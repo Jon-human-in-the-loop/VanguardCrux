@@ -56,6 +56,7 @@ function initProjectSwiper() {
     }
     
     // Auto-advance slides
+    if (window.innerWidth < 768) {
     setInterval(() => {
         currentSlide = (currentSlide + 1) % totalSlides;
         goToSlide(currentSlide);
@@ -506,5 +507,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
