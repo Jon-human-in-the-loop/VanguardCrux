@@ -202,11 +202,12 @@ function initLegalLinks() {
 document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initProjectSwiper();
-    initRippleEffects();
-    initLegalLinks();
 
-    const lang = detectBrowserLanguage();
-    setLanguage(lang);
+    const detectedLang = detectBrowserLanguage();
 
-    console.log('VanguardCrux initialized | lang:', lang);
+    // Espera a que TODO el DOM esté realmente pintado
+    requestAnimationFrame(() => {
+        setLanguage(detectedLang);
+        console.log('Language applied to full DOM:', detectedLang);
+    });
 });
