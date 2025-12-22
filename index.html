@@ -22,7 +22,7 @@
                     Vanguard Crux
                 </div>
                 
-                <!-- Desktop Navigation - Hidden on all screen sizes, only shows in mobile menu -->
+                <!-- Desktop Navigation -->
                 <nav class="hidden">
                     <a href="#philosophy" class="hover:text-accent transition-colors" data-lang="navPhilosophy">Our Approach</a>
                     <a href="#solutions" class="hover:text-accent transition-colors" data-lang="navSolutions">Services</a>
@@ -60,12 +60,10 @@
     <div id="menu-overlay" class="fixed inset-0 hidden bg-black bg-opacity-50 opacity-0" style="z-index: 9999;">
         <div id="menu-content" class="fixed right-0 top-0 h-full w-80 bg-light-navy transform translate-x-full">
             <div class="p-8 pt-20">
-                <!-- Mobile Menu Header -->
                 <div class="menu-header">
                     <h3>Navigation</h3>
                 </div>
                 
-                <!-- Language Switcher -->
                 <div class="language-switcher mb-8">
                     <button onclick="setLanguage('en')" class="language-btn active">
                         <div class="flag-icon flag-en"></div>
@@ -81,7 +79,6 @@
                     </button>
                 </div>
                 
-                <!-- Navigation Links -->
                 <nav class="mobile-nav-links">
                     <a href="#philosophy" class="menu-link" data-lang="navPhilosophy">Our Approach</a>
                     <a href="#solutions" class="menu-link" data-lang="navSolutions">Services</a>
@@ -91,7 +88,6 @@
                     <a href="#contact" class="menu-link" data-lang="navContact">Contact</a>
                 </nav>
                 
-                <!-- Contact Info -->
                 <div class="mt-12 pt-8 border-t border-gray-600 border-opacity-30">
                     <p class="text-sm text-gray-400 mb-2">Porto, Portugal</p>
                     <a href="mailto:strategy@vanguardcrux.com" class="text-sm text-accent hover:text-white transition-colors">
@@ -104,12 +100,10 @@
 
     <!-- Hero Section -->
     <section class="hero-section min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8">
-        <!-- Interactive Particle System -->
         <div class="hero-particles-container">
             <canvas id="hero-particles"></canvas>
         </div>
         
-        <!-- Parallax Background Elements -->
         <div class="parallax-element large"></div>
         <div class="parallax-element medium"></div>
         <div class="parallax-element small"></div>
@@ -118,17 +112,12 @@
             <h1 class="hero-title font-display font-bold text-4xl sm:text-5xl lg:text-6xl mb-6" data-lang="heroTitle">
                 The <span class="text-accent" data-pulse="true">Global Agency</span> that Turns <span class="text-accent" data-pulse="true">Data</span> into Growth.
             </h1>
-            
-            <!-- Slogan -->
             <h2 class="hero-slogan font-display font-bold text-3xl sm:text-4xl lg:text-5xl mb-4 text-accent" data-lang="heroSlogan">
                 Unlock Your Unfair Advantage.
             </h2>
-            
-            <!-- Tagline -->
             <p class="hero-tagline text-xl sm:text-2xl mb-8 text-gray-300" data-lang="heroTagline">
                 AI Architecture. Creative Minds Solving the Impossible.
             </p>
-            
             <p class="hero-subtitle text-xl sm:text-2xl mb-8 max-w-3xl mx-auto text-gray-300" data-lang="heroSubtitle">
                 We are Vanguard Crux, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.
             </p>
@@ -140,7 +129,6 @@
 
     <!-- Philosophy Section -->
     <section id="philosophy" class="py-20 px-4 sm:px-6 lg:px-8 relative">
-        <!-- Wave Transition -->
         <div class="section-wave">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z"></path>
@@ -162,7 +150,6 @@
 
     <!-- Solutions Section -->
     <section id="solutions" class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy relative">
-        <!-- Wave Transition -->
         <div class="section-wave">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M0,60 C300,0 900,120 1200,60 L1200,120 L0,120 Z"></path>
@@ -215,7 +202,6 @@
             </div>
         </div>
         
-        <!-- Geometric Shapes -->
         <div class="geometric-shape circle animate-float" style="top: 20%; right: 5%;"></div>
         <div class="geometric-shape square animate-spin-slow" style="bottom: 30%; left: 8%;"></div>
     </section>
@@ -228,20 +214,36 @@
             </h2>
             <div class="swiper project-swiper">
                 <div class="swiper-wrapper">
-                    <!-- Case Study 1 -->
+                    <!-- Case Study 1: KULTUR ATELIER -->
                     <div class="swiper-slide">
-                        <div class="bg-light-navy p-8 rounded-lg h-full">
-                            <div class="h-48 bg-gradient-to-br from-accent to-blue-400 rounded-lg mb-6 flex items-center justify-center">
-                                <span class="text-dark font-display font-bold text-2xl">KA</span>
+                        <div class="bg-light-navy p-6 rounded-lg h-full border border-gray-700">
+                            <!-- Galería Interna con Snap Scroll -->
+                            <div class="project-gallery-wrapper mb-6">
+                                <div class="project-inner-gallery">
+                                    <img src="images/Kultur/1.jpg" alt="Kultur Atelier 1">
+                                    <img src="images/Kultur/2.jpg" alt="Kultur Atelier 2">
+                                    <img src="images/Kultur/3.jpg" alt="Kultur Atelier 3">
+                                    <img src="images/Kultur/4.jpg" alt="Kultur Atelier 4">
+                                    <img src="images/Kultur/5.jpg" alt="Kultur Atelier 5">
+                                    <img src="images/Kultur/6.jpg" alt="Kultur Atelier 6">
+                                </div>
+                                <div class="gallery-nav-hint">
+                                    <span class="text-accent">← Desliza para ver más →</span>
+                                </div>
                             </div>
                             <h3 class="font-display font-bold text-xl mb-4" data-lang="case1Title">Kultur Atelier, Hamburg</h3>
-                            <p class="text-gray-300" data-lang="case1Desc">Developed a cohesive graphic identity to boost the visibility of their cultural events, increasing community engagement through strategic branding.</p>
+                            <p class="text-gray-300 mb-4" data-lang="case1Desc">Developed a cohesive graphic identity to boost the visibility of their cultural events, increasing community engagement through strategic branding.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill text-xs">Branding</span>
+                                <span class="skill text-xs">Graphic Design</span>
+                                <span class="skill text-xs">Strategy</span>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Case Study 2 -->
                     <div class="swiper-slide">
-                        <div class="bg-light-navy p-8 rounded-lg h-full">
+                        <div class="bg-light-navy p-6 rounded-lg h-full border border-gray-700">
                             <div class="h-48 bg-gradient-to-br from-green-400 to-accent rounded-lg mb-6 flex items-center justify-center">
                                 <span class="text-dark font-display font-bold text-2xl">TI</span>
                             </div>
@@ -293,7 +295,8 @@
             </div>
         </div>
     </section>
-<!-- Team Section - 360° Interactive Team Videos -->
+
+    <!-- Team Section -->
     <section class="helix-team-360" id="team">
         <div class="container">
             <h2 class="section-title" data-lang="teamTitle">Meet the Vanguard Crux Team</h2>
@@ -385,7 +388,6 @@
     <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-dark">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8">
-                <!-- Company -->
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4" data-lang="footerCompany">Company</h3>
                     <ul class="space-y-2">
@@ -395,7 +397,6 @@
                     </ul>
                 </div>
                 
-                <!-- Solutions -->
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4" data-lang="footerSolutions">Solutions</h3>
                     <ul class="space-y-2">
@@ -404,17 +405,15 @@
                     </ul>
                 </div>
                 
-                <!-- Legal -->
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4" data-lang="footerLegal">Legal</h3>
                     <ul class="space-y-2">
                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors legal-link" data-page="privacy-policy" data-lang="footerPrivacy">Privacy Policy</a></li>
-<li><a href="#" class="text-gray-400 hover:text-accent transition-colors legal-link" data-page="terms" data-lang="footerTerms">Terms & Conditions</a></li>
-<li><a href="#" class="text-gray-400 hover:text-accent transition-colors legal-link" data-page="cookies" data-lang="footerCookies">Cookies Policy</a></li>
+                       <li><a href="#" class="text-gray-400 hover:text-accent transition-colors legal-link" data-page="terms" data-lang="footerTerms">Terms & Conditions</a></li>
+                       <li><a href="#" class="text-gray-400 hover:text-accent transition-colors legal-link" data-page="cookies" data-lang="footerCookies">Cookies Policy</a></li>
                     </ul>
                 </div>
                 
-                <!-- Contact -->
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4" data-lang="footerContact">Get in Touch</h3>
                     <div class="space-y-2">
