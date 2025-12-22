@@ -603,6 +603,60 @@ input:focus, textarea:focus {
 .swiper-pagination-bullet-active {
     background-color: var(--accent) !important;
 }
+/* ==========================================================
+   CASE STUDY – INNER GALLERY (SNAP SCROLL)
+   ========================================================== */
+
+.project-gallery-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-inner-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+}
+
+.project-inner-gallery::-webkit-scrollbar {
+    height: 6px;
+}
+
+.project-inner-gallery::-webkit-scrollbar-thumb {
+    background: rgba(100, 255, 218, 0.25);
+    border-radius: 999px;
+}
+
+.project-inner-gallery img {
+    flex: 0 0 85%;
+    max-width: 85%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    scroll-snap-align: start;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+@media (min-width: 768px) {
+    .project-inner-gallery img {
+        flex: 0 0 60%;
+        max-width: 60%;
+        height: 260px;
+    }
+}
+
+.gallery-nav-hint {
+    margin-top: 0.75rem;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.75;
+    pointer-events: none;
+}
+
 
 /* Mobile Hero Text Contrast Improvements */
 @media (max-width: 768px) {
@@ -1055,3 +1109,4 @@ input:focus, textarea:focus {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
