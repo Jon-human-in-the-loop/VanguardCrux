@@ -125,7 +125,12 @@ const translations = {
         philosophyTitle: "We don't just sell services. We build growth partnerships.",
         philosophyDesc: "Our success is measured by your increased revenue. ROI-driven growth partnerships.",
         solutionsTitle: "Digital growth services",
-        // Agrega más claves necesarias según el contenido.
+        sol1Title: "Performance Marketing & SEO",
+        sol1Desc: "We attract and convert valuable customers with data-driven seo & paid media campaigns.",
+        sol2Title: "AI & Business automation",
+        sol2Desc: "We streamline your business operations with ai assistants & process automation.",
+        sol3Title: "Branding & Content strategy",
+        sol3Desc: "We build memorable brands that connect with their audiences using impactful storytelling & visual identity design.",
         contactTitle: "Ready to scale your business?",
         contactSubtitle: "Get a FREE AI-powered analysis of your business!",
         contactButton: "Get my Free business analysis",
@@ -146,6 +151,12 @@ const translations = {
         philosophyTitle: "No vendemos servicios. Construimos asociaciones duraderas.",
         philosophyDesc: "Nuestro éxito se mide por tu aumento de ingresos. Asociaciones ROI-driven.",
         solutionsTitle: "Servicios digitales de crecimiento",
+        sol1Title: "Marketing de rendimiento & SEO",
+        sol1Desc: "Atraemos y convertimos clientes valiosos con campañas de seo impulsadas por datos y medios pagados.",
+        sol2Title: "Automatización empresarial & AI",
+        sol2Desc: "Optimizamos tus operaciones comerciales con asistentes de AI y automatización de procesos.",
+        sol3Title: "Estrategia de marca & Contenido",
+        sol3Desc: "Creamos marcas memorables que se conectan con sus audiencias mediante narrativas impactantes y diseño visual.",
         contactTitle: "¿Listo para escalar tu negocio?",
         contactSubtitle: "Obtén GRATIS un análisis con AI de tu negocio.",
         contactButton: "Obtén mi análisis Gratis",
@@ -166,6 +177,12 @@ const translations = {
         philosophyTitle: "Não vendemos serviços. Construímos parcerias de crescimento.",
         philosophyDesc: "O nosso sucesso é medido pelo aumento da sua receita. Parcerias ROI-driven.",
         solutionsTitle: "Serviços de crescimento digital",
+        sol1Title: "Marketing de desempenho & SEO",
+        sol1Desc: "Atraímos e convertemos clientes valiosos com campanhas de seo orientadas por dados e mídia paga.",
+        sol2Title: "Automação comercial & AI",
+        sol2Desc: "Otimizamos as operações comerciais com assistentes de ai e automação de processos.",
+        sol3Title: "Estratégia de marca & Conteúdo",
+        sol3Desc: "Criamos marcas memoráveis que se conectam com seus públicos através de narrativas impactantes e design visual.",  
         contactTitle: "Pronto para escalar seu negócio?",
         contactSubtitle: "Receba uma análise GRATUITA da sua empresa com IA.",
         contactButton: "Receba minha análise Gratuita",
@@ -238,4 +255,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Language applied to full DOM:', detectedLang);
     });
 });
+
 
