@@ -130,6 +130,12 @@ const translations = {
         sol2Title: "AI & Business automation",
         sol2Desc: "We streamline your business operations with ai assistants & process automation.",
         sol3Title: "Branding & Content strategy",
+        aboutTitle: "We think outside the box. we act inside your goals.",
+        aboutSubtitle: "Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Hamburg and Dubai, and has led us to establish our european hub in Porto.",
+        aboutPillar1Title: "Global perspective, local execution",
+        aboutPillar1Desc: "Our team across continents allows us to apply the best global strategies with a deep understanding of the local market.",
+        aboutPillar2Title: "AI at the core",
+        aboutPillar2Desc: "We use ai and automation not as an add-on, but as the central engine to optimize every marketing process and decision.",
         sol3Desc: "We build memorable brands that connect with their audiences using impactful storytelling & visual identity design.",
         contactTitle: "Ready to scale your business?",
         contactSubtitle: "Get a FREE AI-powered analysis of your business!",
@@ -156,6 +162,12 @@ const translations = {
         sol2Title: "Automatización empresarial & AI",
         sol2Desc: "Optimizamos tus operaciones comerciales con asistentes de AI y automatización de procesos.",
         sol3Title: "Estrategia de marca & Contenido",
+        aboutTitle: "Pensamos fuera de la caja. Actuamos dentro de tus objetivos.",
+        aboutSubtitle: "Nuestra historia no tiene fronteras. Nacida de la colaboración de expertos digitales en Argentina, desde Paraná hasta Mendoza, nuestro viaje nos ha llevado a desarrollar proyectos en Hamburgo y Dubai, y nos ha llevado a establecer nuestro centro europeo en Oporto.",
+        aboutPillar1Title: "Perspectiva global, ejecución local",
+        aboutPillar1Desc: "Nuestro equipo en varios continentes nos permite aplicar las mejores estrategias globales con un profundo entendimiento del mercado local.",
+        aboutPillar2Title: "AI en el centro",
+        aboutPillar2Desc: "Utilizamos ai y automatización no como un complemento, sino como el motor central para optimizar cada proceso y decisión de marketing.",
         sol3Desc: "Creamos marcas memorables que se conectan con sus audiencias mediante narrativas impactantes y diseño visual.",
         contactTitle: "¿Listo para escalar tu negocio?",
         contactSubtitle: "Obtén GRATIS un análisis con AI de tu negocio.",
@@ -182,6 +194,12 @@ const translations = {
         sol2Title: "Automação comercial & AI",
         sol2Desc: "Otimizamos as operações comerciais com assistentes de ai e automação de processos.",
         sol3Title: "Estratégia de marca & Conteúdo",
+        aboutTitle: "Pensamos fora da caixa. agimos dentro dos seus objetivos.",
+        aboutSubtitle: "Nossa história não tem fronteiras. Nasceu da colaboração de especialistas digitais na argentina, de Paraná a Mendoza, nossa jornada nos levou a desenvolver projetos em Hamburgo e Dubai, e nos levou a estabelecer nosso centro europeu em Porto.",
+        aboutPillar1Title: "Perspectiva global, execução local",
+        aboutPillar1Desc: "Nossa equipe em vários continentes nos permite aplicar as melhores estratégias globais com uma compreensão profunda do mercado local.",
+        aboutPillar2Title: "AI no centro",
+        aboutPillar2Desc: "Usamos ai e automação não como um complemento, mas como o motor central para otimizar cada processo e decisão de marketing.",
         sol3Desc: "Criamos marcas memoráveis que se conectam com seus públicos através de narrativas impactantes e design visual.",  
         contactTitle: "Pronto para escalar seu negócio?",
         contactSubtitle: "Receba uma análise GRATUITA da sua empresa com IA.",
@@ -255,5 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Language applied to full DOM:', detectedLang);
     });
 });
+
 
 
