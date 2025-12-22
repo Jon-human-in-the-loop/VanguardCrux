@@ -72,16 +72,13 @@ function initProjectSwiper() {
 }
 
 /* =========================================================
-   UI EFFECTS
+   UI EFFECTS - LANGUAGE BUTTON STATE
    ========================================================= */
 
-function initRippleEffects() {
+function updateLanguageButtons(lang) {
     document.querySelectorAll('.language-btn').forEach(btn => {
-    btn.classList.toggle(
-        'active',
-        btn.dataset.lang === lang
-    );
-});
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
 }
 
 /* =========================================================
@@ -122,7 +119,9 @@ const translations = {
         navContact: "Contact",
         footerPrivacy: "Privacy Policy",
         footerTerms: "Terms & Conditions",
-        footerCookies: "Cookies Policy"
+        footerCookies: "Cookies Policy",
+        contactEmailPlaceholder: "Your Business Email",
+        contactUrlPlaceholder: "Your Website URL"
     },
     es: {
         navSolutions: "Servicios",
@@ -132,7 +131,9 @@ const translations = {
         navContact: "Contacto",
         footerPrivacy: "Política de Privacidad",
         footerTerms: "Términos y Condiciones",
-        footerCookies: "Política de Cookies"
+        footerCookies: "Política de Cookies",
+        contactEmailPlaceholder: "Tu email profesional",
+        contactUrlPlaceholder: "URL de tu sitio web"
     },
     pt: {
         navSolutions: "Serviços",
@@ -142,7 +143,9 @@ const translations = {
         navContact: "Contacto",
         footerPrivacy: "Política de Privacidade",
         footerTerms: "Termos e Condições",
-        footerCookies: "Política de Cookies"
+        footerCookies: "Política de Cookies",
+        contactEmailPlaceholder: "Seu email profissional",
+        contactUrlPlaceholder: "URL do seu site"
     }
 };
 
@@ -165,9 +168,14 @@ function setLanguage(lang) {
         }
     });
 
-    document.querySelectorAll('.language-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
+    document.querySelectorAll('[data-lang-placeholder]').forEach(el => {
+        const key = el.dataset.langPlaceholder;
+        if (translations[lang]?.[key]) {
+            el.placeholder = translations[lang][key];
+        }
     });
+
+    updateLanguageButtons(lang);
 }
 
 /* =========================================================
@@ -193,6 +201,7 @@ function initLegalLinks() {
 document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initProjectSwiper();
+    initLegalLinks();
 
     const detectedLang = detectBrowserLanguage();
 
@@ -202,4 +211,3 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Language applied to full DOM:', detectedLang);
     });
 });
-
