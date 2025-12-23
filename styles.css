@@ -1060,3 +1060,10 @@ input:focus, textarea:focus {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+/* Centrar contenido completo dentro de cada columna del footer */
+.footer-column {
+    text-align: center; /* Centra el contenido dentro de cada columna */
+    display: flex; /* Permite usar flexbox para alineación */
+    flex-direction: column; /* Posiciona los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
