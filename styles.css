@@ -1067,3 +1067,14 @@ input:focus, textarea:focus {
     flex-direction: column; /* Posiciona los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
 }
+/* Personalizar los bullet points */
+.footer-column ul {
+    list-style: disc; /* Mantiene el estilo de discos */
+    padding-left: 10px; /* Ajusta el espacio entre los puntos y el contenido */
+    margin-top: 0; /* Elimina espacio adicional arriba */
+}
+
+.footer-column ul li {
+    margin-bottom: 8px; /* Reduce la separación vertical */
+    font-size: 0.9rem; /* Ajusta el tamaño a algo más discreto */
+}
