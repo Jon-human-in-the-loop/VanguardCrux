@@ -377,7 +377,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+function initPortfolioSwiper() {
+    const swiper = document.querySelector('.portfolio-swiper');
+    if (!swiper) return;
 
+    const wrapper = swiper.querySelector('.swiper-wrapper');
+    const slides = wrapper.children;
+    const prevButton = swiper.querySelector('.swiper-button-prev');
+    const nextButton = swiper.querySelector('.swiper-button-next');
+    const pagination = swiper.querySelector('.swiper-pagination');
 
+    let currentSlide = 0;
 
+    prevButton.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
+    });
 
+    nextButton.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+    });
+
+    function updatePagination() {
+        pagination.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, index) => {
+            bullet.classList.toggle('swiper-pagination-bullet-active', index === currentSlide);
+        });
+    }
+
+    function updateSlide() {
+        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updatePagination();
+    }
+
+    // Create pagination
+    slides.forEach(() => {
+        const bullet = document.createElement('span');
+        bullet.className = 'swiper-pagination-bullet';
+        pagination.appendChild(bullet);
+    });
+
+    updatePagination();
+}
