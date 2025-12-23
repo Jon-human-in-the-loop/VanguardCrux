@@ -671,6 +671,56 @@ input:focus, textarea:focus {
     }
 }
 
+/* Portfolio Carousel */
+.portfolio-swiper {
+    height: auto;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide {
+    flex: 0 0 100%;
+    padding: 0 1rem;
+}
+
+.portfolio-item {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-image {
+    height: 14rem;
+    border-bottom: 4px solid var(--accent);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--accent);
+}
+
 /* 360° Team Section Styles */
 .helix-team-360 {
     padding: 8rem 0;
@@ -1084,3 +1134,4 @@ input:focus, textarea:focus {
     text-align: center; /* Asegura que esté centrado horizontalmente */
     display: inline-block; /* Permite que siga alineado con el contenido */
 }
+
