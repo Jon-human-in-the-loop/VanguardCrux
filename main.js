@@ -252,7 +252,7 @@ const translations = {
         portfolioProject2Title: "Título do Projeto 2",
         portfolioProject2Desc: "Outra descrição breve, destacando melhorias empresariais com IA e automação.",
         portfolioProject3Title: "Título do Projeto 3",
-        portfolioProject3Desc: "Transformação criativa de marca com decisões guiadas por dados e conteúdo envolvente.",
+        portfolioProject3Desc: "Transformação criativa de marca guiada por decisões respaldadas por dados e conteúdo envolvente."
         teamTitle: "Conheça a equipe da Vanguard Crux",
         teamSubtitle: "Experimente nossa equipe em 360° - Inovação interativa",
         contactTitle: "Pronto para escalar seu negócio?",
@@ -377,6 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
