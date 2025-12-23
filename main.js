@@ -137,6 +137,8 @@ const translations = {
         aboutPillar2Title: "AI at the core",
         aboutPillar2Desc: "We use ai and automation not as an add-on, but as the central engine to optimize every marketing process and decision.",
         sol3Desc: "We build memorable brands that connect with their audiences using impactful storytelling & visual identity design.",
+        teamTitle: "Meet the Vanguard Crux Team",
+        teamSubtitle: "Experience our team in 360° - Interactive Innovation",
         contactTitle: "Ready to scale your business?",
         contactSubtitle: "Get a FREE AI-powered analysis of your business!",
         contactButton: "Get my Free business analysis",
@@ -169,6 +171,8 @@ const translations = {
         aboutPillar2Title: "AI en el centro",
         aboutPillar2Desc: "Utilizamos ai y automatización no como un complemento, sino como el motor central para optimizar cada proceso y decisión de marketing.",
         sol3Desc: "Creamos marcas memorables que se conectan con sus audiencias mediante narrativas impactantes y diseño visual.",
+        teamTitle: "Conoce al equipo de Vanguard Crux",
+        teamSubtitle: "Experimenta nuestro equipo en 360° - Innovación interactiva",
         contactTitle: "¿Listo para escalar tu negocio?",
         contactSubtitle: "Obtén GRATIS un análisis con AI de tu negocio",
         contactButton: "Obtén mi análisis Gratis",
@@ -201,6 +205,8 @@ const translations = {
         aboutPillar2Title: "AI no centro",
         aboutPillar2Desc: "Usamos ai e automação não como um complemento, mas como o motor central para otimizar cada processo e decisão de marketing.",
         sol3Desc: "Criamos marcas memoráveis que se conectam com seus públicos através de narrativas impactantes e design visual.",  
+        teamTitle: "Conheça a equipe da Vanguard Crux",
+        teamSubtitle: "Experimente nossa equipe em 360° - Inovação interativa",
         contactTitle: "Pronto para escalar seu negócio?",
         contactSubtitle: "Receba uma análise GRATUITA da sua empresa com IA.",
         contactButton: "Receba minha análise Gratuita",
@@ -311,3 +317,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
