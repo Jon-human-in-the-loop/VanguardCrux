@@ -1060,12 +1060,9 @@ input:focus, textarea:focus {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
-/* Centrar exclusivamente los títulos del footer */
-.footer-title {
-    text-align: center; /* Asegura el centrado solo dentro del contenedor de títulos */
-}
 /* Asegurar que el contenido adicional esté alineado a la izquierda */
 .footer ul, 
 .footer div.space-y-2 {
     text-align: left; /* Fuerza el alineamiento a la izquierda */
 }
+
