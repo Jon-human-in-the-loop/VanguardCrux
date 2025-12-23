@@ -1078,3 +1078,9 @@ input:focus, textarea:focus {
     margin-bottom: 8px; /* Reduce la separación vertical */
     font-size: 0.9rem; /* Ajusta el tamaño a algo más discreto */
 }
+/* Ajuste exclusivo para el título Company */
+.footer-column h3[data-lang="footerCompany"] {
+    margin-bottom: 0.5rem; /* Ajusta el espacio debajo del título */
+    text-align: center; /* Asegura que esté centrado horizontalmente */
+    display: inline-block; /* Permite que siga alineado con el contenido */
+}
