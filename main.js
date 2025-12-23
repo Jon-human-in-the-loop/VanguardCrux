@@ -137,6 +137,14 @@ const translations = {
         aboutPillar2Title: "AI at the core",
         aboutPillar2Desc: "We use ai and automation not as an add-on, but as the central engine to optimize every marketing process and decision.",
         sol3Desc: "We build memorable brands that connect with their audiences using impactful storytelling & visual identity design.",
+        portfolioTitle: "Our Portfolio",
+        portfolioSubtitle: "A showcase of our transformative projects in AI, automation, and creative strategies.",
+        portfolioProject1Title: "Project Title 1",
+        portfolioProject1Desc: "Brief description of the project showcasing creative and performance marketing strategies applied.",
+        portfolioProject2Title: "Project Title 2",
+        portfolioProject2Desc: "Another brief description, highlighting automation and AI-powered business enhancements.",
+        portfolioProject3Title: "Project Title 3",
+        portfolioProject3Desc: "Creative branding transformation powered by data-driven decisions and engaging content.",
         teamTitle: "Meet the Vanguard Crux Team",
         teamSubtitle: "Experience our team in 360° - Interactive Innovation",
         contactTitle: "Ready to scale your business?",
@@ -183,6 +191,14 @@ const translations = {
         aboutPillar2Title: "AI en el centro",
         aboutPillar2Desc: "Utilizamos ai y automatización no como un complemento, sino como el motor central para optimizar cada proceso y decisión de marketing.",
         sol3Desc: "Creamos marcas memorables que se conectan con sus audiencias mediante narrativas impactantes y diseño visual.",
+        portfolioTitle: "Nuestro Portafolio",
+        portfolioSubtitle: "Una selección de proyectos transformadores en IA, automatización y estrategias creativas.",
+        portfolioProject1Title: "Título del Proyecto 1",
+        portfolioProject1Desc: "Descripción breve del proyecto mostrando estrategias creativas y de marketing de rendimiento.",
+        portfolioProject2Title: "Título del Proyecto 2",
+        portfolioProject2Desc: "Otra descripción breve, destacando mejoras empresariales impulsadas por IA y automatización.",
+        portfolioProject3Title: "Título del Proyecto 3",
+        portfolioProject3Desc: "Transformación creativa de marca proporcionada por decisiones impulsadas por datos y contenido atractivo.",
         teamTitle: "Conoce al equipo de Vanguard Crux",
         teamSubtitle: "Experimenta nuestro equipo en 360° - Innovación interactiva",
         contactTitle: "¿Listo para escalar tu negocio?",
@@ -229,6 +245,14 @@ const translations = {
         aboutPillar2Title: "AI no centro",
         aboutPillar2Desc: "Usamos ai e automação não como um complemento, mas como o motor central para otimizar cada processo e decisão de marketing.",
         sol3Desc: "Criamos marcas memoráveis que se conectam com seus públicos através de narrativas impactantes e design visual.",  
+        portfolioTitle: "Nosso Portfólio",
+        portfolioSubtitle: "Uma vitrine de nossos projetos transformadores em IA, automação e estratégias criativas.",
+        portfolioProject1Title: "Título do Projeto 1",
+        portfolioProject1Desc: "Descrição breve do projeto mostrando estratégias criativas e de desempenho em marketing.",
+        portfolioProject2Title: "Título do Projeto 2",
+        portfolioProject2Desc: "Outra descrição breve, destacando melhorias empresariais com IA e automação.",
+        portfolioProject3Title: "Título do Projeto 3",
+        portfolioProject3Desc: "Transformação criativa de marca com decisões guiadas por dados e conteúdo envolvente.",
         teamTitle: "Conheça a equipe da Vanguard Crux",
         teamSubtitle: "Experimente nossa equipe em 360° - Inovação interativa",
         contactTitle: "Pronto para escalar seu negócio?",
@@ -353,5 +377,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
