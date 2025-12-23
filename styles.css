@@ -1134,4 +1134,49 @@ input:focus, textarea:focus {
     text-align: center; /* Asegura que esté centrado horizontalmente */
     display: inline-block; /* Permite que siga alineado con el contenido */
 }
+function initPortfolioSwiper() {
+    const swiper = document.querySelector('.portfolio-swiper');
+    if (!swiper) return;
 
+    const wrapper = swiper.querySelector('.swiper-wrapper');
+    const slides = wrapper.querySelectorAll('.swiper-slide');
+    const pagination = swiper.querySelector('.swiper-pagination');
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Create pagination bullets
+    slides.forEach((_, i) => {
+        const bullet = document.createElement('span');
+        bullet.className = 'swiper-pagination-bullet';
+        if (i === 0) bullet.classList.add('swiper-pagination-bullet-active');
+        bullet.addEventListener('click', () => goToSlide(i));
+        pagination.appendChild(bullet);
+    });
+
+    function updatePagination() {
+        pagination.querySelectorAll('.swiper-pagination-bullet').forEach((b, i) => {
+            b.classList.toggle('swiper-pagination-bullet-active', i === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updatePagination();
+    }
+
+    // Auto-slide for mobile
+    if (window.innerWidth < 768) {
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }, 5000);
+    }
+}
+
+// Initialize portfolio swiper
+document.addEventListener('DOMContentLoaded', () => {
+    initPortfolioSwiper();
+});
+</script>
