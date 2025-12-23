@@ -1180,3 +1180,19 @@ document.addEventListener('DOMContentLoaded', () => {
     initPortfolioSwiper();
 });
 </script>
+/* Buttons for Carousel Navigation */
+.swiper-button-prev, .swiper-button-next {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    background-color: var(--bg-light-navy);
+    transform: scale(1.1);
+}
