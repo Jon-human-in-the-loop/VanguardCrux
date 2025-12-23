@@ -1060,7 +1060,8 @@ input:focus, textarea:focus {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
-/* Footer Titles - Center Alignment */
+/* Centrar solo los títulos del footer */
 .footer h3 {
-    text-align: center;
+    text-align: center; /* Solo afecta los títulos */
+    margin-bottom: 1rem; /* Ajusta el espacio debajo del título si es necesario */
 }
