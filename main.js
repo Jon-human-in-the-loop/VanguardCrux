@@ -143,7 +143,19 @@ const translations = {
         contactSubtitle: "Get a FREE AI-powered analysis of your business!",
         contactButton: "Get my Free business analysis",
         contactEmailPlaceholder: "Your business email",
-        contactUrlPlaceholder: "Your website URL"
+        contactUrlPlaceholder: "Your website URL",
+        footerCompany: "Company",
+        footerSolutions: "Solutions",
+        footerLegal: "Legal",
+        footerContact: "Get in Touch",
+        navAbout: "About Us",
+        navTeam: "The Team",
+        navCaseStudies: "Projects",
+        sol1TitleFoot: "Performance & Growth",
+        sol2TitleFoot: "Tech & Automation",
+        footerPrivacy: "Privacy Policy",
+        footerTerms: "Terms & Conditions",
+        footerCookies: "Cookies Policy"
     },
     es: {
         navSolutions: "Servicios",
@@ -177,7 +189,19 @@ const translations = {
         contactSubtitle: "Obtén GRATIS un análisis con AI de tu negocio",
         contactButton: "Obtén mi análisis Gratis",
         contactEmailPlaceholder: "Tu correo electrónico profesional",
-        contactUrlPlaceholder: "URL de tu sitio web"
+        contactUrlPlaceholder: "URL de tu sitio web",
+        footerCompany: "Compañía",
+        footerSolutions: "Soluciones",
+        footerLegal: "Legal",
+        footerContact: "Contáctanos",
+        navAbout: "Sobre Nosotros",
+        navTeam: "El Equipo",
+        navCaseStudies: "Proyectos",
+        sol1TitleFoot: "Desempeño y Crecimiento",
+        sol2TitleFoot: "Tecnología y Automatización",
+        footerPrivacy: "Política de Privacidad",
+        footerTerms: "Términos y Condiciones",
+        footerCookies: "Política de Cookies"
     },
     pt: {
         navSolutions: "Serviços",
@@ -211,7 +235,19 @@ const translations = {
         contactSubtitle: "Receba uma análise GRATUITA da sua empresa com IA.",
         contactButton: "Receba minha análise Gratuita",
         contactEmailPlaceholder: "Seu email profissional",
-        contactUrlPlaceholder: "URL do seu site"
+        contactUrlPlaceholder: "URL do seu site",
+        footerCompany: "Empresas",
+        footerSolutions: "Soluções",
+        footerLegal: "Legal",
+        footerContact: "Entre em Contato",
+        navAbout: "Sobre Nós",
+        navTeam: "A Equipa",
+        navCaseStudies: "Projetos",
+        sol1TitleFoot: "Desempenho e Crescimento",
+        sol2TitleFoot: "Tecnologia e Automação",
+        footerPrivacy: "Política de Privacidade",
+        footerTerms: "Termos e Condições",
+        footerCookies: "Política de Cookies"
     }
 };
 function detectBrowserLanguage() {
@@ -317,4 +353,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
