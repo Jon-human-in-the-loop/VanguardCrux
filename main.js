@@ -273,8 +273,41 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Language applied to full DOM:', detectedLang);
     });
 });
+/* =========================================================
+   TEAM VIDEOS 360° ROTATION CONTROLS
+   ========================================================= */
 
+document.addEventListener('DOMContentLoaded', () => {
+    const videoContainers = document.querySelectorAll('.team-member-360');
 
+    videoContainers.forEach(container => {
+        const video = container.querySelector('.team-360-video');
+        const controls = container.querySelectorAll('.rotate-btn, .auto-rotate-btn');
+        let currentRotation = 0;
+        let autoRotate;
 
+        controls.forEach(control => {
+            control.addEventListener('click', () => {
+                const direction = control.dataset.direction;
 
+                if (direction === 'left') {
+                    currentRotation -= 45; // Rotate left
+                } else if (direction === 'right') {
+                    currentRotation += 45; // Rotate right
+                } else if (control.classList.contains('auto-rotate-btn')) {
+                    if (autoRotate) {
+                        clearInterval(autoRotate);
+                        autoRotate = null;
+                    } else {
+                        autoRotate = setInterval(() => {
+                            currentRotation += 5;
+                            video.style.transform = `rotateY(${currentRotation}deg)`;
+                        }, 100);
+                    }
+                }
 
+                video.style.transform = `rotateY(${currentRotation}deg)`;
+            });
+        });
+    });
+});
