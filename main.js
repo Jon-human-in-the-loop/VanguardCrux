@@ -445,4 +445,66 @@ function initPortfolioSwiper() {
 
     updatePagination();
 }
+// Actualización del carrusel y traducción de idiomas para prevenir problemas
+function initPortfolioSwiper() {
+    const wrapper = document.querySelector('.portfolio-swiper .swiper-wrapper');
+    const slides = wrapper.querySelectorAll('.swiper-slide');
+    const pagination = document.querySelector('.swiper-pagination');
+
+    let currentSlide = 0;
+
+    document.querySelector('.swiper-button-prev').addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
+    });
+
+    document.querySelector('.swiper-button-next').addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+    });
+
+    function updateSlide() {
+        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        pagination.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, i) => {
+            bullet.classList.toggle('swiper-pagination-bullet-active', i === currentSlide);
+        });
+    }
+
+    slides.forEach((_, i) => {
+        const bullet = document.createElement('span');
+        bullet.classList.add('swiper-pagination-bullet');
+        bullet.addEventListener('click', () => goToSlide(i));
+        pagination.appendChild(bullet);
+    });
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlide();
+    }
+
+    updateSlide(); // Ensure bullets and transformation reset
+}
+
+// Mejora para traducción de idiomas
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem('userLanguage', lang);
+
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.dataset.lang;
+        if (translations[lang]?.[key]) {
+            el.innerHTML = translations[lang][key];
+        } else {
+            el.innerHTML = translations['en'][key] || 'Text missing';
+        }
+    });
+
+    updateLanguageButtons(lang);
+}
+
+// Inicialización del carrusel e idiomas
+document.addEventListener('DOMContentLoaded', () => {
+    initPortfolioSwiper();
+    setLanguage(localStorage.getItem('userLanguage') || 'en');
+});
 
