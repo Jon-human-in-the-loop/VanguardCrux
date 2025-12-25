@@ -1196,3 +1196,57 @@ document.addEventListener('DOMContentLoaded', () => {
     background-color: var(--bg-light-navy);
     transform: scale(1.1);
 }
+/* Ajustar el tamaño general del carrusel */
+#portfolio {
+    padding: 4rem 2rem; /* Reduce el padding */
+}
+
+.swiper-slide {
+    flex-shrink: 0; /* Evita que las diapositivas crezcan demasiado */
+    width: 90%; /* Ajusta el ancho de cada diapositiva */
+    margin: 0 auto; /* Centra visualmente cada diapositiva */
+}
+
+.portfolio-item {
+    max-width: 400px; /* Limita el tamaño de los elementos */
+    margin: 0 auto; /* Centra los proyectos */
+    transition: transform 0.3s ease;
+}
+
+.portfolio-image {
+    height: 200px; /* Altura fija más razonable para las imágenes */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo de los botones */
+.swiper-navigation button {
+    background-color: var(--accent);
+    border: none;
+    color: var(--bg-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-navigation button:hover {
+    background-color: var(--bg-light-navy);
+    transform: scale(1.1);
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
