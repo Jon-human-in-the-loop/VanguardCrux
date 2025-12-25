@@ -1250,3 +1250,18 @@ document.addEventListener('DOMContentLoaded', () => {
     top: 50%;
     transform: translateY(-50%);
 }
+/* Ajustar el estilo de las flechas del carrusel para prevenir desaparición */
+.swiper-button-prev, .swiper-button-next {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    opacity: 1; /* Asegura que las flechas sean visibles siempre */
+    transition: all 0.3s ease; /* Suave efecto al interactuar */
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    background-color: rgba(100, 255, 218, 0.1); /* Cambia el color en hover */
+    opacity: 1; /* Asegura que sean visibles incluso en hover */
+    transform: scale(1.1); /* Escala animada */
+}
