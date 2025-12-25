@@ -399,6 +399,32 @@ function initPortfolioSwiper() {
         updateSlide();
     });
 
+    // Actualizamos la posición del carrusel y los estilos
+    function updateSlide() {
+        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Actualizamos la clase activa en la paginación si se usa
+        pagination.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, index) => {
+            bullet.classList.toggle('swiper-pagination-bullet-active', index === currentSlide);
+        });
+    }
+
+    // Crear paginación dinámica si no existe
+    slides.forEach((_, i) => {
+        const bullet = document.createElement('span');
+        bullet.className = 'swiper-pagination-bullet';
+        bullet.addEventListener('click', () => {
+            currentSlide = i;
+            updateSlide();
+        });
+
+        pagination.appendChild(bullet);
+    });
+
+    // Activar la primera diapositiva de paginación
+    updateSlide();
+}
+
     function updatePagination() {
         pagination.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, index) => {
             bullet.classList.toggle('swiper-pagination-bullet-active', index === currentSlide);
@@ -419,3 +445,4 @@ function initPortfolioSwiper() {
 
     updatePagination();
 }
+
