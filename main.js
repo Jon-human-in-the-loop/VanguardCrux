@@ -210,7 +210,7 @@ const translations = {
 
         // Case Studies Section
         caseStudiesTitle: "Proven results, not promises",
-        case1Title: "Kultur Atelier, Hamburg",
+        case1Title: "Kultur Atelier, Halle & Hamburg - Germany",
         case1Desc: "Unifying the visual identity for a cultural organization with a presence in Halle and Hamburg. A scalable design system connecting communities.",
         case2Title: "Tasca do Infante, Porto",
         case2Desc: "A local performance marketing strategy that increased online bookings by 40% in 3 months through targeted social media ads.",
@@ -298,7 +298,7 @@ const translations = {
 
         // Case Studies Section
         caseStudiesTitle: "Resultados comprobados, no promesas",
-        case1Title: "Kultur Atelier, Hamburgo",
+        case1Title: "Kultur Atelier, Halle y Hamburgo - Alemania",
         case1Desc: "Unificación de la identidad visual para una organización cultural con presencia en Halle y Hamburgo. Un sistema de diseño escalable que conecta comunidades.",
         case2Title: "Tasca do Infante, Oporto",
         case2Desc: "Una estrategia local de marketing de rendimiento que aumentó las reservas en línea en un 40% en 3 meses a través de anuncios dirigidos en redes sociales.",
@@ -386,7 +386,7 @@ const translations = {
 
         // Case Studies Section
         caseStudiesTitle: "Resultados comprovados, não promessas",
-        case1Title: "Kultur Atelier, Hamburgo",
+        case1Title: "Kultur Atelier, HamburgoHalle e Hamburgo - Alemanha",
         case1Desc: "Unificação da identidade visual para uma organização cultural com presença em Halle e Hamburgo. Um sistema de design escalável que conecta comunidades.",
         case2Title: "Tasca do Infante, Porto",
         case2Desc: "Uma estratégia local de marketing de desempenho que aumentou as reservas online em 40% em 3 meses através de anúncios direcionados nas redes sociais.",
