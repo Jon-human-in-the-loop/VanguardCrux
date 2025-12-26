@@ -211,7 +211,7 @@ const translations = {
         // Case Studies Section
         caseStudiesTitle: "Proven results, not promises",
         case1Title: "Kultur Atelier, Hamburg",
-        case1Desc: "Developed a cohesive graphic identity to boost the visibility of their cultural events, increasing community engagement through strategic branding.",
+        case1Desc: "Unifying the visual identity for a cultural organization with a presence in Halle and Hamburg. A scalable design system connecting communities.",
         case2Title: "Tasca do Infante, Porto",
         case2Desc: "A local performance marketing strategy that increased online bookings by 40% in 3 months through targeted social media ads.",
         case3Title: "Smart Mobility Solutions, Dubai",
@@ -299,7 +299,7 @@ const translations = {
         // Case Studies Section
         caseStudiesTitle: "Resultados comprobados, no promesas",
         case1Title: "Kultur Atelier, Hamburgo",
-        case1Desc: "Desarrollamos una identidad gráfica cohesiva para aumentar la visibilidad de sus eventos culturales, incrementando el compromiso de la comunidad a través del branding estratégico.",
+        case1Desc: "Unificación de la identidad visual para una organización cultural con presencia en Halle y Hamburgo. Un sistema de diseño escalable que conecta comunidades.",
         case2Title: "Tasca do Infante, Oporto",
         case2Desc: "Una estrategia local de marketing de rendimiento que aumentó las reservas en línea en un 40% en 3 meses a través de anuncios dirigidos en redes sociales.",
         case3Title: "Smart Mobility Solutions, Dubái",
@@ -387,7 +387,7 @@ const translations = {
         // Case Studies Section
         caseStudiesTitle: "Resultados comprovados, não promessas",
         case1Title: "Kultur Atelier, Hamburgo",
-        case1Desc: "Desenvolvemos uma identidade gráfica coesa para aumentar a visibilidade dos seus eventos culturais, aumentando o envolvimento da comunidade através do branding estratégico.",
+        case1Desc: "Unificação da identidade visual para uma organização cultural com presença em Halle e Hamburgo. Um sistema de design escalável que conecta comunidades.",
         case2Title: "Tasca do Infante, Porto",
         case2Desc: "Uma estratégia local de marketing de desempenho que aumentou as reservas online em 40% em 3 meses através de anúncios direcionados nas redes sociais.",
         case3Title: "Smart Mobility Solutions, Dubai",
