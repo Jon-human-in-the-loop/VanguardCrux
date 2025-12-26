@@ -1170,3 +1170,33 @@ input:focus, textarea:focus {
     margin: 0; /* Elimina cualquier desplazamiento no deseado */
     padding: 0.25rem 0; /* Ajusta el espaciado interno */
 }
+/* Ajustar tamaño máximo y mínimo de las tarjetas */
+.preview-card {
+    width: 100%; /* Aseguramos que ocupe el espacio disponible en el grid */
+    max-width: 20rem; /* Limitar el ancho máximo de las tarjetas */
+    height: auto; /* Ajustar altura según el contenido */
+    padding: 1.5rem; /* Espaciado interno */
+    margin: 0 auto; /* Centra las tarjetas si no caben en un grid */
+    border-radius: 0.5rem; /* Bordes suavizados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra limpia */
+}
+
+/* Ajustar contenedor grid de tarjetas */
+.grid.md\:grid-cols-3, .swiper-wrapper {
+    display: grid; /* Usar diseño grid */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Ajustar tamaño proporcional */
+    gap: 1.5rem; /* Espaciado entre tarjetas */
+    justify-content: center; /* Centrar las tarjetas dentro del contenedor */
+}
+
+/* Ajustar elementos dentro de las tarjetas */
+.preview-card h3 {
+    font-size: 1.2rem; /* Reducir el tamaño de los títulos */
+    margin-bottom: 0.8rem; /* Espaciado adecuado */
+}
+
+.preview-card p {
+    font-size: 0.9rem; /* Texto compacto */
+    line-height: 1.6; /* Altura de línea cómoda para lectura */
+    color: #d1d5db; /* Ajustar tonalidad del texto */
+}
