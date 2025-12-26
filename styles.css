@@ -1126,3 +1126,41 @@ input:focus, textarea:focus {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+/* Ajustar los títulos y centrar contenido en cada columna del footer */
+.footer-column {
+    text-align: center; /* Centra el contenido dentro de cada columna */
+    display: flex; /* Permite usar flexbox para alineación */
+    flex-direction: column; /* Posiciona los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+/* Personalizar los bullet points */
+.footer-column ul {
+    list-style: disc; /* Mantiene el estilo de discos */
+    padding-left: 10px; /* Ajusta el espacio entre los puntos y el contenido */
+    margin-top: 0; /* Elimina espacio adicional arriba */
+}
+
+.footer-column ul li {
+    margin-bottom: 8px; /* Reduce la separación vertical */
+    font-size: 0.9rem; /* Ajusta el tamaño a algo más discreto */
+}
+
+/* Ajuste exclusivo para el título Company */
+.footer-column h3[data-lang="footerCompany"] {
+    margin-bottom: 0.7rem; /* Ajusta el espacio debajo del título */
+    text-align: center; /* Asegura que esté centrado horizontalmente */
+    display: inline-block; /* Permite que siga alineado con el contenido */
+}
+
+/* Textos del contenido de cada columna */
+.footer-column a {
+    margin: 0; /* Asegura que el espacio no descomponga el alineamiento */
+    padding: 0.2rem 0; /* Reduce el espacio interno */
+}
+
+/* Para valores específicos como "Get in Touch" */
+.footer-column:last-child p,
+.footer-column:last-child a {
+    margin: 0;
+}
