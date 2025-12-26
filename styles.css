@@ -1126,36 +1126,43 @@ input:focus, textarea:focus {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
-/* Centrar columnas en el footer */
+/* Ajustar el contenedor del footer con diseño de columnas */
+.grid.md\:grid-cols-4 {
+    display: grid; /* Mantenemos la estructura grid */
+    grid-template-columns: repeat(4, 1fr); /* Distribuir columnas uniformemente */
+    gap: 2rem; /* Espaciar columnas */
+    text-align: center; /* Centrar títulos y listas horizontalmente */
+}
+
+/* Centrar contenido dentro de cada columna */
 .footer-column {
-    display: flex; /* Activamos flexbox */
-    flex-direction: column; /* Elementos alineados verticalmente */
-    align-items: center; /* Elementos centrados horizontalmente */
-    text-align: center; /* Aseguramos que el texto esté centrado */
+    display: block; /* Volvemos al flujo normal de bloque */
+    text-align: center; /* Centra todo dentro de la columna */
 }
 
-/* Ajustar el espacio de las listas y bullet points */
+/* Listas ajustadas debajo de los títulos */
 .footer-column ul {
-    list-style: none; /* Eliminamos el estilo por defecto de los puntos */
-    padding: 0; /* Quitamos cualquier relleno interno */
-    margin: 0; /* Eliminamos los márgenes externos */
+    list-style: none; /* Eliminamos los estilos predeterminados de los bullet points */
+    padding: 0; /* Quitamos relleno interno */
+    margin: 0; /* Quitamos márgenes externos */
 }
 
-/* Bullet personalizado */
+/* Opcional: Bullet personalizado */
 .footer-column ul li::before {
     content: "•"; /* Usamos un punto como bullet personalizado */
     color: var(--accent); /* Color del tema */
-    display: inline-block; /* Permite alineación visual */
-    margin-right: 0.5rem; /* Espaciado entre punto y texto */
+    display: inline-block;
+    margin-right: 0.5rem; /* Separación entre el punto y el texto */
 }
 
-/* Ajustar títulos sobre las listas */
+/* Espaciado uniforme entre el título y la lista */
 .footer-column h3 {
-    margin-bottom: 1rem; /* Espaciado uniforme debajo del título */
+    margin-bottom: 1rem; /* Espacio adecuado debajo del título */
+    font-size: 1.2rem; /* Aseguramos tamaño legible */
 }
 
-/* Ajuste opcional para mejorar visualización */
+/* Enlaces dentro de las listas */
 .footer-column a {
-    margin: 0; /* Elimina cualquier desplazamiento no deseado */
-    padding: 0.25rem 0; /* Ajusta espacio interno */
+    margin: 0; /* Eliminamos cualquier desplazamiento no deseado */
+    padding: 0.25rem 0; /* Ajustamos espacio interno */
 }
