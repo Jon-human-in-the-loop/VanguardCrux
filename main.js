@@ -188,15 +188,15 @@ const translations = {
         metaKeywords: "digital agency porto, ai marketing, business automation, performance marketing, growth agency portugal, marketing automation, digital strategy, seo agency",
 
         // Hero Section
-        heroTitle: 'The <span class="text-accent" data-pulse="true">global agency</span> that utrns <span class="text-accent" data-pulse="true">Data</span> into growth.',
-        heroSlogan: "Unlock your unfair advantage.",
+        heroTitle: 'The <span class="text-accent" data-pulse="true">global agency</span> that utrns <span class="text-accent" data-pulse="true">Data</span> into growth',
+        heroSlogan: "Unlock your unfair advantage",
         heroTagline: "AI architecture. Creative minds solving the impossible.",
         heroSubtitle: "We are Vanguard Crux, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.",
         heroCTA: "Claim your free audit",
 
         // Philosophy Section
         philosophyTag: "Our Growth Approach",
-        philosophyTitle: "We don't just sell services. We build growth partnerships.",
+        philosophyTitle: "We don't just sell services. We build growth partnerships",
         philosophyDesc: "Our success is measured by your increased revenue. We focus on implementing performance marketing and automation that delivers a clear ROI, ensuring our collaboration is a profitable long-term investment.",
 
         // Solutions Section
@@ -209,7 +209,7 @@ const translations = {
         sol3Desc: "We build memorable brands that connect with their audience. Includes visual identity design and high-performance content marketing strategies.",
 
         // Case Studies Section
-        caseStudiesTitle: "Proven results, not promises.",
+        caseStudiesTitle: "Proven results, not promises",
         case1Title: "Kultur Atelier, Hamburg",
         case1Desc: "Developed a cohesive graphic identity to boost the visibility of their cultural events, increasing community engagement through strategic branding.",
         case2Title: "Tasca do Infante, Porto",
@@ -222,7 +222,7 @@ const translations = {
         case5Desc: "Implemented comprehensive SEO and content marketing strategy that drove 300% organic traffic growth and established thought leadership in the Portuguese tech ecosystem.",
 
         // About Section
-        aboutTitle: "We think outside the box. We act inside your goals.",
+        aboutTitle: "We think outside the box. We act inside your goals",
         aboutSubtitle: "Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Hamburg and Dubai, and has led us to establish our European hub in Porto.",
         aboutPillar1Title: "Global perspective, local execution",
         aboutPillar1Desc: "Our team across continents allows us to apply the best global strategies with a deep understanding of the local market.",
@@ -276,15 +276,15 @@ const translations = {
         metaKeywords: "agencia digital oporto, marketing con ia, automatización empresarial, marketing de rendimiento, agencia de crecimiento portugal, automatización de marketing, estrategia digital, agencia seo",
 
         // Hero Section
-        heroTitle: 'La <span class="text-accent" data-pulse="true">agencia global</span> que convierte <span class="text-accent" data-pulse="true">datos</span> en crecimiento.',
-        heroSlogan: "Desbloquea tu ventaja competitiva.",
+        heroTitle: 'La <span class="text-accent" data-pulse="true">agencia global</span> que convierte <span class="text-accent" data-pulse="true">datos</span> en crecimiento',
+        heroSlogan: "Desbloquea tu ventaja competitiva",
         heroTagline: "Arquitectura de IA. Mentes creativas resolviendo lo imposible.",
         heroSubtitle: "Somos Vanguard Crux, una agencia global de marketing de rendimiento. Implementamos estrategias de IA y automatización para darle a tu negocio una ventaja competitiva real en Portugal y más allá.",
         heroCTA: "Reclama tu auditoría gratuita",
 
         // Philosophy Section
         philosophyTag: "Nuestro enfoque de crecimiento",
-        philosophyTitle: "No solo vendemos servicios. Construimos asociaciones de crecimiento.",
+        philosophyTitle: "No solo vendemos servicios. Construimos asociaciones de crecimiento",
         philosophyDesc: "Nuestro éxito se mide por el aumento de tus ingresos. Nos enfocamos en implementar marketing de rendimiento y automatización que genere un ROI claro, asegurando que nuestra colaboración sea una inversión rentable a largo plazo.",
 
         // Solutions Section
@@ -297,7 +297,7 @@ const translations = {
         sol3Desc: "Construimos marcas memorables que conectan con su audiencia. Incluye diseño de identidad visual y estrategias de marketing de contenido de alto rendimiento.",
 
         // Case Studies Section
-        caseStudiesTitle: "Resultados comprobados, no promesas.",
+        caseStudiesTitle: "Resultados comprobados, no promesas",
         case1Title: "Kultur Atelier, Hamburgo",
         case1Desc: "Desarrollamos una identidad gráfica cohesiva para aumentar la visibilidad de sus eventos culturales, incrementando el compromiso de la comunidad a través del branding estratégico.",
         case2Title: "Tasca do Infante, Oporto",
@@ -310,7 +310,7 @@ const translations = {
         case5Desc: "Implementamos una estrategia integral de SEO y marketing de contenidos que impulsó un crecimiento del 300% en tráfico orgánico y estableció liderazgo de pensamiento en el ecosistema tecnológico portugués.",
 
         // About Section
-        aboutTitle: "Pensamos fuera de la caja. Actuamos dentro de tus objetivos.",
+        aboutTitle: "Pensamos fuera de la caja. Actuamos dentro de tus objetivos",
         aboutSubtitle: "Nuestra historia es una sin fronteras. Nacidos de la colaboración de expertos digitales en Argentina, desde Paraná hasta Mendoza, nuestro viaje nos ha llevado a desarrollar proyectos en Hamburgo y Dubái, y nos ha conducido a establecer nuestro centro europeo en Oporto.",
         aboutPillar1Title: "Perspectiva global, ejecución local",
         aboutPillar1Desc: "Nuestro equipo a través de continentes nos permite aplicar las mejores estrategias globales con un profundo conocimiento del mercado local.",
@@ -364,15 +364,15 @@ const translations = {
         metaKeywords: "agência digital porto, marketing com ia, automatização empresarial, marketing de desempenho, agência de crescimento portugal, automatização de marketing, estratégia digital, agência seo",
 
         // Hero Section
-        heroTitle: 'A <span class="text-accent" data-pulse="true">agência global</span> que transforma <span class="text-accent" data-pulse="true">dados</span> em crescimento.',
-        heroSlogan: "Desbloqueie a sua vantagem injusta.",
+        heroTitle: 'A <span class="text-accent" data-pulse="true">agência global</span> que transforma <span class="text-accent" data-pulse="true">dados</span> em crescimento',
+        heroSlogan: "Desbloqueie a sua vantagem injusta",
         heroTagline: "Arquitetura de IA. Mentes criativas a resolver o impossível.",
         heroSubtitle: "Somos a Vanguard Crux, uma agência global de marketing de desempenho. Implementamos estratégias de IA e automatização para dar ao seu negócio uma vantagem competitiva real em Portugal e além.",
         heroCTA: "Reclame a seu auditoria gratuita",
 
         // Philosophy Section
         philosophyTag: "A nossa abordagem de crescimento",
-        philosophyTitle: "Não vendemos apenas serviços. Construímos parcerias de crescimento.",
+        philosophyTitle: "Não vendemos apenas serviços. Construímos parcerias de crescimento",
         philosophyDesc: "O nosso sucesso é medido pelo aumento da sua receita. Focamo-nos na implementação de marketing de desempenho e automatização que entrega um ROI claro, garantindo que a nossa colaboração seja um investimento rentável a longo prazo.",
 
         // Solutions Section
@@ -385,7 +385,7 @@ const translations = {
         sol3Desc: "Construímos marcas memoráveis que se conectam com o seu público. Inclui design de identidade visual e estratégias de marketing de conteúdo de alto desempenho.",
 
         // Case Studies Section
-        caseStudiesTitle: "Resultados comprovados, não promessas.",
+        caseStudiesTitle: "Resultados comprovados, não promessas",
         case1Title: "Kultur Atelier, Hamburgo",
         case1Desc: "Desenvolvemos uma identidade gráfica coesa para aumentar a visibilidade dos seus eventos culturais, aumentando o envolvimento da comunidade através do branding estratégico.",
         case2Title: "Tasca do Infante, Porto",
@@ -398,7 +398,7 @@ const translations = {
         case5Desc: "Implementámos uma estratégia abrangente de SEO e marketing de conteúdo que impulsionou um crescimento de 300% no tráfego orgânico e estabeleceu liderança de pensamento no ecossistema tecnológico português.",
 
         // About Section
-        aboutTitle: "Pensamos fora da caixa. Agimos dentro dos seus objetivos.",
+        aboutTitle: "Pensamos fora da caixa. Agimos dentro dos seus objetivos",
         aboutSubtitle: "A nossa história é sem fronteiras. Nascidos da colaboração de especialistas digitais em toda a Argentina, de Paraná a Mendoza, a nossa jornada levou-nos a desenvolver projetos em Hamburgo e Dubai, e conduziu-nos a estabelecer o nosso centro europeu no Porto.",
         aboutPillar1Title: "Perspetiva global, execução local",
         aboutPillar1Desc: "A nossa equipa em continentes permite-nos aplicar as melhores estratégias globais com um profundo conhecimento do mercado local.",
