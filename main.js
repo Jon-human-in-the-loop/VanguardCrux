@@ -188,7 +188,7 @@ const translations = {
         metaKeywords: "digital agency porto, ai marketing, business automation, performance marketing, growth agency portugal, marketing automation, digital strategy, seo agency",
 
         // Hero Section
-        heroTitle: 'The <span class="text-accent" data-pulse="true">global agency</span> that utrns <span class="text-accent" data-pulse="true">Data</span> into growth',
+        heroTitle: 'The <span class="text-accent" data-pulse="true">global agency</span> that turns <span class="text-accent" data-pulse="true">data</span> into growth',
         heroSlogan: "Unlock your unfair advantage",
         heroTagline: "AI architecture. Creative minds solving the impossible.",
         heroSubtitle: "We are Vanguard Crux, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.",
