@@ -41,7 +41,7 @@ function initProjectSwiper() {
     let currentSlide = 0;
     const totalSlides = slides.length;
 
-    // Create navigation buttons
+    // Crear botones de navegación
     const prevBtn = document.createElement('button');
     prevBtn.className = 'swiper-button-prev';
     prevBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>';
@@ -55,41 +55,39 @@ function initProjectSwiper() {
     swiper.appendChild(prevBtn);
     swiper.appendChild(nextBtn);
 
-    // Create bullets
-    slides.forEach((_, i) => {
-        const bullet = document.createElement('span');
-        bullet.className = 'swiper-pagination-bullet';
-        if (i === 0) bullet.classList.add('swiper-pagination-bullet-active');
-        bullet.addEventListener('click', () => goToSlide(i));
-        pagination.appendChild(bullet);
-    });
+    // Ajustar visibilidad de los slides por tamaño de pantalla
+    function updateSlidesPerView() {
+        const viewportWidth = window.innerWidth;
 
+        if (viewportWidth < 640) {
+            return 1; // 1 slide por pantalla en móviles
+        } else if (viewportWidth < 1024) {
+            return 2; // 2 slides por pantalla en tablets/medianos
+        } else {
+            return 3; // 3 slides por pantalla en pantallas grandes
+        }
+    }
+
+    let slidesPerView = updateSlidesPerView();
+
+    // Inicializar estado de botones y paginación
     function updatePagination() {
         pagination.querySelectorAll('.swiper-pagination-bullet').forEach((b, i) => {
-            b.classList.toggle('swiper-pagination-bullet-active', i === currentSlide);
+            b.classList.toggle('.swiper-pagination-bullet-active', i === currentSlide);
         });
     }
 
     function updateButtons() {
         const isAtStart = currentSlide === 0;
-        const isAtEnd = currentSlide === totalSlides - 1;
-        
-        // Update previous button
+        const isAtEnd = currentSlide >= totalSlides - slidesPerView;
+
         prevBtn.disabled = isAtStart;
-        prevBtn.style.opacity = isAtStart ? '0.5' : '1';
-        prevBtn.style.cursor = isAtStart ? 'not-allowed' : 'pointer';
-        prevBtn.style.pointerEvents = isAtStart ? 'none' : 'auto';
-        
-        // Update next button
         nextBtn.disabled = isAtEnd;
-        nextBtn.style.opacity = isAtEnd ? '0.5' : '1';
-        nextBtn.style.cursor = isAtEnd ? 'not-allowed' : 'pointer';
-        nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'auto';
     }
 
     function goToSlide(index) {
-        currentSlide = Math.max(0, Math.min(index, totalSlides - 1));
-        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        currentSlide = Math.max(0, Math.min(index, totalSlides - slidesPerView));
+        wrapper.style.transform = `translateX(-${currentSlide * (100 / slidesPerView)}%)`;
         updatePagination();
         updateButtons();
     }
@@ -102,7 +100,6 @@ function initProjectSwiper() {
         goToSlide(currentSlide - 1);
     }
 
-    // Add click handlers
     prevBtn.addEventListener('click', (e) => {
         e.preventDefault();
         prevSlide();
@@ -113,16 +110,22 @@ function initProjectSwiper() {
         nextSlide();
     });
 
-    // Initialize button states
-    updateButtons();
+    // Configuración inicial
+    goToSlide(0);
 
-    // Auto-slide SOLO mobile, UNA SOLA VEZ
+    // Auto-slide en móviles, solo una vez
     if (window.innerWidth < 768) {
         setInterval(() => {
             currentSlide = (currentSlide + 1) % totalSlides;
             goToSlide(currentSlide);
         }, 5000);
     }
+
+    // Recalcular vistas por pantalla al redimensionar
+    window.addEventListener('resize', () => {
+        slidesPerView = updateSlidesPerView();
+        goToSlide(0);
+    });
 }
 
 /* =========================================================
