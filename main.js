@@ -176,23 +176,23 @@ const translations = {
     en: {
         // Navigation
         navSolutions: "Services",
-        navPhilosophy: "Our Approach",
-        navTeam: "The Team",
+        navPhilosophy: "Our approach",
+        navTeam: "The team",
         navCaseStudies: "Projects",
         navContact: "Contact",
         navAbout: "About Us",
 
         // Meta
-        metaTitle: "Vanguard Crux | AI & Automation Marketing Agency in Porto",
+        metaTitle: "Vanguard Crux | AI & Automation marketing agency in Porto",
         metaDescription: "Vanguard Crux is a digital growth agency in Porto, Portugal, specializing in AI marketing, business process automation, and performance strategies to scale your revenue.",
         metaKeywords: "digital agency porto, ai marketing, business automation, performance marketing, growth agency portugal, marketing automation, digital strategy, seo agency",
 
         // Hero Section
-        heroTitle: 'The <span class="text-accent" data-pulse="true">Global Agency</span> that Turns <span class="text-accent" data-pulse="true">Data</span> into Growth.',
-        heroSlogan: "Unlock Your Unfair Advantage.",
-        heroTagline: "AI Architecture. Creative Minds Solving the Impossible.",
+        heroTitle: 'The <span class="text-accent" data-pulse="true">global agency</span> that utrns <span class="text-accent" data-pulse="true">Data</span> into growth.',
+        heroSlogan: "Unlock your unfair advantage.",
+        heroTagline: "AI architecture. Creative minds solving the impossible.",
         heroSubtitle: "We are Vanguard Crux, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.",
-        heroCTA: "Claim My Free Audit",
+        heroCTA: "Claim your free audit",
 
         // Philosophy Section
         philosophyTag: "Our Growth Approach",
@@ -200,16 +200,16 @@ const translations = {
         philosophyDesc: "Our success is measured by your increased revenue. We focus on implementing performance marketing and automation that delivers a clear ROI, ensuring our collaboration is a profitable long-term investment.",
 
         // Solutions Section
-        solutionsTitle: "Digital Growth Services",
-        sol1Title: "Performance Marketing & SEO",
+        solutionsTitle: "Digital growth services",
+        sol1Title: "Performance marketing & SEO",
         sol1Desc: "We attract and convert high-value customers with data-driven SEO and paid media campaigns on Meta & Google, focused on maximizing your ROI.",
-        sol2Title: "AI & Business Automation",
+        sol2Title: "AI & Business automation",
         sol2Desc: "We optimize your operations with custom AI assistants and process automation (Make/N8N) to increase efficiency and reduce costs.",
-        sol3Title: "Branding & Content Strategy",
+        sol3Title: "Branding & Content strategy",
         sol3Desc: "We build memorable brands that connect with their audience. Includes visual identity design and high-performance content marketing strategies.",
 
         // Case Studies Section
-        caseStudiesTitle: "Proven Results, Not Promises.",
+        caseStudiesTitle: "Proven results, not promises.",
         case1Title: "Kultur Atelier, Hamburg",
         case1Desc: "Developed a cohesive graphic identity to boost the visibility of their cultural events, increasing community engagement through strategic branding.",
         case2Title: "Tasca do Infante, Porto",
@@ -224,13 +224,13 @@ const translations = {
         // About Section
         aboutTitle: "We think outside the box. We act inside your goals.",
         aboutSubtitle: "Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Hamburg and Dubai, and has led us to establish our European hub in Porto.",
-        aboutPillar1Title: "Global Perspective, Local Execution",
+        aboutPillar1Title: "Global perspective, local execution",
         aboutPillar1Desc: "Our team across continents allows us to apply the best global strategies with a deep understanding of the local market.",
-        aboutPillar2Title: "AI at the Core",
+        aboutPillar2Title: "AI at the core",
         aboutPillar2Desc: "We use AI and automation not as an add-on, but as the central engine to optimize every marketing process and decision.",
 
         // Team Section
-        teamTitle: "Meet the Vanguard Crux Team",
+        teamTitle: "Meet the Vanguard Crux team",
         teamSubtitle: "Experience our team in 360° - Interactive Innovation",
         jonName: "Jon Flores",
         jonRole: "AI Strategist",
@@ -247,10 +247,10 @@ const translations = {
 
         // Contact Section
         contactTitle: "Ready to scale your business?",
-        contactSubtitle: 'Get a <strong class="text-accent">FREE AI-powered analysis</strong> of your business. Just share your website and email - we\'ll identify your top 3 growth opportunities and send a personalized report in 48 hours.',
-        contactEmailPlaceholder: "Your Business Email",
-        contactUrlPlaceholder: "Your Website URL",
-        contactButton: "Get My Free Business Analysis",
+        contactSubtitle: 'Get a <strong class="text-accent">FREE AI-powered analysis</strong> of your business. Just share your website and email, we\'ll identify your top 3 growth opportunities and send a personalized report in 48 hours.',
+        contactEmailPlaceholder: "Your business email",
+        contactUrlPlaceholder: "Your website URL",
+        contactButton: "Get your free business analysis",
 
         // Footer
         footerCompany: "Company",
@@ -264,40 +264,40 @@ const translations = {
     es: {
         // Navigation
         navSolutions: "Servicios",
-        navPhilosophy: "Nuestro Enfoque",
-        navTeam: "El Equipo",
+        navPhilosophy: "Nuestro enfoque",
+        navTeam: "El equipo",
         navCaseStudies: "Proyectos",
         navContact: "Contacto",
         navAbout: "Nosotros",
 
         // Meta
-        metaTitle: "Vanguard Crux | Agencia de Marketing con IA y Automatización en Oporto",
+        metaTitle: "Vanguard Crux | Agencia de marketing con IA y automatización en Oporto",
         metaDescription: "Vanguard Crux es una agencia de crecimiento digital en Oporto, Portugal, especializada en marketing con IA, automatización de procesos empresariales y estrategias de rendimiento para escalar tus ingresos.",
         metaKeywords: "agencia digital oporto, marketing con ia, automatización empresarial, marketing de rendimiento, agencia de crecimiento portugal, automatización de marketing, estrategia digital, agencia seo",
 
         // Hero Section
-        heroTitle: 'La <span class="text-accent" data-pulse="true">Agencia Global</span> que Convierte <span class="text-accent" data-pulse="true">Datos</span> en Crecimiento.',
-        heroSlogan: "Desbloquea Tu Ventaja Competitiva.",
-        heroTagline: "Arquitectura de IA. Mentes Creativas Resolviendo lo Imposible.",
+        heroTitle: 'La <span class="text-accent" data-pulse="true">agencia global</span> que convierte <span class="text-accent" data-pulse="true">datos</span> en crecimiento.',
+        heroSlogan: "Desbloquea tu ventaja competitiva.",
+        heroTagline: "Arquitectura de IA. Mentes creativas resolviendo lo imposible.",
         heroSubtitle: "Somos Vanguard Crux, una agencia global de marketing de rendimiento. Implementamos estrategias de IA y automatización para darle a tu negocio una ventaja competitiva real en Portugal y más allá.",
-        heroCTA: "Reclama Mi Auditoría Gratuita",
+        heroCTA: "Reclama tu auditoría gratuita",
 
         // Philosophy Section
-        philosophyTag: "Nuestro Enfoque de Crecimiento",
+        philosophyTag: "Nuestro enfoque de crecimiento",
         philosophyTitle: "No solo vendemos servicios. Construimos asociaciones de crecimiento.",
         philosophyDesc: "Nuestro éxito se mide por el aumento de tus ingresos. Nos enfocamos en implementar marketing de rendimiento y automatización que genere un ROI claro, asegurando que nuestra colaboración sea una inversión rentable a largo plazo.",
 
         // Solutions Section
-        solutionsTitle: "Servicios de Crecimiento Digital",
-        sol1Title: "Marketing de Rendimiento y SEO",
+        solutionsTitle: "Servicios de crecimiento digital",
+        sol1Title: "Marketing de rendimiento y SEO",
         sol1Desc: "Atraemos y convertimos clientes de alto valor con SEO basado en datos y campañas de medios pagos en Meta y Google, enfocados en maximizar tu ROI.",
-        sol2Title: "IA y Automatización Empresarial",
+        sol2Title: "IA y Automatización empresarial",
         sol2Desc: "Optimizamos tus operaciones con asistentes de IA personalizados y automatización de procesos (Make/N8N) para aumentar la eficiencia y reducir costos.",
-        sol3Title: "Branding y Estrategia de Contenido",
+        sol3Title: "Branding y Estrategia de contenido",
         sol3Desc: "Construimos marcas memorables que conectan con su audiencia. Incluye diseño de identidad visual y estrategias de marketing de contenido de alto rendimiento.",
 
         // Case Studies Section
-        caseStudiesTitle: "Resultados Comprobados, No Promesas.",
+        caseStudiesTitle: "Resultados comprobados, no promesas.",
         case1Title: "Kultur Atelier, Hamburgo",
         case1Desc: "Desarrollamos una identidad gráfica cohesiva para aumentar la visibilidad de sus eventos culturales, incrementando el compromiso de la comunidad a través del branding estratégico.",
         case2Title: "Tasca do Infante, Oporto",
@@ -312,13 +312,13 @@ const translations = {
         // About Section
         aboutTitle: "Pensamos fuera de la caja. Actuamos dentro de tus objetivos.",
         aboutSubtitle: "Nuestra historia es una sin fronteras. Nacidos de la colaboración de expertos digitales en Argentina, desde Paraná hasta Mendoza, nuestro viaje nos ha llevado a desarrollar proyectos en Hamburgo y Dubái, y nos ha conducido a establecer nuestro centro europeo en Oporto.",
-        aboutPillar1Title: "Perspectiva Global, Ejecución Local",
+        aboutPillar1Title: "Perspectiva global, ejecución local",
         aboutPillar1Desc: "Nuestro equipo a través de continentes nos permite aplicar las mejores estrategias globales con un profundo conocimiento del mercado local.",
-        aboutPillar2Title: "IA en el Núcleo",
+        aboutPillar2Title: "IA en el núcleo",
         aboutPillar2Desc: "Usamos IA y automatización no como un complemento, sino como el motor central para optimizar cada proceso y decisión de marketing.",
 
         // Team Section
-        teamTitle: "Conoce al Equipo de Vanguard Crux",
+        teamTitle: "Conoce al equipo de Vanguard Crux",
         teamSubtitle: "Experimenta nuestro equipo en 360° - Innovación Interactiva",
         jonName: "Jon Flores",
         jonRole: "Estratega de IA",
@@ -335,10 +335,10 @@ const translations = {
 
         // Contact Section
         contactTitle: "¿Listo para escalar tu negocio?",
-        contactSubtitle: 'Obtén un <strong class="text-accent">análisis GRATUITO impulsado por IA</strong> de tu negocio. Solo comparte tu sitio web y correo electrónico - identificaremos tus 3 principales oportunidades de crecimiento y enviaremos un informe personalizado en 48 horas.',
-        contactEmailPlaceholder: "Tu Email Empresarial",
-        contactUrlPlaceholder: "URL de Tu Sitio Web",
-        contactButton: "Obtener Mi Análisis Empresarial Gratuito",
+        contactSubtitle: 'Obtén un <strong class="text-accent">análisis GRATUITO impulsado por IA</strong> de tu negocio. Solo comparte tu sitio web y correo electrónico, identificaremos tus 3 principales oportunidades de crecimiento y enviaremos un informe personalizado en 48 horas.',
+        contactEmailPlaceholder: "Tu email empresarial",
+        contactUrlPlaceholder: "URL de tu sitio web",
+        contactButton: "Obtener tu análisis empresarial gratuito",
 
         // Footer
         footerCompany: "Empresa",
@@ -352,40 +352,40 @@ const translations = {
     pt: {
         // Navigation
         navSolutions: "Serviços",
-        navPhilosophy: "A Nossa Abordagem",
-        navTeam: "A Equipa",
+        navPhilosophy: "A nossa abordagem",
+        navTeam: "A equipa",
         navCaseStudies: "Projetos",
         navContact: "Contacto",
         navAbout: "Sobre Nós",
 
         // Meta
-        metaTitle: "Vanguard Crux | Agência de Marketing com IA e Automatização no Porto",
+        metaTitle: "Vanguard Crux | Agência de marketing com IA e automatização no Porto",
         metaDescription: "A Vanguard Crux é uma agência de crescimento digital no Porto, Portugal, especializada em marketing com IA, automatização de processos empresariais e estratégias de desempenho para escalar a sua receita.",
         metaKeywords: "agência digital porto, marketing com ia, automatização empresarial, marketing de desempenho, agência de crescimento portugal, automatização de marketing, estratégia digital, agência seo",
 
         // Hero Section
-        heroTitle: 'A <span class="text-accent" data-pulse="true">Agência Global</span> que Transforma <span class="text-accent" data-pulse="true">Dados</span> em Crescimento.',
-        heroSlogan: "Desbloqueie a Sua Vantagem Injusta.",
-        heroTagline: "Arquitetura de IA. Mentes Criativas a Resolver o Impossível.",
+        heroTitle: 'A <span class="text-accent" data-pulse="true">agência global</span> que transforma <span class="text-accent" data-pulse="true">dados</span> em crescimento.',
+        heroSlogan: "Desbloqueie a sua vantagem injusta.",
+        heroTagline: "Arquitetura de IA. Mentes criativas a resolver o impossível.",
         heroSubtitle: "Somos a Vanguard Crux, uma agência global de marketing de desempenho. Implementamos estratégias de IA e automatização para dar ao seu negócio uma vantagem competitiva real em Portugal e além.",
-        heroCTA: "Reclame a Minha Auditoria Gratuita",
+        heroCTA: "Reclame a seu auditoria gratuita",
 
         // Philosophy Section
-        philosophyTag: "A Nossa Abordagem de Crescimento",
+        philosophyTag: "A nossa abordagem de crescimento",
         philosophyTitle: "Não vendemos apenas serviços. Construímos parcerias de crescimento.",
         philosophyDesc: "O nosso sucesso é medido pelo aumento da sua receita. Focamo-nos na implementação de marketing de desempenho e automatização que entrega um ROI claro, garantindo que a nossa colaboração seja um investimento rentável a longo prazo.",
 
         // Solutions Section
-        solutionsTitle: "Serviços de Crescimento Digital",
-        sol1Title: "Marketing de Desempenho e SEO",
+        solutionsTitle: "Serviços de crescimento digital",
+        sol1Title: "Marketing de desempenho e SEO",
         sol1Desc: "Atraímos e convertemos clientes de alto valor com SEO baseado em dados e campanhas de mídia paga no Meta e Google, focados em maximizar o seu ROI.",
-        sol2Title: "IA e Automatização Empresarial",
+        sol2Title: "IA e Automatização empresarial",
         sol2Desc: "Otimizamos as suas operações com assistentes de IA personalizados e automatização de processos (Make/N8N) para aumentar a eficiência e reduzir custos.",
-        sol3Title: "Branding e Estratégia de Conteúdo",
+        sol3Title: "Branding e Estratégia de conteúdo",
         sol3Desc: "Construímos marcas memoráveis que se conectam com o seu público. Inclui design de identidade visual e estratégias de marketing de conteúdo de alto desempenho.",
 
         // Case Studies Section
-        caseStudiesTitle: "Resultados Comprovados, Não Promessas.",
+        caseStudiesTitle: "Resultados comprovados, não promessas.",
         case1Title: "Kultur Atelier, Hamburgo",
         case1Desc: "Desenvolvemos uma identidade gráfica coesa para aumentar a visibilidade dos seus eventos culturais, aumentando o envolvimento da comunidade através do branding estratégico.",
         case2Title: "Tasca do Infante, Porto",
@@ -400,13 +400,13 @@ const translations = {
         // About Section
         aboutTitle: "Pensamos fora da caixa. Agimos dentro dos seus objetivos.",
         aboutSubtitle: "A nossa história é sem fronteiras. Nascidos da colaboração de especialistas digitais em toda a Argentina, de Paraná a Mendoza, a nossa jornada levou-nos a desenvolver projetos em Hamburgo e Dubai, e conduziu-nos a estabelecer o nosso centro europeu no Porto.",
-        aboutPillar1Title: "Perspetiva Global, Execução Local",
+        aboutPillar1Title: "Perspetiva global, execução local",
         aboutPillar1Desc: "A nossa equipa em continentes permite-nos aplicar as melhores estratégias globais com um profundo conhecimento do mercado local.",
-        aboutPillar2Title: "IA no Núcleo",
+        aboutPillar2Title: "IA no núcleo",
         aboutPillar2Desc: "Usamos IA e automatização não como um complemento, mas como o motor central para otimizar cada processo e decisão de marketing.",
 
         // Team Section
-        teamTitle: "Conheça a Equipa da Vanguard Crux",
+        teamTitle: "Conheça a equipa da Vanguard Crux",
         teamSubtitle: "Experiencie a nossa equipa em 360° - Inovação Interativa",
         jonName: "Jon Flores",
         jonRole: "Estratega de IA",
@@ -423,10 +423,10 @@ const translations = {
 
         // Contact Section
         contactTitle: "Pronto para escalar o seu negócio?",
-        contactSubtitle: 'Obtenha uma <strong class="text-accent">análise GRATUITA impulsionada por IA</strong> do seu negócio. Partilhe apenas o seu website e email - identificaremos as suas 3 principais oportunidades de crescimento e enviaremos um relatório personalizado em 48 horas.',
-        contactEmailPlaceholder: "O Seu Email Empresarial",
-        contactUrlPlaceholder: "URL do Seu Website",
-        contactButton: "Obter a Minha Análise Empresarial Gratuita",
+        contactSubtitle: 'Obtenha uma <strong class="text-accent">análise GRATUITA impulsionada por IA</strong> do seu negócio. Partilhe apenas o seu website e email, identificaremos as suas 3 principais oportunidades de crescimento e enviaremos um relatório personalizado em 48 horas.',
+        contactEmailPlaceholder: "O seu email empresarial",
+        contactUrlPlaceholder: "URL do seu website",
+        contactButton: "Obter a minha análise empresarial gratuita",
 
         // Footer
         footerCompany: "Empresa",
