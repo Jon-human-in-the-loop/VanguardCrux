@@ -274,23 +274,47 @@ const translations = {
 
         // Kultur Atelier Detail Page
         kulturMetaTitle: "Kultur Atelier Case Study | Vanguard Crux",
-        kulturMetaDesc: "Unified visual identity and branding strategy for Kultur Atelier's locations in Halle and Hamburg, Germany.",
-        backToHome: "← Back to Home",
-        kulturHeroTitle: "Kultur Atelier: Identity Without Borders",
-        kulturHeroSubtitle: "Visual standardization and brand strategy for locations in Halle and Hamburg.",
-        kulturHeroMeta: "Client: Kultur Atelier e.V. | Location: Halle & Hamburg | Services: Branding System, Multi-location Strategy.",
-        kulturChallengeTitle: "The Challenge of Regional Coherence",
-        kulturChallengeDesc: "With activities expanding between Halle and Hamburg, Kultur Atelier suffered from critical fragmentation. Each location communicated differently, diluting the strength of the parent brand. The challenge was not just to design, but to create a system that worked equally well for concerts in the south as for workshops in the north.",
-        kulturSolutionTitle: "The Solution: Unified System",
-        kulturSolution1Title: "Liquid and Adaptive Identity",
-        kulturSolution1Desc: "We developed a flexible \"Brand Book.\" Watercolor textures unify the aesthetic but allow subtle variations to adapt communication to the local vibe of each city without losing group belonging.",
-        kulturSolution2Title: "Tactical Deployment",
-        kulturSolution2Desc: "Implementation was simultaneous. We designed graphic pieces that maintain visual hierarchy regardless of whether the event occurs on Seebener Straße in Halle or in the center of Hamburg.",
-        kulturSolution3Title: "Extended Community",
-        kulturSolution3Desc: "Merchandising (tote bags, mugs) became the physical link between members of both communities, creating a shared sense of belonging.",
-        kulturResultsQuote: "\"We achieved a cohesive identity that respects locality but strengthens the global brand. The result is an organization perceived as solid and professional in both German cities.\"",
-        backToProjects: "← Back to Projects"
-    },
+    kulturMetaDesc: "Unified visual identity and branding strategy for Kultur Atelier locations in Halle and Hamburg, Germany.",
+    backToHome: "← Back to Home",
+    backToProjects: "← Back to Projects",
+
+    kulturHeroTitle: "Kultur Atelier: Identity Without Borders",
+    kulturHeroSubtitle: "Visual standardization and brand strategy for locations in Halle and Hamburg.",
+    kulturHeroDesc: "A cohesive visual system for a multi-location cultural organization.",
+    kulturHeroClient: "Client: Kultur Atelier e.V.",
+    kulturHeroLocation: "Location: Halle & Hamburg",
+    kulturHeroServices: "Branding System",
+
+    kulturChallengeTitle: "The Challenge",
+    kulturChallengeDesc: "As activities expanded between Halle and Hamburg, Kultur Atelier suffered from critical fragmentation. Each location communicated differently, weakening the parent brand.",
+    kulturChallengeStat1Title: "2",
+    kulturChallengeStat1Label: "Locations in Germany",
+    kulturChallengeStat2Title: "100%",
+    kulturChallengeStat2Label: "Digital Identity",
+
+    kulturSolutionTitle: "The Solution",
+    kulturSolution1Title: "Liquid and Adaptive Identity",
+    kulturSolution1Desc: "We developed a flexible Brand Book. Watercolor textures unify the aesthetic while allowing local adaptations.",
+    kulturSolution2Title: "Tactical Deployment",
+    kulturSolution2Desc: "Graphic assets preserve hierarchy whether in Halle or Hamburg.",
+    kulturSolution3Title: "Extended Community",
+    kulturSolution3Desc: "Merchandising became the physical bridge between both communities.",
+
+    kulturCommunityTitle: "Extended Community",
+    kulturCommunityDesc: "Merchandising created a shared sense of belonging across cities.",
+    kulturMerchToteTitle: "Tote Bags",
+    kulturMerchToteDesc: "Portable identity design",
+    kulturMerchNotebookTitle: "Notebooks",
+    kulturMerchNotebookDesc: "Creativity with identity",
+    kulturMerchMugTitle: "Mugs",
+    kulturMerchMugDesc: "Moments of inspiration",
+
+    exploreMoreTitle: "Explore More Projects",
+    exploreMoreDesc: "Discover how we transform brands into memorable experiences",
+    viewAllCases: "View All Case Studies",
+
+    footerRights: "© 2024 Vanguard Crux. All rights reserved."
+  },
     es: {
         // Navigation
         navSolutions: "Servicios",
@@ -384,23 +408,54 @@ const translations = {
         footerCookies: "Política de Cookies",
 
         // Kultur Atelier Detail Page
-        kulturMetaTitle: "Caso de Estudio Kultur Atelier | Vanguard Crux",
-        kulturMetaDesc: "Identidad visual unificada y estrategia de marca para las ubicaciones de Kultur Atelier en Halle y Hamburgo, Alemania.",
-        backToHome: "← Volver al Inicio",
-        kulturHeroTitle: "Kultur Atelier: Identidad sin Fronteras",
-        kulturHeroSubtitle: "Estandarización visual y estrategia de marca para sedes en Halle y Hamburgo.",
-        kulturHeroMeta: "Cliente: Kultur Atelier e.V. | Ubicación: Halle y Hamburgo | Servicios: Sistema de Branding, Estrategia Multi-sede.",
-        kulturChallengeTitle: "El Reto de la Coherencia Regional",
-        kulturChallengeDesc: "Con actividades expandiéndose entre Halle y Hamburgo, Kultur Atelier sufría una fragmentación crítica. Cada sede comunicaba de forma distinta, diluyendo la fuerza de la marca matriz. El reto no era solo diseñar, sino crear un sistema que funcionara igual de bien para los conciertos en el sur que para los talleres en el norte.",
-        kulturSolutionTitle: "La Solución: Sistema Unificado",
-        kulturSolution1Title: "Identidad Líquida y Adaptable",
-        kulturSolution1Desc: "Desarrollamos un \"Brand Book\" flexible. Las texturas de acuarela unifican la estética pero permiten variaciones sutiles para adaptar la comunicación a la vibra local de cada ciudad sin perder la pertenencia al grupo.",
-        kulturSolution2Title: "Despliegue Táctico",
-        kulturSolution2Desc: "La implementación fue simultánea. Diseñamos piezas gráficas que mantienen la jerarquía visual independientemente de si el evento ocurre en la Seebener Straße de Halle o en el centro de Hamburgo.",
-        kulturSolution3Title: "Comunidad Extendida",
-        kulturSolution3Desc: "El merchandising (tote bags, tazas) se convirtió en el nexo de unión físico entre los miembros de ambas comunidades, creando un sentido de pertenencia compartido.",
-        kulturResultsQuote: "\"Logramos una identidad cohesiva que respeta la localidad pero fortalece la marca global. El resultado es una organización que se percibe sólida y profesional en ambas ciudades alemanas.\"",
-        backToProjects: "← Volver a Proyectos"
+        // Meta
+    kulturMetaTitle: "Caso de Estudio Kultur Atelier | Vanguard Crux",
+    kulturMetaDesc: "Identidad visual unificada y estrategia de marca para las ubicaciones de Kultur Atelier en Halle y Hamburgo, Alemania.",
+    backToHome: "← Volver al Inicio",
+    backToProjects: "← Volver a Proyectos",
+
+    // Hero
+    kulturHeroTitle: "Kultur Atelier: Identidad sin Fronteras",
+    kulturHeroSubtitle: "Estandarización visual y estrategia de marca para sedes en Halle y Hamburgo.",
+    kulturHeroDesc: "Sistema visual coherente para una organización cultural multi-sede.",
+    kulturHeroClient: "Cliente: Kultur Atelier e.V.",
+    kulturHeroLocation: "Ubicación: Halle y Hamburgo",
+    kulturHeroServices: "Sistema de Branding",
+
+    // Challenge
+    kulturChallengeTitle: "El Desafío",
+    kulturChallengeDesc: "Con actividades expandiéndose entre Halle y Hamburgo, Kultur Atelier sufría una fragmentación crítica. Cada sede comunicaba de forma distinta, diluyendo la fuerza de la marca matriz.",
+    kulturChallengeStat1Title: "2",
+    kulturChallengeStat1Label: "Sedes en Alemania",
+    kulturChallengeStat2Title: "100%",
+    kulturChallengeStat2Label: "Identidad Digital",
+
+    // Solution
+    kulturSolutionTitle: "La Solución",
+    kulturSolution1Title: "Identidad Líquida y Adaptativa",
+    kulturSolution1Desc: "Desarrollamos un Brand Book flexible. Las texturas acuareladas unifican la estética permitiendo variaciones locales sin perder pertenencia.",
+    kulturSolution2Title: "Despliegue Táctico",
+    kulturSolution2Desc: "Las piezas gráficas mantienen jerarquía visual tanto en Halle como en Hamburgo.",
+    kulturSolution3Title: "Comunidad Extendida",
+    kulturSolution3Desc: "El merchandising actúa como nexo físico entre ambas comunidades.",
+
+    // Community / Merch
+    kulturCommunityTitle: "Comunidad Extendida",
+    kulturCommunityDesc: "El merchandising se convirtió en el vínculo físico entre los miembros de ambas ciudades.",
+    kulturMerchToteTitle: "Tote Bags",
+    kulturMerchToteDesc: "Diseño portátil de la identidad",
+    kulturMerchNotebookTitle: "Libretas",
+    kulturMerchNotebookDesc: "Creatividad con identidad",
+    kulturMerchMugTitle: "Tazas",
+    kulturMerchMugDesc: "Momentos de inspiración",
+
+    // Navigation
+    exploreMoreTitle: "Explora Más Proyectos",
+    exploreMoreDesc: "Descubre cómo transformamos marcas en experiencias memorables",
+    viewAllCases: "Ver Todos los Casos",
+
+    // Footer
+    footerRights: "© 2024 Vanguard Crux. Todos los derechos reservados."
     },
     pt: {
         // Navigation
@@ -495,24 +550,48 @@ const translations = {
         footerCookies: "Política de Cookies",
 
         // Kultur Atelier Detail Page
-        kulturMetaTitle: "Caso de Estudo Kultur Atelier | Vanguard Crux",
-        kulturMetaDesc: "Identidade visual unificada e estratégia de marca para as localizações de Kultur Atelier em Halle e Hamburgo, Alemanha.",
-        backToHome: "← Voltar ao Início",
-        kulturHeroTitle: "Kultur Atelier: Identidade Sem Fronteiras",
-        kulturHeroSubtitle: "Padronização visual e estratégia de marca para localizações em Halle e Hamburgo.",
-        kulturHeroMeta: "Cliente: Kultur Atelier e.V. | Localização: Halle e Hamburgo | Serviços: Sistema de Branding, Estratégia Multi-localização.",
-        kulturChallengeTitle: "O Desafio da Coerência Regional",
-        kulturChallengeDesc: "Com atividades expandindo-se entre Halle e Hamburgo, Kultur Atelier sofria de fragmentação crítica. Cada localização comunicava de forma diferente, diluindo a força da marca principal. O desafio não era apenas desenhar, mas criar um sistema que funcionasse igualmente bem para os concertos no sul como para os workshops no norte.",
-        kulturSolutionTitle: "A Solução: Sistema Unificado",
-        kulturSolution1Title: "Identidade Líquida e Adaptável",
-        kulturSolution1Desc: "Desenvolvemos um \"Brand Book\" flexível. As texturas de aquarela unificam a estética mas permitem variações subtis para adaptar a comunicação à vibração local de cada cidade sem perder o sentimento de pertença ao grupo.",
-        kulturSolution2Title: "Implementação Tática",
-        kulturSolution2Desc: "A implementação foi simultânea. Desenhamos peças gráficas que mantêm a hierarquia visual independentemente de o evento ocorrer na Seebener Straße em Halle ou no centro de Hamburgo.",
-        kulturSolution3Title: "Comunidade Estendida",
-        kulturSolution3Desc: "O merchandising (tote bags, canecas) tornou-se o elo físico entre os membros de ambas as comunidades, criando um sentido de pertença partilhado.",
-        kulturResultsQuote: "\"Alcançamos uma identidade coesa que respeita a localidade mas fortalece a marca global. O resultado é uma organização percebida como sólida e profissional em ambas as cidades alemãs.\"",
-        backToProjects: "← Voltar aos Projetos"
-    }
+         kulturMetaTitle: "Estudo de Caso Kultur Atelier | Vanguard Crux",
+    kulturMetaDesc: "Identidade visual unificada e estratégia de marca para as localizações da Kultur Atelier em Halle e Hamburgo, Alemanha.",
+    backToHome: "← Voltar ao Início",
+    backToProjects: "← Voltar aos Projetos",
+
+    kulturHeroTitle: "Kultur Atelier: Identidade Sem Fronteiras",
+    kulturHeroSubtitle: "Padronização visual e estratégia de marca para unidades em Halle e Hamburgo.",
+    kulturHeroDesc: "Sistema visual coeso para uma organização cultural multi-local.",
+    kulturHeroClient: "Cliente: Kultur Atelier e.V.",
+    kulturHeroLocation: "Localização: Halle e Hamburgo",
+    kulturHeroServices: "Sistema de Branding",
+
+    kulturChallengeTitle: "O Desafio",
+    kulturChallengeDesc: "Com a expansão entre Halle e Hamburgo, a Kultur Atelier enfrentava uma fragmentação crítica. Cada unidade comunicava de forma diferente.",
+    kulturChallengeStat1Title: "2",
+    kulturChallengeStat1Label: "Unidades na Alemanha",
+    kulturChallengeStat2Title: "100%",
+    kulturChallengeStat2Label: "Identidade Digital",
+
+    kulturSolutionTitle: "A Solução",
+    kulturSolution1Title: "Identidade Líquida e Adaptável",
+    kulturSolution1Desc: "Criámos um Brand Book flexível. Texturas em aquarela unificam a estética com adaptação local.",
+    kulturSolution2Title: "Implementação Tática",
+    kulturSolution2Desc: "As peças mantêm hierarquia visual tanto em Halle como em Hamburgo.",
+    kulturSolution3Title: "Comunidade Estendida",
+    kulturSolution3Desc: "O merchandising tornou-se o elo físico entre as comunidades.",
+
+    kulturCommunityTitle: "Comunidade Estendida",
+    kulturCommunityDesc: "O merchandising criou um sentimento de pertença partilhado.",
+    kulturMerchToteTitle: "Sacos Tote",
+    kulturMerchToteDesc: "Identidade portátil",
+    kulturMerchNotebookTitle: "Cadernos",
+    kulturMerchNotebookDesc: "Criatividade com identidade",
+    kulturMerchMugTitle: "Canecas",
+    kulturMerchMugDesc: "Momentos de inspiração",
+
+    exploreMoreTitle: "Explorar Mais Projetos",
+    exploreMoreDesc: "Descobre como transformamos marcas em experiências memoráveis",
+    viewAllCases: "Ver Todos os Projetos",
+
+    footerRights: "© 2024 Vanguard Crux. Todos os direitos reservados."
+  }
 }
 
 /* =========================================================
