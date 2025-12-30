@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="fintechMetaTitle">Caso de Estudio Business Case Analyzer Pro | Vanguard Crux</title>
+    <meta name="description" data-lang="fintechMetaDesc" content="Arquitectura de modelado financiero algorítmico con cálculos de VPN, ROI y TIR de latencia cero. Fintech SaaS AI-ready construido con Vanilla JS.">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+                
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn active">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors" data-lang="backToHome">← Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Immersive -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/Fintech/fintech-hero-ui.webp" alt="" class="w-full h-full object-cover opacity-40 blur-sm" loading="eager" fetchpriority="high">
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r bg-clip-text text-transparent">
+                Business Case Analyzer Pro
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">
+                Estrategia Algorítmica
+            </p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Modelado financiero con privacidad primero, con cálculos instantáneos de VPN, TIR y ROI. Sin dependencias del servidor, 100% inteligencia del lado del cliente.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Fintech SaaS</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Arquitectura AI-Ready</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Vanilla JS + Chart.js</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section - Asymmetric 4/8 -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <!-- Left Column - Sticky -->
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">El Desafío</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Los ejecutivos necesitan tomar decisiones financieras rápidas, pero las herramientas tradicionales son lentas, requieren conexiones al servidor y exponen datos sensibles. El análisis de casos de negocio típicamente requiere APIs externas u hojas de cálculo complejas. No existía una solución que priorice la privacidad para cálculos instantáneos de ROI/VPN/TIR.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">&lt;50ms</div>
+                            <div class="text-sm text-gray-400">Latencia de Cálculo</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">0</div>
+                            <div class="text-sm text-gray-400">Dependencias del Servidor</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                            <div class="text-sm text-gray-400">Privacidad del Cliente</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column - Image -->
+                <div class="col-span-12 lg:col-span-8">
+                    <img src="assets/images/Fintech/fintech-mobile-grid.webp" alt="Interfaz Móvil del Analizador de Casos de Negocio" class="w-full h-auto rounded-2xl shadow-2xl" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section - Bento Grid -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">La Solución</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Inteligencia Desacoplada</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Método de Newton-Raphson</h4>
+                        <p class="text-gray-300">Búsqueda iterativa de raíces para el cálculo preciso de TIR con convergencia O(log n).</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Vanilla JS Reactivo</h4>
+                        <p class="text-gray-300">Sin frameworks pesados, puro ES6+ con manipulación quirúrgica del DOM.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Privacidad Local Primero</h4>
+                        <p class="text-gray-300">Todos los datos financieros procesados del lado del cliente, sin comunicación con el servidor.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Sistema de Guía Contextual</h4>
+                        <p class="text-gray-300">UX educativa integrada con evaluación de calidad de campo en tiempo real.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-12 gap-4 auto-rows-fr">
+                <!-- Cell 1 - Tall -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-5 row-span-2 overflow-hidden rounded-2xl bg-dark group">
+                    <img src="assets/images/Fintech/fintech-code-snippet.webp" alt="Implementación del Núcleo Financiero" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                </div>
+                <!-- Cell 2 - Wide -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-7 overflow-hidden rounded-2xl bg-dark group">
+                    <img src="assets/images/Fintech/fintech-hero-ui.webp" alt="Interfaz de la Aplicación" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                </div>
+                <!-- Cell 3 - Square -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 overflow-hidden rounded-2xl bg-dark group">
+                    <img src="assets/images/Fintech/fintech-pdf-export.webp" alt="Función de Exportación PDF" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                </div>
+                <!-- Cell 4 - Detail -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-3 overflow-hidden rounded-2xl bg-dark group">
+                    <img src="assets/images/Fintech/fintech-mobile-grid.webp" alt="Diseño Responsivo Móvil" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="transform -rotate-2 shadow-2xl rounded-2xl overflow-hidden">
+                        <img src="assets/images/Fintech/fintech-code-snippet.webp" alt="Detalle de Implementación del Código" class="w-full h-auto" loading="lazy">
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl sm:text-4xl font-bold mb-6 text-accent">Implementación Técnica</h3>
+                    <ul class="space-y-4 text-lg text-gray-300">
+                        <li><strong class="text-accent">Núcleo Financiero:</strong> Cálculos de VPN, TIR, ROI con precisión de Newton-Raphson</li>
+                        <li><strong class="text-accent">Capa de IA Simulada:</strong> Motor de análisis estratégico (AI-Ready para integración LLM en producción)</li>
+                        <li><strong class="text-accent">Integración Chart.js:</strong> Visualizaciones interactivas para flujo de caja y rentabilidad</li>
+                        <li><strong class="text-accent">Motor jsPDF:</strong> Generación de PDF del lado del cliente con informes ejecutivos</li>
+                        <li><strong class="text-accent">Soporte Trilingüe:</strong> Implementación completa de i18n (EN/ES/PT)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Impacto y Resultados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-dark rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold text-accent mb-4">&lt;50ms</div>
+                    <div class="text-xl text-lightest mb-2">Tiempo de Cálculo</div>
+                    <p class="text-gray-400">vs. segundos con herramientas basadas en servidor</p>
+                </div>
+                <div class="bg-dark rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold text-accent mb-4">0 KB</div>
+                    <div class="text-xl text-lightest mb-2">Sobrecarga de Framework</div>
+                    <p class="text-gray-400">Implementación en Vanilla JS puro</p>
+                </div>
+                <div class="bg-dark rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold text-accent mb-4">100%</div>
+                    <div class="text-xl text-lightest mb-2">Compatibilidad de Navegadores</div>
+                    <p class="text-gray-400">Totalmente compatible con navegadores modernos</p>
+                </div>
+                <div class="bg-dark rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold text-accent mb-4">3</div>
+                    <div class="text-xl text-lightest mb-2">Idiomas</div>
+                    <p class="text-gray-400">Interfaz trilingüe (EN/ES/PT)</p>
+                </div>
+                <div class="bg-dark rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold text-accent mb-4">PWA</div>
+                    <div class="text-xl text-lightest mb-2">Lista</div>
+                    <p class="text-gray-400">Diseño responsivo para todos los dispositivos</p>
+                </div>
+                <div class="bg-dark rounded-2xl p-8 text-center">
+                    <div class="text-5xl font-bold text-accent mb-4">PDF</div>
+                    <div class="text-xl text-lightest mb-2">Exportación</div>
+                    <p class="text-gray-400">Informes ejecutivos del lado del cliente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-lightest">Experimenta la Aplicación en Vivo</h2>
+            <p class="text-xl text-gray-300 mb-8">Prueba el Business Case Analyzer Pro por ti mismo</p>
+            <a href="https://bussinesanalizer.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent text-dark px-12 py-5 rounded-lg font-bold text-xl transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                Lanzar Aplicación
+            </a>
+            <p class="text-sm text-gray-400 mt-6">Sin necesidad de registro • Trilingüe • Responsive móvil</p>
+        </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-lightest">Explora Más Proyectos</h2>
+            <p class="text-xl text-gray-300 mb-8">Descubre cómo transformamos marcas en experiencias memorables</p>
+            <a href="index.html#case-studies" class="inline-block bg-accent text-dark px-8 py-4 rounded-lg font-bold text-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                Ver Todos los Casos
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="font-display font-bold text-xl text-accent mb-2">Vanguard Crux</div>
+            <p class="text-gray-400 text-sm">© 2024 Vanguard Crux. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
