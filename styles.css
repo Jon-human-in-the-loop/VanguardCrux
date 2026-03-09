@@ -1138,13 +1138,15 @@ input:focus, textarea:focus {
     to { transform: rotate(360deg); }
 }
 /* Contenedor principal del footer */
-.grid.md\:grid-cols-4 {
-    display: grid; /* Usamos diseño grid para asegurar distribución horizontal */
-    grid-template-columns: repeat(4, 1fr); /* Distribuir columnas uniformemente */
-    gap: 2rem; /* Espaciado entre columnas */
-    justify-content: center; /* Centra las columnas dentro del contenedor */
-    align-items: flex-start; /* Asegura que todo comience correctamente alineado */
-    text-align: center; /* Asegura que el contenido esté centrado dentro de cada columna */
+@media (min-width: 768px) {
+    .grid.md\:grid-cols-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+    }
 }
 
 /* Estilo para las columnas del footer */
