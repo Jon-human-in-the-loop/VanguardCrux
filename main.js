@@ -200,11 +200,11 @@ const translations = {
         metaKeywords: "digital agency porto, ai marketing, business automation, performance marketing, growth agency portugal, marketing automation, digital strategy, seo agency",
 
         // Hero Section
-        heroTitle: 'The <span class="text-accent" data-pulse="true">global agency</span> that turns <span class="text-accent" data-pulse="true">data</span> into growth',
-        heroSlogan: "Unlock your unfair advantage",
-        heroTagline: "AI architecture. Creative minds solving the impossible.",
-        heroSubtitle: "We are Vanguard Crux, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.",
-        heroCTA: "Claim your free audit",
+        heroTitle: 'Scalable growth. <span class="text-accent" data-pulse="true">Personalized</span> attention',
+        heroSlogan: "Marketing & automation boutique",
+        heroTagline: "We're not a giant agency. We're your best competitive advantage.",
+        heroSubtitle: "We empower your business with AI and data without losing the human touch. We design systems that scale your sales with the exclusive attention your company deserves.",
+        heroCTA: "Let's discuss your growth",
 
         // Social Proof
         socialProof1: "Clients Successfully Helped",
@@ -391,11 +391,11 @@ const translations = {
         metaKeywords: "agencia digital oporto, marketing con ia, automatización empresarial, marketing de rendimiento, agencia de crecimiento portugal, automatización de marketing, estrategia digital, agencia seo",
 
         // Hero Section
-        heroTitle: 'La <span class="text-accent" data-pulse="true">agencia global</span> que convierte <span class="text-accent" data-pulse="true">datos</span> en crecimiento',
-        heroSlogan: "Desbloquea tu ventaja competitiva",
-        heroTagline: "Arquitectura de IA. Mentes creativas resolviendo lo imposible.",
-        heroSubtitle: "Somos Vanguard Crux, una agencia global de marketing de rendimiento. Implementamos estrategias de IA y automatización para darle a tu negocio una ventaja competitiva real en Portugal y más allá.",
-        heroCTA: "Reclama tu auditoría gratuita",
+        heroTitle: 'Crecimiento escalable. Atención <span class="text-accent" data-pulse="true">personalizada</span>',
+        heroSlogan: "Boutique de marketing & automatización",
+        heroTagline: "No somos una gran agencia. Somos tu mejor ventaja competitiva.",
+        heroSubtitle: "Potenciamos tu negocio con IA y datos, sin perder el toque humano. Diseñamos sistemas que escalan tus ventas con la atención exclusiva que tu empresa merece.",
+        heroCTA: "Hablemos de tu crecimiento",
 
         // Social Proof
         socialProof1: "Clientes Atendidos Exitosamente",
@@ -589,11 +589,11 @@ const translations = {
         metaKeywords: "agência digital porto, marketing com ia, automatização empresarial, marketing de desempenho, agência de crescimento portugal, automatização de marketing, estratégia digital, agência seo",
 
         // Hero Section
-        heroTitle: 'A <span class="text-accent" data-pulse="true">agência global</span> que transforma <span class="text-accent" data-pulse="true">dados</span> em crescimento',
-        heroSlogan: "Desbloqueie a sua vantagem injusta",
-        heroTagline: "Arquitetura de IA. Mentes criativas a resolver o impossível.",
-        heroSubtitle: "Somos a Vanguard Crux, uma agência global de marketing de desempenho. Implementamos estratégias de IA e automatização para dar ao seu negócio uma vantagem competitiva real em Portugal e além.",
-        heroCTA: "Reclame a seu auditoria gratuita",
+        heroTitle: 'Crescimento escalável. Atenção <span class="text-accent" data-pulse="true">personalizada</span>',
+        heroSlogan: "Boutique de marketing & automatização",
+        heroTagline: "Não somos uma grande agência. Somos a sua melhor vantagem competitiva.",
+        heroSubtitle: "Potenciamos o seu negócio com IA e dados, sem perder o toque humano. Desenhamos sistemas que escalam as suas vendas com a atenção exclusiva que a sua empresa merece.",
+        heroCTA: "Vamos falar sobre o seu crescimento",
 
         // Social Proof
         socialProof1: "Clientes Atendidos com Sucesso",
