@@ -518,41 +518,104 @@
     </div>
 </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="section-title mb-8" data-lang="aboutTitle">
-                        We think outside the box. We act inside your goals.
-                    </h2>
-                    <p class="text-xl text-gray-300 mb-8" data-lang="aboutSubtitle">
-                        Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Hamburg and Dubai, and has led us to establish our European hub in Porto.
-                    </p>
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="font-display font-bold text-lg mb-2" data-lang="aboutPillar1Title">Global perspective, local execution</h3>
-                            <p class="text-gray-300" data-lang="aboutPillar1Desc">Our team across continents allows us to apply the best global strategies with a deep understanding of the local market.</p>
+    <!-- About Section — Parallax Journey -->
+    <section id="about" class="about-journey-section">
+        <div class="about-journey-inner">
+            <!-- Left: Compact Text -->
+            <div class="about-journey-text" data-aos="fade-right">
+                <h2 class="section-title mb-4" data-lang="aboutTitle" style="font-size:1.8rem;line-height:1.2;">
+                    We think outside the box. We act inside your goals.
+                </h2>
+                <p class="text-gray-300 mb-5" data-lang="aboutSubtitle" style="font-size:0.95rem;line-height:1.6;">
+                    Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Hamburg and Dubai, and has led us to establish our European hub in Porto.
+                </p>
+                <div class="about-pillars">
+                    <div class="about-pillar">
+                        <h3 data-lang="aboutPillar1Title">Global perspective, local execution</h3>
+                        <p data-lang="aboutPillar1Desc">Our team across continents allows us to apply the best global strategies with a deep understanding of the local market.</p>
+                    </div>
+                    <div class="about-pillar">
+                        <h3 data-lang="aboutPillar2Title">AI at the core</h3>
+                        <p data-lang="aboutPillar2Desc">We use AI and automation not as an add-on, but as the central engine to optimize every marketing process and decision.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Parallax Journey Map -->
+            <div class="about-journey-visual" data-aos="fade-left">
+                <!-- Parallax background layer (stars / grid) -->
+                <div class="parallax-layer parallax-bg" data-speed="0.15">
+                    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="parallax-grid-svg">
+                        <defs>
+                            <pattern id="grid-dots" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <circle cx="20" cy="20" r="1" fill="rgba(100,255,218,0.12)"/>
+                            </pattern>
+                        </defs>
+                        <rect width="400" height="400" fill="url(#grid-dots)"/>
+                    </svg>
+                </div>
+
+                <!-- Parallax mid layer (route path) -->
+                <div class="parallax-layer parallax-mid" data-speed="0.35">
+                    <svg viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg" class="journey-route-svg">
+                        <path class="journey-path" d="M 60 280 C 100 250, 130 180, 180 160 S 260 100, 300 80 S 350 60, 340 50" stroke="url(#route-gradient)" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+                        <defs>
+                            <linearGradient id="route-gradient" x1="60" y1="280" x2="340" y2="50">
+                                <stop offset="0%" stop-color="rgba(100,255,218,0.2)"/>
+                                <stop offset="100%" stop-color="rgba(100,255,218,0.8)"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Parallax front layer (location pins) -->
+                <div class="parallax-layer parallax-front" data-speed="0.6">
+                    <!-- Argentina -->
+                    <div class="journey-pin" style="bottom:18%;left:10%;" data-delay="0">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-dot"></div>
+                        <div class="pin-label">
+                            <span class="pin-flag">🇦🇷</span>
+                            <span class="pin-city">Argentina</span>
+                            <span class="pin-year">2015</span>
                         </div>
-                        <div>
-                            <h3 class="font-display font-bold text-lg mb-2" data-lang="aboutPillar2Title">AI at the core</h3>
-                            <p class="text-gray-300" data-lang="aboutPillar2Desc">We use AI and automation not as an add-on, but as the central engine to optimize every marketing process and decision.</p>
+                    </div>
+                    <!-- Germany -->
+                    <div class="journey-pin" style="bottom:48%;left:38%;" data-delay="200">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-dot"></div>
+                        <div class="pin-label">
+                            <span class="pin-flag">🇩🇪</span>
+                            <span class="pin-city">Germany</span>
+                            <span class="pin-year">2019</span>
+                        </div>
+                    </div>
+                    <!-- Dubai -->
+                    <div class="journey-pin" style="bottom:62%;left:62%;" data-delay="400">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-dot"></div>
+                        <div class="pin-label">
+                            <span class="pin-flag">🇦🇪</span>
+                            <span class="pin-city">Dubai</span>
+                            <span class="pin-year">2022</span>
+                        </div>
+                    </div>
+                    <!-- Porto (current — highlighted) -->
+                    <div class="journey-pin journey-pin--current" style="bottom:78%;left:82%;" data-delay="600">
+                        <div class="pin-pulse pin-pulse--current"></div>
+                        <div class="pin-dot pin-dot--current"></div>
+                        <div class="pin-label pin-label--current">
+                            <span class="pin-flag">🇵🇹</span>
+                            <span class="pin-city">Porto</span>
+                            <span class="pin-year" data-lang="aboutPinNow" style="color:var(--accent);">Now</span>
                         </div>
                     </div>
                 </div>
-                <div class="relative" data-aos="fade-left">
-                    <div class="aspect-square bg-gradient-to-br from-accent to-blue-400 rounded-full opacity-20 absolute inset-0"></div>
-                    <div class="relative z-10 aspect-square bg-dark rounded-lg flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="w-24 h-24 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-12 h-12 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                            </div>
-                            <div class="font-display font-bold text-xl text-accent">Vanguard Crux</div>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- Floating particle accents -->
+                <div class="journey-particle" style="top:20%;left:25%;animation-delay:0s;"></div>
+                <div class="journey-particle" style="top:40%;left:55%;animation-delay:1.5s;"></div>
+                <div class="journey-particle" style="top:65%;left:75%;animation-delay:3s;"></div>
             </div>
         </div>
     </section>

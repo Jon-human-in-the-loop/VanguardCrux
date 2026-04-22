@@ -297,6 +297,7 @@ const translations = {
         aboutPillar1Desc: "Our team across continents allows us to apply the best global strategies with a deep understanding of the local market.",
         aboutPillar2Title: "AI at the core",
         aboutPillar2Desc: "We use AI and automation not as an add-on, but as the central engine to optimize every marketing process and decision.",
+        aboutPinNow: "Now",
 
         // Team Section
         teamTitle: "Meet the Founders",
@@ -491,6 +492,7 @@ const translations = {
         aboutPillar1Desc: "Nuestro equipo a través de continentes nos permite aplicar las mejores estrategias globales con un profundo conocimiento del mercado local.",
         aboutPillar2Title: "IA en el núcleo",
         aboutPillar2Desc: "Usamos IA y automatización no como un complemento, sino como el motor central para optimizar cada proceso y decisión de marketing.",
+        aboutPinNow: "Ahora",
 
         // Team Section
         teamTitle: "Conoce a los Fundadores",
@@ -692,6 +694,7 @@ const translations = {
         aboutPillar1Desc: "A nossa equipa em continentes permite-nos aplicar as melhores estratégias globais com um profundo conhecimento do mercado local.",
         aboutPillar2Title: "IA no núcleo",
         aboutPillar2Desc: "Usamos IA e automatização não como um complemento, mas como o motor central para otimizar cada processo e decisão de marketing.",
+        aboutPinNow: "Agora",
 
         // Team Section
         teamTitle: "Conheça os Fundadores",
@@ -928,6 +931,47 @@ function initFintechCaseCard() {
 }
 
 /* =========================================================
+   ABOUT — PARALLAX JOURNEY
+   ========================================================= */
+
+function initJourneyParallax() {
+    const section = document.querySelector('.about-journey-visual');
+    if (!section) return;
+
+    const layers = section.querySelectorAll('.parallax-layer');
+    let ticking = false;
+
+    function updateParallax() {
+        const rect = section.getBoundingClientRect();
+        const windowH = window.innerHeight;
+
+        // Only compute when section is in viewport
+        if (rect.bottom < 0 || rect.top > windowH) { ticking = false; return; }
+
+        // Progress: 0 when section enters bottom, 1 when it exits top
+        const progress = 1 - (rect.bottom / (windowH + rect.height));
+
+        layers.forEach(layer => {
+            const speed = parseFloat(layer.dataset.speed) || 0.2;
+            const yOffset = (progress - 0.5) * 80 * speed; // subtle vertical shift
+            layer.style.transform = `translateY(${yOffset}px)`;
+        });
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Initial call
+    updateParallax();
+}
+
+/* =========================================================
    INIT
    ========================================================= */
 
@@ -937,6 +981,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLegalLinks();
     initKulturAtelierCard();
     initFintechCaseCard();
+    initJourneyParallax();
 
     const detectedLang = detectBrowserLanguage();
 
@@ -946,4 +991,3 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Language applied to full DOM:', detectedLang);
     });
 });
-
