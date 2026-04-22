@@ -292,7 +292,7 @@ const translations = {
 
         // About Section
         aboutTitle: "We think outside the box. We act inside your goals",
-        aboutSubtitle: "Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Hamburg and Dubai, and has led us to establish our European hub in Porto.",
+        aboutSubtitle: "Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Germany, Dubai, Portugal, and Argentina, ultimately leading us to establish our European hub in Porto.",
         aboutPillar1Title: "Global perspective, local execution",
         aboutPillar1Desc: "Our team across continents allows us to apply the best global strategies with a deep understanding of the local market.",
         aboutPillar2Title: "AI at the core",
@@ -486,7 +486,7 @@ const translations = {
 
         // About Section
         aboutTitle: "Pensamos fuera de la caja. Actuamos dentro de tus objetivos",
-        aboutSubtitle: "Nuestra historia es una sin fronteras. Nacidos de la colaboración de expertos digitales en Argentina, desde Paraná hasta Mendoza, nuestro viaje nos ha llevado a desarrollar proyectos en Hamburgo y Dubái, y nos ha conducido a establecer nuestro centro europeo en Oporto.",
+        aboutSubtitle: "Nuestra historia no tiene fronteras. Nacidos de la colaboración de expertos digitales en Argentina, desde Paraná hasta Mendoza, nuestro viaje nos ha llevado a desarrollar proyectos en Alemania, Dubái, Portugal y Argentina, estableciendo finalmente nuestro centro europeo en Oporto.",
         aboutPillar1Title: "Perspectiva global, ejecución local",
         aboutPillar1Desc: "Nuestro equipo a través de continentes nos permite aplicar las mejores estrategias globales con un profundo conocimiento del mercado local.",
         aboutPillar2Title: "IA en el núcleo",
@@ -687,7 +687,7 @@ const translations = {
 
         // About Section
         aboutTitle: "Pensamos fora da caixa. Agimos dentro dos seus objetivos",
-        aboutSubtitle: "A nossa história é sem fronteiras. Nascidos da colaboração de especialistas digitais em toda a Argentina, de Paraná a Mendoza, a nossa jornada levou-nos a desenvolver projetos em Hamburgo e Dubai, e conduziu-nos a estabelecer o nosso centro europeu no Porto.",
+        aboutSubtitle: "A nossa história não tem fronteiras. Nascidos da colaboração de especialistas digitais em toda a Argentina, de Paraná a Mendoza, a nossa jornada levou-nos a desenvolver projetos na Alemanha, Dubai, Portugal e Argentina, estabelecendo finalmente o nosso centro europeu no Porto.",
         aboutPillar1Title: "Perspetiva global, execução local",
         aboutPillar1Desc: "A nossa equipa em continentes permite-nos aplicar as melhores estratégias globais com um profundo conhecimento do mercado local.",
         aboutPillar2Title: "IA no núcleo",
