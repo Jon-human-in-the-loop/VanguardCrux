@@ -85,6 +85,8 @@
                 <nav class="mobile-nav-links">
                     <a href="#philosophy" class="menu-link" data-lang="navPhilosophy">Our approach</a>
                     <a href="#solutions" class="menu-link" data-lang="navSolutions">Services</a>
+                    <a href="#testimonials" class="menu-link" data-lang="navTestimonials">Testimonials</a>
+                    <a href="#pricing" class="menu-link" data-lang="navPricing">Pricing</a>
                     <a href="#case-studies" class="menu-link" data-lang="navCaseStudies">Projects</a>
                     <a href="#about" class="menu-link" data-lang="navAbout">About Us</a>
                     <a href="#team" class="menu-link" data-lang="navTeam">The team</a>
@@ -138,6 +140,37 @@
         </div>
     </section>
 
+    <!-- Social Proof Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-dark to-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <!-- Stat 1: Clients -->
+                <div class="space-y-2">
+                    <div class="text-4xl font-display font-bold text-accent">4-5</div>
+                    <p class="text-gray-300" data-lang="socialProof1">Clients Successfully Helped</p>
+                </div>
+
+                <!-- Stat 2: Projects -->
+                <div class="space-y-2">
+                    <div class="text-4xl font-display font-bold text-accent">10+</div>
+                    <p class="text-gray-300" data-lang="socialProof2">Projects Completed</p>
+                </div>
+
+                <!-- Stat 3: Global Presence -->
+                <div class="space-y-2">
+                    <div class="text-4xl font-display font-bold text-accent">5+</div>
+                    <p class="text-gray-300" data-lang="socialProof3">Countries Served</p>
+                </div>
+
+                <!-- Stat 4: Expertise -->
+                <div class="space-y-2">
+                    <div class="text-4xl font-display font-bold text-accent">15+</div>
+                    <p class="text-gray-300" data-lang="socialProof4">Years Combined Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Philosophy Section -->
     <section id="philosophy" class="py-20 px-4 sm:px-6 lg:px-8 relative">
         <!-- Wave Transition -->
@@ -157,6 +190,11 @@
             <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-lang="philosophyDesc">
                 Our success is measured by your increased revenue. We focus on implementing performance marketing and automation that delivers a clear ROI, ensuring our collaboration is a profitable long-term investment.
             </p>
+            <div class="mt-8">
+                <a href="#contact" class="btn-primary inline-block magnetic-element" data-lang="philosophyCTA">
+                    Start Your Growth Journey
+                </a>
+            </div>
         </div>
     </section>
 
@@ -181,9 +219,14 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                         </svg>
                     </div>
-                    <div class="service-content">
-                        <h3 class="font-display font-bold text-xl mb-4" data-lang="sol1Title">Performance marketing & SEO</h3>
-                        <p class="text-gray-300" data-lang="sol1Desc">We attract and convert high-value customers with data-driven SEO and paid media campaigns on Meta & Google, focused on maximizing your ROI.</p>
+                    <div class="service-content flex flex-col h-full">
+                        <div>
+                            <h3 class="font-display font-bold text-xl mb-4" data-lang="sol1Title">Performance marketing & SEO</h3>
+                            <p class="text-gray-300" data-lang="sol1Desc">We attract and convert high-value customers with data-driven SEO and paid media campaigns on Meta & Google, focused on maximizing your ROI.</p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#contact" class="text-accent hover:text-white transition-colors font-semibold" data-lang="learnMore">Learn More →</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -194,12 +237,17 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                     </div>
-                    <div class="service-content">
-                        <h3 class="font-display font-bold text-xl mb-4" data-lang="sol2Title">AI & Business automation</h3>
-                        <p class="text-gray-300" data-lang="sol2Desc">We optimize your operations with custom AI assistants and process automation (Make/N8N) to increase efficiency and reduce costs.</p>
+                    <div class="service-content flex flex-col h-full">
+                        <div>
+                            <h3 class="font-display font-bold text-xl mb-4" data-lang="sol2Title">AI & Business automation</h3>
+                            <p class="text-gray-300" data-lang="sol2Desc">We optimize your operations with custom AI assistants and process automation (Make/N8N) to increase efficiency and reduce costs.</p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#contact" class="text-accent hover:text-white transition-colors font-semibold" data-lang="learnMore">Learn More →</a>
+                        </div>
                     </div>
                 </div>
-                
+
                 <!-- Service 3 -->
                 <div class="service-card p-8 rounded-lg hover-lift magnetic-element" data-service-card>
                     <div class="service-icon w-16 h-16 bg-accent bg-opacity-20 rounded-full flex items-center justify-center mb-6">
@@ -207,17 +255,203 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
                         </svg>
                     </div>
-                    <div class="service-content">
-                        <h3 class="font-display font-bold text-xl mb-4" data-lang="sol3Title">Branding & Content strategy</h3>
-                        <p class="text-gray-300" data-lang="sol3Desc">We build memorable brands that connect with their audience. Includes visual identity design and high-performance content marketing strategies.</p>
+                    <div class="service-content flex flex-col h-full">
+                        <div>
+                            <h3 class="font-display font-bold text-xl mb-4" data-lang="sol3Title">Branding & Content strategy</h3>
+                            <p class="text-gray-300" data-lang="sol3Desc">We build memorable brands that connect with their audience. Includes visual identity design and high-performance content marketing strategies.</p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#contact" class="text-accent hover:text-white transition-colors font-semibold" data-lang="learnMore">Learn More →</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Geometric Shapes -->
         <div class="geometric-shape circle animate-float" style="top: 20%; right: 5%;"></div>
         <div class="geometric-shape square animate-spin-slow" style="bottom: 30%; left: 8%;"></div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="section-title mb-4" data-lang="testimonialsTitle">
+                    Clients & Results
+                </h2>
+                <p class="text-xl text-gray-300" data-lang="testimonialsSubtitle">
+                    Real stories from businesses we've transformed
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-light-navy p-6 rounded-lg hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dark font-bold">CM</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-white">Cliente A</p>
+                            <p class="text-sm text-gray-400">E-commerce Business</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "VanguardCrux helped us automate our entire sales pipeline. The results spoke for themselves."
+                    </p>
+                    <p class="text-accent font-semibold">+180% Sales Growth</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-light-navy p-6 rounded-lg hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dark font-bold">TA</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-white">Cliente B</p>
+                            <p class="text-sm text-gray-400">SaaS Startup</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "Their AI strategy transformed how we engage with customers. Incredibly professional team."
+                    </p>
+                    <p class="text-accent font-semibold">+240% Lead Quality</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-light-navy p-6 rounded-lg hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dark font-bold">RF</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-white">Cliente C</p>
+                            <p class="text-sm text-gray-400">B2B Services</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "We saved thousands in operational costs thanks to their automation solutions."
+                    </p>
+                    <p class="text-accent font-semibold">€50K Monthly Savings</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-light-navy p-6 rounded-lg hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-dark font-bold">MG</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-white">Cliente D</p>
+                            <p class="text-sm text-gray-400">Digital Agency</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "Outstanding strategic guidance. They truly understand the Portuguese market."
+                    </p>
+                    <p class="text-accent font-semibold">+320% Campaign ROI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="section-title mb-4" data-lang="pricingTitle">
+                    Packages & Pricing
+                </h2>
+                <p class="text-xl text-gray-300" data-lang="pricingSubtitle">
+                    Flexible plans tailored to your business needs. All include a free consultation.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Plan 1: Starter -->
+                <div class="bg-dark border border-gray-700 p-8 rounded-lg hover-lift transform hover:scale-105 transition-transform">
+                    <h3 class="font-display font-bold text-2xl mb-2" data-lang="pricingPlan1">Automation Starter</h3>
+                    <p class="text-accent text-sm mb-6" data-lang="pricingPlan1Desc">Perfect for small businesses</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-accent">500€</span>
+                        <span class="text-gray-400 ml-2">- 2,000€</span>
+                        <p class="text-sm text-gray-400 mt-2">Project-based</p>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Simple automation setup
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Email automation
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Lead management tools
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-primary w-full text-center block" data-lang="pricingCTA">Get Started</a>
+                </div>
+
+                <!-- Plan 2: Professional -->
+                <div class="bg-dark border-2 border-accent p-8 rounded-lg hover-lift transform hover:scale-105 transition-transform relative">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <span class="bg-accent text-dark px-4 py-1 rounded-full text-sm font-bold" data-lang="pricingPopular">Most Popular</span>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-2" data-lang="pricingPlan2">Professional Growth</h3>
+                    <p class="text-accent text-sm mb-6" data-lang="pricingPlan2Desc">For scaling teams</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-accent">1,500€</span>
+                        <span class="text-gray-400 ml-2">- 6,000€</span>
+                        <p class="text-sm text-gray-400 mt-2">Per project</p>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Multi-system integration (CRM, email, etc.)
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            AI chatbots & customer support
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            30-day support & optimization
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-primary w-full text-center block" data-lang="pricingCTA">Request Demo</a>
+                </div>
+
+                <!-- Plan 3: Enterprise -->
+                <div class="bg-dark border border-gray-700 p-8 rounded-lg hover-lift transform hover:scale-105 transition-transform">
+                    <h3 class="font-display font-bold text-2xl mb-2" data-lang="pricingPlan3">Enterprise Solutions</h3>
+                    <p class="text-accent text-sm mb-6" data-lang="pricingPlan3Desc">Custom & unlimited</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-accent">5,000€+</span>
+                        <span class="text-gray-400 ml-2"></span>
+                        <p class="text-sm text-gray-400 mt-2">Custom pricing</p>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Full business transformation
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Dedicated account manager
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            Ongoing optimization & support
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-primary w-full text-center block" data-lang="pricingCTA">Contact Us</a>
+                </div>
+            </div>
+        </div>
     </section>
 
    <!-- Case Studies Section -->
@@ -300,61 +534,6 @@
                         <p class="text-gray-300" data-lang="case5Desc">Implemented comprehensive SEO and content marketing strategy that drove 300% organic traffic growth and established thought leadership in the Portuguese tech ecosystem.</p>
                     </div>
                 </div>
-                
-                <!-- Coming Soon 1 -->
-                <div class="swiper-slide">
-                    <div class="bg-light-navy p-8 rounded-lg h-full border-2 border-dashed border-gray-600">
-                        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-6 flex items-center justify-center">
-                            <span class="text-gray-400 font-display font-bold text-2xl">?</span>
-                        </div>
-                        <h3 class="font-display font-bold text-xl mb-4 text-gray-400">Coming Soon</h3>
-                        <p class="text-gray-500">New exciting project coming soon. Stay tuned for updates.</p>
-                    </div>
-                </div>
-                
-                <!-- Coming Soon 2 -->
-                <div class="swiper-slide">
-                    <div class="bg-light-navy p-8 rounded-lg h-full border-2 border-dashed border-gray-600">
-                        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-6 flex items-center justify-center">
-                            <span class="text-gray-400 font-display font-bold text-2xl">?</span>
-                        </div>
-                        <h3 class="font-display font-bold text-xl mb-4 text-gray-400">Coming Soon</h3>
-                        <p class="text-gray-500">New exciting project coming soon. Stay tuned for updates.</p>
-                    </div>
-                </div>
-                
-                <!-- Coming Soon 3 -->
-                <div class="swiper-slide">
-                    <div class="bg-light-navy p-8 rounded-lg h-full border-2 border-dashed border-gray-600">
-                        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-6 flex items-center justify-center">
-                            <span class="text-gray-400 font-display font-bold text-2xl">?</span>
-                        </div>
-                        <h3 class="font-display font-bold text-xl mb-4 text-gray-400">Coming Soon</h3>
-                        <p class="text-gray-500">New exciting project coming soon. Stay tuned for updates.</p>
-                    </div>
-                </div>
-                
-                <!-- Coming Soon 4 -->
-                <div class="swiper-slide">
-                    <div class="bg-light-navy p-8 rounded-lg h-full border-2 border-dashed border-gray-600">
-                        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-6 flex items-center justify-center">
-                            <span class="text-gray-400 font-display font-bold text-2xl">?</span>
-                        </div>
-                        <h3 class="font-display font-bold text-xl mb-4 text-gray-400">Coming Soon</h3>
-                        <p class="text-gray-500">New exciting project coming soon. Stay tuned for updates.</p>
-                    </div>
-                </div>
-                
-                <!-- Coming Soon 5 -->
-                <div class="swiper-slide">
-                    <div class="bg-light-navy p-8 rounded-lg h-full border-2 border-dashed border-gray-600">
-                        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-6 flex items-center justify-center">
-                            <span class="text-gray-400 font-display font-bold text-2xl">?</span>
-                        </div>
-                        <h3 class="font-display font-bold text-xl mb-4 text-gray-400">Coming Soon</h3>
-                        <p class="text-gray-500">New exciting project coming soon. Stay tuned for updates.</p>
-                    </div>
-                </div>
             </div>
             <div class="swiper-pagination mt-8"></div>
         </div>
@@ -402,8 +581,8 @@
 <!-- Team Section - 360° Interactive Team Videos -->
     <section class="helix-team-360" id="team">
         <div class="container">
-            <h2 class="section-title" data-lang="teamTitle">Meet the Vanguard Crux team</h2>
-            <p class="section-subtitle" data-lang="teamSubtitle">Experience our team in 360° - Interactive Innovation</p>
+            <h2 class="section-title" data-lang="teamTitle">Meet our Founders</h2>
+            <p class="section-subtitle" data-lang="teamSubtitle">Visionary leaders driving innovation at Vanguard Crux</p>
             
             <div class="team-360-grid">
                 <!-- Jon Flores -->
