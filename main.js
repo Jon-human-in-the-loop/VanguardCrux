@@ -216,6 +216,7 @@ const translations = {
         philosophyTag: "Our Growth Approach",
         philosophyTitle: "We don't just sell services. We build growth partnerships",
         philosophyDesc: "Our success is measured by your increased revenue. We focus on implementing performance marketing and automation that delivers a clear ROI, ensuring our collaboration is a profitable long-term investment.",
+        philosophyCTA: "Start Your Growth Journey",
 
         // Solutions Section
         solutionsTitle: "Digital growth services",
@@ -225,6 +226,7 @@ const translations = {
         sol2Desc: "We optimize your operations with custom AI assistants and process automation (Make/N8N) to increase efficiency and reduce costs.",
         sol3Title: "Branding & Content strategy",
         sol3Desc: "We build memorable brands that connect with their audience. Includes visual identity design and high-performance content marketing strategies.",
+        learnMore: "Learn More →",
 
         // Testimonials Section
         testimonialsTag: "Client Stories",
@@ -405,6 +407,7 @@ const translations = {
         philosophyTag: "Nuestro enfoque de crecimiento",
         philosophyTitle: "No solo vendemos servicios. Construimos asociaciones de crecimiento",
         philosophyDesc: "Nuestro éxito se mide por el aumento de tus ingresos. Nos enfocamos en implementar marketing de rendimiento y automatización que genere un ROI claro, asegurando que nuestra colaboración sea una inversión rentable a largo plazo.",
+        philosophyCTA: "Comienza Tu Crecimiento",
 
         // Solutions Section
         solutionsTitle: "Servicios de crecimiento digital",
@@ -414,6 +417,7 @@ const translations = {
         sol2Desc: "Optimizamos tus operaciones con asistentes de IA personalizados y automatización de procesos (Make/N8N) para aumentar la eficiencia y reducir costos.",
         sol3Title: "Branding y Estrategia de contenido",
         sol3Desc: "Construimos marcas memorables que conectan con su audiencia. Incluye diseño de identidad visual y estrategias de marketing de contenido de alto rendimiento.",
+        learnMore: "Saber Más →",
 
         // Testimonials Section
         testimonialsTag: "Historias de Clientes",
@@ -601,6 +605,7 @@ const translations = {
         philosophyTag: "A nossa abordagem de crescimento",
         philosophyTitle: "Não vendemos apenas serviços. Construímos parcerias de crescimento",
         philosophyDesc: "O nosso sucesso é medido pelo aumento da sua receita. Focamo-nos na implementação de marketing de desempenho e automatização que entrega um ROI claro, garantindo que a nossa colaboração seja um investimento rentável a longo prazo.",
+        philosophyCTA: "Comece o Seu Crescimento",
 
         // Solutions Section
         solutionsTitle: "Serviços de crescimento digital",
@@ -610,6 +615,7 @@ const translations = {
         sol2Desc: "Otimizamos as suas operações com assistentes de IA personalizados e automatização de processos (Make/N8N) para aumentar a eficiência e reduzir custos.",
         sol3Title: "Branding e Estratégia de conteúdo",
         sol3Desc: "Construímos marcas memoráveis que se conectam com o seu público. Inclui design de identidade visual e estratégias de marketing de conteúdo de alto desempenho.",
+        learnMore: "Saber Mais →",
 
         // Testimonials Section
         testimonialsTag: "Histórias de Clientes",
