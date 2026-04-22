@@ -187,10 +187,12 @@ const translations = {
         // Navigation
         navSolutions: "Services",
         navPhilosophy: "Our approach",
-        navTeam: "The team",
+        navTeam: "Founders",
         navCaseStudies: "Projects",
         navContact: "Contact",
         navAbout: "About Us",
+        navTestimonials: "Testimonials",
+        navPricing: "Pricing",
 
         // Meta
         metaTitle: "Vanguard Crux | AI & Automation marketing agency in Porto",
@@ -203,6 +205,12 @@ const translations = {
         heroTagline: "AI architecture. Creative minds solving the impossible.",
         heroSubtitle: "We are Vanguard Crux, a global performance marketing agency. We implement AI and automation strategies to give your business a real competitive edge in Portugal and beyond.",
         heroCTA: "Claim your free audit",
+
+        // Social Proof
+        socialProof1: "Clients Successfully Helped",
+        socialProof2: "Projects Completed",
+        socialProof3: "Countries Served",
+        socialProof4: "Years Combined Experience",
 
         // Philosophy Section
         philosophyTag: "Our Growth Approach",
@@ -217,6 +225,45 @@ const translations = {
         sol2Desc: "We optimize your operations with custom AI assistants and process automation (Make/N8N) to increase efficiency and reduce costs.",
         sol3Title: "Branding & Content strategy",
         sol3Desc: "We build memorable brands that connect with their audience. Includes visual identity design and high-performance content marketing strategies.",
+
+        // Testimonials Section
+        testimonialsTag: "Client Stories",
+        testimonialsTitle: "Clients & Results",
+        testimonialsSubtitle: "Real stories of transformed businesses",
+        testimonial1Text: "VanguardCrux automated our sales pipeline and completely transformed our conversion process.",
+        testimonial1Metric: "Sales",
+        testimonial1Name: "Client A",
+        testimonial2Text: "Their AI strategy transformed our customer engagement and lead generation completely.",
+        testimonial2Metric: "Leads",
+        testimonial2Name: "Client B",
+        testimonial3Text: "We saved thousands in operating costs with their automation solutions.",
+        testimonial3Metric: "Savings",
+        testimonial3Name: "Client C",
+        testimonial4Text: "Exceptional strategic guidance. They truly understand the Portuguese market.",
+        testimonial4Name: "Client D",
+
+        // Pricing Section
+        pricingTag: "Pricing",
+        pricingTitle: "Packages & Pricing",
+        pricingSubtitle: "Flexible plans for your business. Free consultation included.",
+        pricingPlan1: "Basic Automation",
+        pricingPlan1Desc: "For small businesses",
+        pricingPlan2: "Professional Growth",
+        pricingPlan2Desc: "For growing teams",
+        pricingPlan3: "Enterprise Solutions",
+        pricingPlan3Desc: "Custom & unlimited",
+        pricingPopular: "Popular",
+        pricingPeriod: "Per project",
+        pricingPeriodCustom: "Custom pricing",
+        pricingFeature1a: "Simple automation setup",
+        pricingFeature1b: "Email automation",
+        pricingFeature2a: "Multi-system integration (CRM, email)",
+        pricingFeature2b: "AI chatbots & support",
+        pricingFeature3a: "Full business transformation",
+        pricingFeature3b: "Dedicated account manager",
+        pricingCTA1: "Get Started",
+        pricingCTA2: "Request Demo",
+        pricingCTA3: "Contact Us",
 
         // Case Studies Section
         caseStudiesTitle: "Proven results, not promises",
@@ -247,16 +294,16 @@ const translations = {
         aboutPillar2Desc: "We use AI and automation not as an add-on, but as the central engine to optimize every marketing process and decision.",
 
         // Team Section
-        teamTitle: "Meet the Vanguard Crux team",
-        teamSubtitle: "Experience our team in 360° - Interactive Innovation",
+        teamTitle: "Meet the Founders",
+        teamSubtitle: "Visionary leaders driving innovation at Vanguard Crux",
         jonName: "Jon Flores",
-        jonRole: "AI Strategist",
+        jonRole: "AI Strategist & Founder",
         jonLocation: "Porto, Portugal",
         jonSkill1: "AI Strategy",
         jonSkill2: "Automation",
         jonSkill3: "Data Analytics",
         joseName: "José Aluz",
-        joseRole: "Content Strategist",
+        joseRole: "Content Strategist & Founder",
         joseLocation: "Mendoza, Argentina",
         joseSkill1: "Content Strategy",
         joseSkill2: "Brand Narrative",
@@ -329,10 +376,12 @@ const translations = {
         // Navigation
         navSolutions: "Servicios",
         navPhilosophy: "Nuestro enfoque",
-        navTeam: "El equipo",
+        navTeam: "Fundadores",
         navCaseStudies: "Proyectos",
         navContact: "Contacto",
         navAbout: "Nosotros",
+        navTestimonials: "Testimonios",
+        navPricing: "Precios",
 
         // Meta
         metaTitle: "Vanguard Crux | Agencia de marketing con IA y automatización en Oporto",
@@ -345,6 +394,12 @@ const translations = {
         heroTagline: "Arquitectura de IA. Mentes creativas resolviendo lo imposible.",
         heroSubtitle: "Somos Vanguard Crux, una agencia global de marketing de rendimiento. Implementamos estrategias de IA y automatización para darle a tu negocio una ventaja competitiva real en Portugal y más allá.",
         heroCTA: "Reclama tu auditoría gratuita",
+
+        // Social Proof
+        socialProof1: "Clientes Atendidos Exitosamente",
+        socialProof2: "Proyectos Completados",
+        socialProof3: "Países Atendidos",
+        socialProof4: "Años de Experiencia Combinada",
 
         // Philosophy Section
         philosophyTag: "Nuestro enfoque de crecimiento",
@@ -359,6 +414,45 @@ const translations = {
         sol2Desc: "Optimizamos tus operaciones con asistentes de IA personalizados y automatización de procesos (Make/N8N) para aumentar la eficiencia y reducir costos.",
         sol3Title: "Branding y Estrategia de contenido",
         sol3Desc: "Construimos marcas memorables que conectan con su audiencia. Incluye diseño de identidad visual y estrategias de marketing de contenido de alto rendimiento.",
+
+        // Testimonials Section
+        testimonialsTag: "Historias de Clientes",
+        testimonialsTitle: "Clientes & Resultados",
+        testimonialsSubtitle: "Historias reales de negocios transformados",
+        testimonial1Text: "VanguardCrux automatizó nuestro pipeline de ventas y transformó completamente nuestro proceso de conversión.",
+        testimonial1Metric: "Ventas",
+        testimonial1Name: "Cliente A",
+        testimonial2Text: "Su estrategia de IA transformó nuestro engagement con clientes y la generación de leads por completo.",
+        testimonial2Metric: "Leads",
+        testimonial2Name: "Cliente B",
+        testimonial3Text: "Ahorramos miles en costos operativos con sus soluciones de automatización.",
+        testimonial3Metric: "Ahorros",
+        testimonial3Name: "Cliente C",
+        testimonial4Text: "Orientación estratégica excepcional. Entienden realmente el mercado portugués.",
+        testimonial4Name: "Cliente D",
+
+        // Pricing Section
+        pricingTag: "Precios",
+        pricingTitle: "Paquetes & Precios",
+        pricingSubtitle: "Planes flexibles para tu negocio. Incluyen consulta gratuita.",
+        pricingPlan1: "Automatización Básica",
+        pricingPlan1Desc: "Para pequeños negocios",
+        pricingPlan2: "Crecimiento Profesional",
+        pricingPlan2Desc: "Para equipos en expansión",
+        pricingPlan3: "Soluciones Empresariales",
+        pricingPlan3Desc: "Personalizado & ilimitado",
+        pricingPopular: "Popular",
+        pricingPeriod: "Por proyecto",
+        pricingPeriodCustom: "Precio personalizado",
+        pricingFeature1a: "Setup de automatización simple",
+        pricingFeature1b: "Automatización de email",
+        pricingFeature2a: "Integración multi-sistema (CRM, email)",
+        pricingFeature2b: "Chatbots IA y soporte",
+        pricingFeature3a: "Transformación empresarial completa",
+        pricingFeature3b: "Gestor de cuenta dedicado",
+        pricingCTA1: "Comenzar",
+        pricingCTA2: "Solicitar Demo",
+        pricingCTA3: "Contactar",
 
         // Case Studies Section
         caseStudiesTitle: "Resultados comprobados, no promesas",
@@ -389,16 +483,16 @@ const translations = {
         aboutPillar2Desc: "Usamos IA y automatización no como un complemento, sino como el motor central para optimizar cada proceso y decisión de marketing.",
 
         // Team Section
-        teamTitle: "Conoce al equipo de Vanguard Crux",
-        teamSubtitle: "Experimenta nuestro equipo en 360° - Innovación Interactiva",
+        teamTitle: "Conoce a los Fundadores",
+        teamSubtitle: "Líderes visionarios impulsando innovación en Vanguard Crux",
         jonName: "Jon Flores",
-        jonRole: "Estratega de IA",
+        jonRole: "Estratega de IA & Fundador",
         jonLocation: "Oporto, Portugal",
         jonSkill1: "Estrategia de IA",
         jonSkill2: "Automatización",
         jonSkill3: "Analítica de Datos",
         joseName: "José Aluz",
-        joseRole: "Estratega de Contenido",
+        joseRole: "Estratega de Contenido & Fundador",
         joseLocation: "Mendoza, Argentina",
         joseSkill1: "Estrategia de Contenido",
         joseSkill2: "Narrativa de Marca",
@@ -478,10 +572,12 @@ const translations = {
         // Navigation
         navSolutions: "Serviços",
         navPhilosophy: "A nossa abordagem",
-        navTeam: "A equipa",
+        navTeam: "Fundadores",
         navCaseStudies: "Projetos",
         navContact: "Contacto",
         navAbout: "Sobre Nós",
+        navTestimonials: "Testemunhos",
+        navPricing: "Preços",
 
         // Meta
         metaTitle: "Vanguard Crux | Agência de marketing com IA e automatização no Porto",
@@ -494,6 +590,12 @@ const translations = {
         heroTagline: "Arquitetura de IA. Mentes criativas a resolver o impossível.",
         heroSubtitle: "Somos a Vanguard Crux, uma agência global de marketing de desempenho. Implementamos estratégias de IA e automatização para dar ao seu negócio uma vantagem competitiva real em Portugal e além.",
         heroCTA: "Reclame a seu auditoria gratuita",
+
+        // Social Proof
+        socialProof1: "Clientes Atendidos com Sucesso",
+        socialProof2: "Projetos Concluídos",
+        socialProof3: "Países Atendidos",
+        socialProof4: "Anos de Experiência Combinada",
 
         // Philosophy Section
         philosophyTag: "A nossa abordagem de crescimento",
@@ -508,6 +610,45 @@ const translations = {
         sol2Desc: "Otimizamos as suas operações com assistentes de IA personalizados e automatização de processos (Make/N8N) para aumentar a eficiência e reduzir custos.",
         sol3Title: "Branding e Estratégia de conteúdo",
         sol3Desc: "Construímos marcas memoráveis que se conectam com o seu público. Inclui design de identidade visual e estratégias de marketing de conteúdo de alto desempenho.",
+
+        // Testimonials Section
+        testimonialsTag: "Histórias de Clientes",
+        testimonialsTitle: "Clientes & Resultados",
+        testimonialsSubtitle: "Histórias reais de negócios transformados",
+        testimonial1Text: "A VanguardCrux automatizou o nosso pipeline de vendas e transformou completamente o nosso processo de conversão.",
+        testimonial1Metric: "Vendas",
+        testimonial1Name: "Cliente A",
+        testimonial2Text: "A sua estratégia de IA transformou o nosso engagement com clientes e a geração de leads por completo.",
+        testimonial2Metric: "Leads",
+        testimonial2Name: "Cliente B",
+        testimonial3Text: "Poupámos milhares em custos operacionais com as suas soluções de automatização.",
+        testimonial3Metric: "Poupança",
+        testimonial3Name: "Cliente C",
+        testimonial4Text: "Orientação estratégica excecional. Compreendem verdadeiramente o mercado português.",
+        testimonial4Name: "Cliente D",
+
+        // Pricing Section
+        pricingTag: "Preços",
+        pricingTitle: "Pacotes & Preços",
+        pricingSubtitle: "Planos flexíveis para o seu negócio. Consulta gratuita incluída.",
+        pricingPlan1: "Automatização Básica",
+        pricingPlan1Desc: "Para pequenos negócios",
+        pricingPlan2: "Crescimento Profissional",
+        pricingPlan2Desc: "Para equipas em expansão",
+        pricingPlan3: "Soluções Empresariais",
+        pricingPlan3Desc: "Personalizado & ilimitado",
+        pricingPopular: "Popular",
+        pricingPeriod: "Por projeto",
+        pricingPeriodCustom: "Preço personalizado",
+        pricingFeature1a: "Setup de automatização simples",
+        pricingFeature1b: "Automatização de email",
+        pricingFeature2a: "Integração multi-sistema (CRM, email)",
+        pricingFeature2b: "Chatbots IA e suporte",
+        pricingFeature3a: "Transformação empresarial completa",
+        pricingFeature3b: "Gestor de conta dedicado",
+        pricingCTA1: "Começar",
+        pricingCTA2: "Solicitar Demo",
+        pricingCTA3: "Contactar",
 
         // Case Studies Section
         caseStudiesTitle: "Resultados comprovados, não promessas",
@@ -538,16 +679,16 @@ const translations = {
         aboutPillar2Desc: "Usamos IA e automatização não como um complemento, mas como o motor central para otimizar cada processo e decisão de marketing.",
 
         // Team Section
-        teamTitle: "Conheça a equipa da Vanguard Crux",
-        teamSubtitle: "Experiencie a nossa equipa em 360° - Inovação Interativa",
+        teamTitle: "Conheça os Fundadores",
+        teamSubtitle: "Líderes visionários a impulsionar inovação na Vanguard Crux",
         jonName: "Jon Flores",
-        jonRole: "Estratega de IA",
+        jonRole: "Estratega de IA & Fundador",
         jonLocation: "Porto, Portugal",
         jonSkill1: "Estratégia de IA",
         jonSkill2: "Automatização",
         jonSkill3: "Análise de Dados",
         joseName: "José Aluz",
-        joseRole: "Estratega de Conteúdo",
+        joseRole: "Estratega de Conteúdo & Fundador",
         joseLocation: "Mendoza, Argentina",
         joseSkill1: "Estratégia de Conteúdo",
         joseSkill2: "Narrativa de Marca",
