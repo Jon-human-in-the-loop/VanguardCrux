@@ -1852,20 +1852,17 @@ input:focus, textarea:focus {
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1rem;
-    padding: 0 !important;
-    padding-left: 0 !important;
-    padding-top: 0;
-    padding-bottom: 1.25rem;
+    gap: 1.5rem; /* Slightly wider gap */
+    padding: 0.5rem 0 1.25rem 0 !important; /* Some padding to prevent box-shadow clipping */
     scrollbar-width: none;
     scroll-behavior: smooth;
   }
   #solutions .grid::-webkit-scrollbar { display: none; }
   #solutions .grid .service-card {
     flex-shrink: 0;
-    scroll-snap-align: start;
-    width: calc(100vw - 3rem);
-    max-width: 340px;
+    scroll-snap-align: center;
+    width: 100%;
+    max-width: none;
   }
   #solutions .grid .service-card:hover {
     transform: none !important;
@@ -1878,10 +1875,8 @@ input:focus, textarea:focus {
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1rem;
-    padding: 0 !important;
-    padding-top: 0;
-    padding-bottom: 1.25rem;
+    gap: 1.5rem;
+    padding: 0.5rem 0 1.25rem 0 !important;
     scrollbar-width: none;
     grid-template-columns: unset !important;
     scroll-behavior: smooth;
@@ -1889,9 +1884,9 @@ input:focus, textarea:focus {
   .testimonials-grid::-webkit-scrollbar { display: none; }
   .testimonials-grid .testimonial-card {
     flex-shrink: 0;
-    scroll-snap-align: start;
-    width: calc(100vw - 3rem);
-    max-width: 340px;
+    scroll-snap-align: center;
+    width: 100%;
+    max-width: none;
   }
   .testimonials-grid .testimonial-card:hover {
     transform: none !important;
@@ -1904,7 +1899,7 @@ input:focus, textarea:focus {
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 2rem 0 1.25rem 0 !important;
     scrollbar-width: none;
     grid-template-columns: unset !important;
@@ -1915,9 +1910,9 @@ input:focus, textarea:focus {
   .pricing-grid::-webkit-scrollbar { display: none; }
   .pricing-grid .pricing-card {
     flex-shrink: 0;
-    scroll-snap-align: start;
-    width: calc(100vw - 3rem);
-    max-width: 340px;
+    scroll-snap-align: center;
+    width: 100%;
+    max-width: none;
   }
   .pricing-grid .pricing-card:hover {
     transform: none !important;
