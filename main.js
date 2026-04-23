@@ -966,7 +966,6 @@ function initMobileCarousels() {
     if (window.innerWidth > 1023) return;
 
     const configs = [
-        { grid: document.getElementById('solutions-grid'),    cardSel: '.service-card', startIdx: 0 },
         { grid: document.querySelector('.testimonials-grid'), cardSel: '.testimonial-card', startIdx: 0 },
         { grid: document.querySelector('.pricing-grid'),      cardSel: '.pricing-card', startIdx: 1 },
     ];
@@ -1035,6 +1034,76 @@ function initMobileCarousels() {
 }
 
 /* =========================================================
+   SOLUTIONS MOBILE CAROUSEL (transform-based, independent)
+   ========================================================= */
+
+function initSolutionsMobileCarousel() {
+    if (window.innerWidth > 1023) return;
+
+    const grid = document.getElementById('solutions-grid');
+    if (!grid || grid.dataset.carouselInit === '1') return;
+
+    const cards = Array.from(grid.querySelectorAll('.service-card'));
+    if (cards.length < 2) return;
+
+    // Wrap all cards in a track
+    const track = document.createElement('div');
+    track.className = 'solutions-track';
+    cards.forEach(c => track.appendChild(c));
+    grid.appendChild(track);
+    grid.classList.add('solutions-carousel');
+    grid.dataset.carouselInit = '1';
+
+    // Dots
+    const dotsEl = document.createElement('div');
+    dotsEl.className = 'carousel-dots';
+    let current = 0;
+    cards.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(dot);
+    });
+    grid.parentNode.insertBefore(dotsEl, grid.nextSibling);
+
+    function goTo(idx) {
+        current = Math.max(0, Math.min(cards.length - 1, idx));
+        track.style.transform = `translateX(${-current * 100}%)`;
+        dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+        });
+    }
+
+    // Touch swipe
+    let startX = 0, dx = 0, dragging = false;
+    track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        dx = 0;
+        dragging = true;
+        track.style.transition = 'none';
+    }, { passive: true });
+    track.addEventListener('touchmove', (e) => {
+        if (!dragging) return;
+        dx = e.touches[0].clientX - startX;
+        const pct = (dx / grid.clientWidth) * 100;
+        track.style.transform = `translateX(calc(${-current * 100}% + ${pct}%))`;
+    }, { passive: true });
+    track.addEventListener('touchend', () => {
+        if (!dragging) return;
+        dragging = false;
+        track.style.transition = '';
+        const threshold = grid.clientWidth * 0.15;
+        if (dx > threshold && current > 0) goTo(current - 1);
+        else if (dx < -threshold && current < cards.length - 1) goTo(current + 1);
+        else goTo(current);
+        dx = 0;
+    }, { passive: true });
+
+    goTo(0);
+}
+
+/* =========================================================
    ABOUT — PARALLAX JOURNEY
    ========================================================= */
 
@@ -1086,6 +1155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initKulturAtelierCard();
     initFintechCaseCard();
     initMobileCarousels();
+    initSolutionsMobileCarousel();
     initJourneyParallax();
 
     const detectedLang = detectBrowserLanguage();

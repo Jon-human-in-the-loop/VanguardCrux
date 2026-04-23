@@ -1845,38 +1845,37 @@ input:focus, textarea:focus {
     max-width: unset !important;
   }
 
-  /* ── Solutions grid → horizontal carousel ── */
-  #solutions-grid {
-    display: flex !important;
-    overflow-x: auto;
-    overflow-y: visible;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 0;
-    padding: 0.5rem 5vw 1.25rem 5vw !important;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-  }
-  #solutions-grid::-webkit-scrollbar { display: none; }
-  #solutions-grid .service-card {
-    flex: 0 0 90vw !important;
-    width: 90vw !important;
-    min-width: 90vw !important;
-    scroll-snap-align: center;
-    margin-right: 1.5rem;
+  /* ── Solutions grid → transform-based carousel (JS-driven, no scroll-snap) ── */
+  #solutions-grid.solutions-carousel {
+    display: block !important;
+    overflow: hidden !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+    padding: 0.5rem 0 1.25rem 0 !important;
     position: relative;
-    z-index: 20;
-    flex-shrink: 0 !important;
+    touch-action: pan-y;
   }
-  #solutions-grid .service-card:last-child {
-    margin-right: 0;
+  #solutions-grid .solutions-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
   }
-  #solutions-grid .service-card,
-  #solutions-grid .service-card:hover,
-  #solutions-grid .service-card:active,
-  #solutions-grid .service-card:focus {
+  #solutions-grid.solutions-carousel .service-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 2rem 1.25rem !important;
+    box-sizing: border-box;
     transform: none !important;
     transition: box-shadow 0.3s ease !important;
+  }
+  #solutions-grid.solutions-carousel .service-card:hover,
+  #solutions-grid.solutions-carousel .service-card:active,
+  #solutions-grid.solutions-carousel .service-card:focus {
+    transform: none !important;
   }
 
   /* ── Testimonials grid → horizontal carousel ── */
