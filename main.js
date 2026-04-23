@@ -4,8 +4,7 @@
 
 function initAnimations() {
     if (typeof gsap !== 'undefined') {
-        console.log('Premium GSAP animations loaded');
-        return;
+            return;
     }
 
     const elements = document.querySelectorAll('[data-aos]');
@@ -291,6 +290,7 @@ const translations = {
         case5Desc: "Implemented comprehensive SEO and content marketing strategy that drove 300% organic traffic growth and established thought leadership in the Portuguese tech ecosystem.",
 
         // About Section
+        aboutTag: "Our Global Journey",
         aboutTitle: "We think outside the box. We act inside your goals",
         aboutSubtitle: "Our story is one without borders. Born from the collaboration of digital experts across Argentina, from Paraná to Mendoza, our journey has taken us to develop projects in Germany, Dubai, Portugal, and Argentina, ultimately leading us to establish our European hub in Porto.",
         aboutPillar1Title: "Global perspective, local execution",
@@ -298,6 +298,15 @@ const translations = {
         aboutPillar2Title: "AI at the core",
         aboutPillar2Desc: "We use AI and automation not as an add-on, but as the central engine to optimize every marketing process and decision.",
         aboutPinNow: "Now",
+        journeyArgName: "Argentina",
+        journeyArgDesc: "Where it all started. Born in Paraná & Mendoza.",
+        journeyGerName: "Germany",
+        journeyGerDesc: "Expanding to Europe. Projects in Hamburg & Halle.",
+        journeyDubName: "Dubai",
+        journeyDubDesc: "Conquering the Middle East. AI strategies at scale.",
+        journeyPorName: "Porto",
+        journeyPorDesc: "Our European HQ. The future base for global AI.",
+        journeyNow: "Now",
 
         // Team Section
         teamTitle: "Meet the Founders",
@@ -486,6 +495,7 @@ const translations = {
         case5Desc: "Implementamos una estrategia integral de SEO y marketing de contenidos que impulsó un crecimiento del 300% en tráfico orgánico y estableció liderazgo de pensamiento en el ecosistema tecnológico portugués.",
 
         // About Section
+        aboutTag: "Nuestro Viaje Global",
         aboutTitle: "Pensamos fuera de la caja. Actuamos dentro de tus objetivos",
         aboutSubtitle: "Nuestra historia no tiene fronteras. Nacidos de la colaboración de expertos digitales en Argentina, desde Paraná hasta Mendoza, nuestro viaje nos ha llevado a desarrollar proyectos en Alemania, Dubái, Portugal y Argentina, estableciendo finalmente nuestro centro europeo en Oporto.",
         aboutPillar1Title: "Perspectiva global, ejecución local",
@@ -493,6 +503,15 @@ const translations = {
         aboutPillar2Title: "IA en el núcleo",
         aboutPillar2Desc: "Usamos IA y automatización no como un complemento, sino como el motor central para optimizar cada proceso y decisión de marketing.",
         aboutPinNow: "Ahora",
+        journeyArgName: "Argentina",
+        journeyArgDesc: "Donde todo empezó. Nacidos en Paraná y Mendoza.",
+        journeyGerName: "Alemania",
+        journeyGerDesc: "Expansión a Europa. Proyectos en Hamburgo y Halle.",
+        journeyDubName: "Dubái",
+        journeyDubDesc: "Conquistando Medio Oriente. Estrategias de IA a escala.",
+        journeyPorName: "Oporto",
+        journeyPorDesc: "Nuestra sede europea. La base futura para la IA global.",
+        journeyNow: "Ahora",
 
         // Team Section
         teamTitle: "Conoce a los Fundadores",
@@ -688,6 +707,7 @@ const translations = {
         case5Desc: "Implementámos uma estratégia abrangente de SEO e marketing de conteúdo que impulsionou um crescimento de 300% no tráfego orgânico e estabeleceu liderança de pensamento no ecossistema tecnológico português.",
 
         // About Section
+        aboutTag: "A nossa jornada global",
         aboutTitle: "Pensamos fora da caixa. Agimos dentro dos seus objetivos",
         aboutSubtitle: "A nossa história não tem fronteiras. Nascidos da colaboração de especialistas digitais em toda a Argentina, de Paraná a Mendoza, a nossa jornada levou-nos a desenvolver projetos na Alemanha, Dubai, Portugal e Argentina, estabelecendo finalmente o nosso centro europeu no Porto.",
         aboutPillar1Title: "Perspetiva global, execução local",
@@ -695,6 +715,15 @@ const translations = {
         aboutPillar2Title: "IA no núcleo",
         aboutPillar2Desc: "Usamos IA e automatização não como um complemento, mas como o motor central para otimizar cada processo e decisão de marketing.",
         aboutPinNow: "Agora",
+        journeyArgName: "Argentina",
+        journeyArgDesc: "Onde tudo começou. Nascidos no Paraná e Mendoza.",
+        journeyGerName: "Alemanha",
+        journeyGerDesc: "Expansão para a Europa. Projetos em Hamburgo e Halle.",
+        journeyDubName: "Dubai",
+        journeyDubDesc: "Conquistando o Médio Oriente. Estratégias de IA à escala.",
+        journeyPorName: "Porto",
+        journeyPorDesc: "A nossa sede europeia. A base futura para a IA global.",
+        journeyNow: "Agora",
 
         // Team Section
         teamTitle: "Conheça os Fundadores",
@@ -880,7 +909,6 @@ function setLanguage(lang) {
         if (keywordsMeta) keywordsMeta.setAttribute('content', metaKeywords);
     }
     
-    console.log('Language set to:', lang);
 }
 
 /* =========================================================
@@ -988,6 +1016,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Espera a que TODO el DOM esté realmente pintado
     requestAnimationFrame(() => {
         setLanguage(detectedLang);
-        console.log('Language applied to full DOM:', detectedLang);
-    });
+        });
 });
