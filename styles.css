@@ -1848,15 +1848,20 @@ input:focus, textarea:focus {
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
     padding: 0 !important;
+    padding-top: 0;
     padding-bottom: 1.25rem;
     scrollbar-width: none;
+    scroll-behavior: smooth;
   }
   #solutions .grid::-webkit-scrollbar { display: none; }
   #solutions .grid .service-card {
     flex-shrink: 0;
     scroll-snap-align: start;
-    width: 82vw;
+    width: calc(100vw - 3rem);
     max-width: 340px;
+  }
+  #solutions .grid .service-card:hover {
+    transform: none !important;
   }
 
   /* ── Testimonials grid → horizontal carousel ── */
@@ -1868,16 +1873,21 @@ input:focus, textarea:focus {
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
     padding: 0 !important;
+    padding-top: 0;
     padding-bottom: 1.25rem;
     scrollbar-width: none;
     grid-template-columns: unset !important;
+    scroll-behavior: smooth;
   }
   .testimonials-grid::-webkit-scrollbar { display: none; }
   .testimonials-grid .testimonial-card {
     flex-shrink: 0;
     scroll-snap-align: start;
-    width: 82vw;
+    width: calc(100vw - 3rem);
     max-width: 340px;
+  }
+  .testimonials-grid .testimonial-card:hover {
+    transform: none !important;
   }
 
   /* ── Pricing grid → horizontal carousel ── */
@@ -1888,19 +1898,22 @@ input:focus, textarea:focus {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
-    padding: 0 !important;
-    padding-bottom: 1.25rem;
+    padding: 2rem 0 1.25rem 0 !important;
     scrollbar-width: none;
     grid-template-columns: unset !important;
     max-width: unset !important;
     margin: 0 !important;
+    scroll-behavior: smooth;
   }
   .pricing-grid::-webkit-scrollbar { display: none; }
   .pricing-grid .pricing-card {
     flex-shrink: 0;
     scroll-snap-align: start;
-    width: 82vw;
+    width: calc(100vw - 3rem);
     max-width: 340px;
+  }
+  .pricing-grid .pricing-card:hover {
+    transform: none !important;
   }
 
   /* ── Dot indicators (injected by JS) ── */

@@ -971,6 +971,15 @@ function initMobileCarousels() {
         { grid: document.querySelector('.pricing-grid'),      cardSel: '.pricing-card', startIdx: 1 },
     ];
 
+    function scrollToCard(grid, cards, cardIdx) {
+        const card = cards[cardIdx];
+        const cardWidth = card.offsetWidth;
+        const gridWidth = grid.clientWidth;
+        const cardCenter = card.offsetLeft + cardWidth / 2;
+        const scrollLeft = Math.max(0, cardCenter - gridWidth / 2);
+        grid.scrollLeft = scrollLeft;
+    }
+
     configs.forEach(({ grid, cardSel, startIdx }) => {
         if (!grid) return;
         const cards = Array.from(grid.querySelectorAll(cardSel));
@@ -984,44 +993,36 @@ function initMobileCarousels() {
             dot.className = 'carousel-dot' + (i === startIdx ? ' active' : '');
             dot.setAttribute('aria-label', 'Slide ' + (i + 1));
             dot.addEventListener('click', () => {
-                const cardWidth = cards[i].offsetWidth;
-                const gap = 16; // 1rem in pixels
-                let scrollLeft = cards[i].offsetLeft;
-
-                // Center the card in viewport by adjusting scroll position
-                const gridWidth = grid.clientWidth;
-                const cardCenter = scrollLeft + cardWidth / 2;
-                scrollLeft = Math.max(0, cardCenter - gridWidth / 2);
-
-                grid.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                scrollToCard(grid, cards, i);
             });
             dotsEl.appendChild(dot);
         });
 
         grid.parentNode.insertBefore(dotsEl, grid.nextSibling);
 
-        // Scroll to initial position after layout settles
-        setTimeout(() => {
-            const startCard = cards[startIdx];
-            const cardWidth = startCard.offsetWidth;
-            const gridWidth = grid.clientWidth;
-            const cardCenter = startCard.offsetLeft + cardWidth / 2;
-            const scrollLeft = Math.max(0, cardCenter - gridWidth / 2);
-            grid.scrollLeft = scrollLeft;
-        }, 100);
+        // Scroll to initial position on next frame + wait for images
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                scrollToCard(grid, cards, startIdx);
+            }, 200);
+        });
 
+        let scrollTimeout;
         grid.addEventListener('scroll', () => {
-            let activeIdx = 0;
-            let minDist = Infinity;
-            cards.forEach((card, i) => {
-                const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-                const gridCenter = grid.scrollLeft + grid.clientWidth / 2;
-                const dist = Math.abs(cardCenter - gridCenter);
-                if (dist < minDist) { minDist = dist; activeIdx = i; }
-            });
-            dotsEl.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === activeIdx);
-            });
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                let activeIdx = 0;
+                let minDist = Infinity;
+                cards.forEach((card, i) => {
+                    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                    const gridCenter = grid.scrollLeft + grid.clientWidth / 2;
+                    const dist = Math.abs(cardCenter - gridCenter);
+                    if (dist < minDist) { minDist = dist; activeIdx = i; }
+                });
+                dotsEl.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === activeIdx);
+                });
+            }, 50);
         }, { passive: true });
     });
 }
