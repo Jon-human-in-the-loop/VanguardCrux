@@ -973,8 +973,18 @@ function initMobileCarousels() {
 
     function scrollToCard(grid, cards, cardIdx) {
         const card = cards[cardIdx];
+        if (!card) return;
+
         const cardWidth = card.offsetWidth;
         const gridWidth = grid.clientWidth;
+
+        // For first card, scroll to 0 to show it fully
+        if (cardIdx === 0) {
+            grid.scrollLeft = 0;
+            return;
+        }
+
+        // For other cards, center them in viewport
         const cardCenter = card.offsetLeft + cardWidth / 2;
         const scrollLeft = Math.max(0, cardCenter - gridWidth / 2);
         grid.scrollLeft = scrollLeft;
