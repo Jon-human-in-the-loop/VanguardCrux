@@ -242,8 +242,10 @@ document.head.appendChild(cursorStyleSheet);
 
 // Initialize cursor effects when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    if (window.matchMedia('(hover: none)').matches) return;
+
     const cursorEffects = new CursorEffects();
-    
+
     // Add magnetic effects to specific elements
     cursorEffects.addMagneticEffect('.btn-primary', 0.2);
     cursorEffects.addMagneticEffect('.service-card', 0.1);

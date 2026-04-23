@@ -1871,8 +1871,12 @@ input:focus, textarea:focus {
   #solutions-grid .service-card:last-child {
     margin-right: 0;
   }
-  #solutions-grid .service-card:hover {
+  #solutions-grid .service-card,
+  #solutions-grid .service-card:hover,
+  #solutions-grid .service-card:active,
+  #solutions-grid .service-card:focus {
     transform: none !important;
+    transition: box-shadow 0.3s ease !important;
   }
 
   /* ── Testimonials grid → horizontal carousel ── */

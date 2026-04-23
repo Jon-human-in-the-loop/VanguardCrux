@@ -127,6 +127,7 @@ class AdvancedAnimations {
     }
     
     initServiceCardAnimations() {
+        if (window.matchMedia('(hover: none)').matches) return;
         const cards = document.querySelectorAll('.service-card, [data-service-card]');
         
         cards.forEach(card => {

@@ -400,7 +400,10 @@
     const th = cachedMapH || window.innerHeight;
     const tx = (50 - cx) * (scale - 1) * (tw / 100);
     const ty = (50 - cy) * (scale - 1) * (th / 100);
-    mapWrapper.style.transform = `scale(${scale}) translate(${tx / scale}px, ${ty / scale}px)`;
+    const t = `scale(${scale}) translate(${tx / scale}px, ${ty / scale}px)`;
+    mapWrapper.style.transform = t;
+    const overlay = document.getElementById('journey-stops-overlay');
+    if (overlay) overlay.style.transform = t;
     mapWrapper.style.setProperty('--map-zoom', scale);
   }
 

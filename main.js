@@ -974,11 +974,12 @@ function initMobileCarousels() {
     function scrollToCard(grid, cards, cardIdx) {
         const card = cards[cardIdx];
         if (!card) return;
+        if (cardIdx === 0) { grid.scrollLeft = 0; return; }
 
         // Scroll so the card is centered in the viewport
         const cardCenter = card.offsetLeft + card.offsetWidth / 2;
         const gridCenter = grid.clientWidth / 2;
-        grid.scrollLeft = cardCenter - gridCenter;
+        grid.scrollLeft = Math.max(0, cardCenter - gridCenter);
     }
 
     configs.forEach(({ grid, cardSel, startIdx }) => {
@@ -1007,6 +1008,11 @@ function initMobileCarousels() {
                 scrollToCard(grid, cards, startIdx);
             }, 200);
         });
+
+        // Re-apply after full load in case image/font reflow re-snapped the grid
+        window.addEventListener('load', () => {
+            scrollToCard(grid, cards, startIdx);
+        }, { once: true });
 
         let scrollTimeout;
         grid.addEventListener('scroll', () => {
