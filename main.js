@@ -179,7 +179,7 @@ if (menuBtn) {
    ========================================================= */
 
 // Pages with separate language-specific HTML files
-const PAGES_WITH_LANGUAGE_VERSIONS = ['kultur-atelier', 'fintech-case', 'privacy-policy', 'terms', 'cookies'];
+const PAGES_WITH_LANGUAGE_VERSIONS = ['kultur-atelier', 'fintech-case', 'vrykan-case', 'privacy-policy', 'terms', 'cookies'];
 
 const translations = {
     en: {
@@ -974,6 +974,22 @@ function initFintechCaseCard() {
 }
 
 /* =========================================================
+   VRYKAN CASE CARD CLICK HANDLER
+   ========================================================= */
+
+function initVrykanCaseCard() {
+    document.querySelectorAll('.vrykan-case-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('userLanguage') || 'en';
+            let targetPage = 'vrykan-case.html';
+            if (currentLang === 'es') targetPage = 'vrykan-case-es.html';
+            if (currentLang === 'pt') targetPage = 'vrykan-case-pt.html';
+            window.location.href = targetPage;
+        });
+    });
+}
+
+/* =========================================================
    MOBILE CAROUSELS
    ========================================================= */
 
@@ -1169,6 +1185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLegalLinks();
     initKulturAtelierCard();
     initFintechCaseCard();
+    initVrykanCaseCard();
     initMobileCarousels();
     initSolutionsMobileCarousel();
     window.addEventListener('load', initSolutionsMobileCarousel, { once: true });

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRYKAN Caso de Estudo E-commerce | Vanguard Crux</title>
+    <meta name="description" content="Backend de e-commerce seguro por design construído em Node.js com Drizzle ORM. Comprovado com 10.000+ requisições simultâneas durante campanhas de tráfego alto.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn active">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Voltar ao Início</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #0a1e30 0%, #123047 60%, #1b4a5e 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                VRYKAN
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Plataforma de E-commerce de Alto Tráfego</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Backend transacional seguro por design, engenhado para sustentar tráfego máximo de campanhas enquanto bloqueia injeção SQL e sequestro de sessão nativamente.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Backend Node.js</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Drizzle ORM</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">10.000+ RPS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">O Desafio</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Plataformas de e-commerce de alto volume enfrentam duas ameaças críticas: picos de tráfego durante campanhas podem sobrecarregar servidores, e vetores de ataque modernos (injeção SQL, sequestro de sessão, força bruta) podem comprometer a integridade transacional. Backends tradicionais exigem patching e monitoramento constante.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">10K+</div>
+                            <div class="text-sm text-gray-400">Meta de Requisições Simultâneas</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">0 SQL</div>
+                            <div class="text-sm text-gray-400">Risco de Query Raw</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                            <div class="text-sm text-gray-400">Proteção de Sessão</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Durante Black Friday e campanhas pagas pesadas, o volume transacional dispara de forma imprevisível. Enquanto isso, atacantes sondam vetores de vulnerabilidade: injeção SQL via entrada de usuário, roubo de token de sessão via cookies desprotegidos, credential stuffing via exércitos bot. Uma violação não só perde transações—destrói confiança do cliente e dispara penalidades de compliance.
+                        </p>
+                        <p class="text-gray-300">
+                            A solução exigia uma arquitetura de backend onde segurança e escalabilidade fossem inseparáveis, não adicionadas depois.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">A Solução</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Arquitetura Segura por Design</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Abstração Drizzle ORM</h4>
+                        <p class="text-gray-300">Todas as queries de banco de dados são geradas de esquemas tipados, eliminando SQL raw e bloqueando injeção por design. Sem concatenação de strings, sem construção de queries em runtime.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Content Security Policy</h4>
+                        <p class="text-gray-300">Headers CSP estritos previnem execução de scripts inline e ataques cross-origin. Carregamento de scripts baseado em nonce assegura que apenas ativos autorizados executem no navegador.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Segurança de Token HttpOnly</h4>
+                        <p class="text-gray-300">Tokens de sessão armazenados em cookies seguros, HttpOnly com SameSite=Strict. Previne acesso JavaScript e mitiga CSRF e roubo de token cross-site.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Rate Limiting & Defesa DDoS</h4>
+                        <p class="text-gray-300">Limites de rate adaptativo distinguem compradores legítimos de ataques bot. Requisições de IPs comprometidas são silenciosamente aceleradas sem disromper fluxos reais de checkout.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Desempenho de Alta Disponibilidade</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        A arquitetura non-blocking I/O do Node.js lida com conexões simultâneas eficientemente. Cada transação é isolada dentro de seu próprio contexto async, prevenindo que uma query lenta bloqueie outras. Escalabilidade horizontal através de múltiplos processos assegura que não há ponto único de falha.
+                    </p>
+                    <p class="text-gray-300">
+                        Testes de carga comprovados mostram rendimento sustentado de 10.000+ requisições por segundo durante cenários simulados de Black Friday, com latência P99 abaixo de 100ms para transações bem-sucedidas.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Qualidade de Código Empresarial</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                        <p class="text-gray-300">Cobertura TypeScript</p>
+                        <p class="text-sm text-gray-400 mt-2">Sem any implícito, null checks estritos</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">0</div>
+                        <p class="text-gray-300">Débito Técnico</p>
+                        <p class="text-sm text-gray-400 mt-2">Padrões de arquitetura limpa, princípios SOLID</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">Auditoria</div>
+                        <p class="text-gray-300">Codebase Pronto</p>
+                        <p class="text-sm text-gray-400 mt-2">Para escala multi-filial de franquia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Resultados & Impacto</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Manipulação de Tráfego</h3>
+                    <p class="text-gray-300">Carga sustentada de Black Friday (10.000+ RPS) sem transações perdidas ou timeouts de cliente. Zero degradação em velocidade de checkout mesmo durante minutos de pico.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Postura de Segurança</h3>
+                    <p class="text-gray-300">Zero ataques de injeção bem-sucedidos, zero sequestros de sessão, zero violações de compliance. Passa auditorias de segurança OWASP Top 10 sem remediação.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Eficiência Operacional</h3>
+                    <p class="text-gray-300">Redução de 70% em sobrecarga de monitoramento de segurança manual. Equipes DevOps focam em entrega de features, não em apagar incêndios de patch de vulnerabilidade.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Pronto para Franquia</h3>
+                    <p class="text-gray-300">Codebase estruturada para desploment multi-filial. Cada franquia pode girar lojas independentes na mesma infraestrutura de backend comprovada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. Todos os direitos reservados.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Início</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Casos de Estudo</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>
