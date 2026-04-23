@@ -392,12 +392,30 @@
   }
   #journey-left-panel {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem 1.25rem;
     background: linear-gradient(180deg, rgba(5,13,26,0.98) 70%, rgba(5,13,26,0) 100%);
-    min-height: 220px;
+    max-height: 38vh;
+    min-height: 0;
+    flex-shrink: 0;
   }
-  #journey-left-panel h2 { font-size: 1.2rem; }
+  #journey-left-panel h2 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+  #journey-left-panel .journey-subtitle { font-size: 0.75rem; margin-bottom: 0.5rem; }
+  #journey-left-panel p { font-size: 0.75rem; margin-bottom: 0.5rem !important; }
+  #journey-info-box { padding: 0.75rem; margin-top: 0.5rem; }
+  .info-flag { font-size: 1.6rem; }
+  .info-label { font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .info-desc { font-size: 0.72rem; }
   .journey-stops-list { flex-direction: row; flex-wrap: wrap; gap: 0.4rem; }
-  #journey-right-panel { flex: 1; }
+  #journey-right-panel {
+    flex: 1 1 auto;
+    min-height: 55vh;
+    padding: 0.25rem;
+  }
+  #journey-map-wrapper { max-height: none; }
+  #journey-stops-overlay { top: 0.25rem; left: 0.25rem; right: 0.25rem; bottom: 0.25rem; }
+  #journey-plane { width: 40px; height: 40px; filter: drop-shadow(0 0 8px rgba(100,255,218,0.8)); }
+  .stop-label-flag { font-size: 0.7rem; }
+  .stop-label-city { font-size: 0.7rem; letter-spacing: 0.06rem; }
+  .journey-map-stop-label { padding: 3px 7px; }
   #journey-section-wrapper { height: 550vh; }
 }

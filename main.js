@@ -1156,6 +1156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFintechCaseCard();
     initMobileCarousels();
     initSolutionsMobileCarousel();
+    window.addEventListener('load', initSolutionsMobileCarousel, { once: true });
     initJourneyParallax();
 
     const detectedLang = detectBrowserLanguage();
