@@ -966,12 +966,12 @@ function initMobileCarousels() {
     if (window.innerWidth > 767) return;
 
     const configs = [
-        { grid: document.querySelector('#solutions .grid'),  cardSel: '.service-card' },
-        { grid: document.querySelector('.testimonials-grid'), cardSel: '.testimonial-card' },
-        { grid: document.querySelector('.pricing-grid'),      cardSel: '.pricing-card' },
+        { grid: document.querySelector('#solutions .grid'),  cardSel: '.service-card', startIdx: 0 },
+        { grid: document.querySelector('.testimonials-grid'), cardSel: '.testimonial-card', startIdx: 0 },
+        { grid: document.querySelector('.pricing-grid'),      cardSel: '.pricing-card', startIdx: 1 },
     ];
 
-    configs.forEach(({ grid, cardSel }) => {
+    configs.forEach(({ grid, cardSel, startIdx }) => {
         if (!grid) return;
         const cards = Array.from(grid.querySelectorAll(cardSel));
         if (cards.length < 2) return;
@@ -981,21 +981,42 @@ function initMobileCarousels() {
 
         cards.forEach((_, i) => {
             const dot = document.createElement('button');
-            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.className = 'carousel-dot' + (i === startIdx ? ' active' : '');
             dot.setAttribute('aria-label', 'Slide ' + (i + 1));
             dot.addEventListener('click', () => {
-                grid.scrollTo({ left: cards[i].offsetLeft, behavior: 'smooth' });
+                const cardWidth = cards[i].offsetWidth;
+                const gap = 16; // 1rem in pixels
+                let scrollLeft = cards[i].offsetLeft;
+
+                // Center the card in viewport by adjusting scroll position
+                const gridWidth = grid.clientWidth;
+                const cardCenter = scrollLeft + cardWidth / 2;
+                scrollLeft = Math.max(0, cardCenter - gridWidth / 2);
+
+                grid.scrollTo({ left: scrollLeft, behavior: 'smooth' });
             });
             dotsEl.appendChild(dot);
         });
 
         grid.parentNode.insertBefore(dotsEl, grid.nextSibling);
 
+        // Scroll to initial position after layout settles
+        setTimeout(() => {
+            const startCard = cards[startIdx];
+            const cardWidth = startCard.offsetWidth;
+            const gridWidth = grid.clientWidth;
+            const cardCenter = startCard.offsetLeft + cardWidth / 2;
+            const scrollLeft = Math.max(0, cardCenter - gridWidth / 2);
+            grid.scrollLeft = scrollLeft;
+        }, 100);
+
         grid.addEventListener('scroll', () => {
             let activeIdx = 0;
             let minDist = Infinity;
             cards.forEach((card, i) => {
-                const dist = Math.abs(card.offsetLeft - grid.scrollLeft);
+                const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                const gridCenter = grid.scrollLeft + grid.clientWidth / 2;
+                const dist = Math.abs(cardCenter - gridCenter);
                 if (dist < minDist) { minDist = dist; activeIdx = i; }
             });
             dotsEl.querySelectorAll('.carousel-dot').forEach((dot, i) => {

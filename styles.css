@@ -1843,9 +1843,11 @@ input:focus, textarea:focus {
   #solutions .grid {
     display: flex !important;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
+    padding: 0 !important;
     padding-bottom: 1.25rem;
     scrollbar-width: none;
   }
@@ -1861,9 +1863,11 @@ input:focus, textarea:focus {
   .testimonials-grid {
     display: flex !important;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
+    padding: 0 !important;
     padding-bottom: 1.25rem;
     scrollbar-width: none;
     grid-template-columns: unset !important;
@@ -1880,9 +1884,11 @@ input:focus, textarea:focus {
   .pricing-grid {
     display: flex !important;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
+    padding: 0 !important;
     padding-bottom: 1.25rem;
     scrollbar-width: none;
     grid-template-columns: unset !important;
