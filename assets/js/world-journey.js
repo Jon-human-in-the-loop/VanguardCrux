@@ -266,7 +266,7 @@
 
     // ── Apply plane position + counter-scale so it stays the same visual size
     positionElementOnMap(planeEl, pos.x, pos.y);
-    planeEl.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+    planeEl.style.transform = `translate(-50%, -50%) rotate(${angle}deg) scale(${1 / zScale})`;
 
     // ── Update active dashed flight path
     if (!activeFlightPathEl) return;
@@ -400,8 +400,18 @@
     const th = cachedMapH || window.innerHeight;
     const tx = (50 - cx) * (scale - 1) * (tw / 100);
     const ty = (50 - cy) * (scale - 1) * (th / 100);
-    mapWrapper.style.transform = `scale(${scale}) translate(${tx / scale}px, ${ty / scale}px)`;
+    
+    const transformStr = `scale(${scale}) translate(${tx / scale}px, ${ty / scale}px)`;
+    mapWrapper.style.transform = transformStr;
     mapWrapper.style.setProperty('--map-zoom', scale);
+    
+    // Keep overlay grouped with map geometry
+    const overlay = document.getElementById('journey-stops-overlay');
+    if (overlay) {
+      overlay.style.transform = transformStr;
+      overlay.style.transformOrigin = 'center center';
+      overlay.style.setProperty('--map-zoom', scale);
+    }
   }
 
   /* ─────────────────────────────────────────

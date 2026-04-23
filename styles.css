@@ -1852,17 +1852,20 @@ input:focus, textarea:focus {
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1.5rem; /* Slightly wider gap */
-    padding: 0.5rem 0 1.25rem 0 !important; /* Some padding to prevent box-shadow clipping */
+    gap: 0;
+    padding: 0.5rem 1rem 1.25rem 1rem !important;
     scrollbar-width: none;
     scroll-behavior: smooth;
   }
   #solutions .grid::-webkit-scrollbar { display: none; }
   #solutions .grid .service-card {
-    flex-shrink: 0;
-    scroll-snap-align: center;
-    width: 100%;
-    max-width: none;
+    flex: 0 0 calc(100vw - 2rem);
+    width: calc(100vw - 2rem);
+    scroll-snap-align: start;
+    margin-right: 1rem;
+  }
+  #solutions .grid .service-card:last-child {
+    margin-right: 0;
   }
   #solutions .grid .service-card:hover {
     transform: none !important;
@@ -1875,18 +1878,21 @@ input:focus, textarea:focus {
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1.5rem;
-    padding: 0.5rem 0 1.25rem 0 !important;
+    gap: 0;
+    padding: 0.5rem 1rem 1.25rem 1rem !important;
     scrollbar-width: none;
     grid-template-columns: unset !important;
     scroll-behavior: smooth;
   }
   .testimonials-grid::-webkit-scrollbar { display: none; }
   .testimonials-grid .testimonial-card {
-    flex-shrink: 0;
-    scroll-snap-align: center;
-    width: 100%;
-    max-width: none;
+    flex: 0 0 calc(100vw - 2rem);
+    width: calc(100vw - 2rem);
+    scroll-snap-align: start;
+    margin-right: 1rem;
+  }
+  .testimonials-grid .testimonial-card:last-child {
+    margin-right: 0;
   }
   .testimonials-grid .testimonial-card:hover {
     transform: none !important;
@@ -1899,8 +1905,8 @@ input:focus, textarea:focus {
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 1.5rem;
-    padding: 2rem 0 1.25rem 0 !important;
+    gap: 0;
+    padding: 2rem 1rem 1.25rem 1rem !important;
     scrollbar-width: none;
     grid-template-columns: unset !important;
     max-width: unset !important;
@@ -1909,10 +1915,13 @@ input:focus, textarea:focus {
   }
   .pricing-grid::-webkit-scrollbar { display: none; }
   .pricing-grid .pricing-card {
-    flex-shrink: 0;
-    scroll-snap-align: center;
-    width: 100%;
-    max-width: none;
+    flex: 0 0 calc(100vw - 2rem);
+    width: calc(100vw - 2rem);
+    scroll-snap-align: start;
+    margin-right: 1rem;
+  }
+  .pricing-grid .pricing-card:last-child {
+    margin-right: 0;
   }
   .pricing-grid .pricing-card:hover {
     transform: none !important;
