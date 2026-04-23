@@ -266,7 +266,7 @@
 
     // ── Apply plane position + counter-scale so it stays the same visual size
     positionElementOnMap(planeEl, pos.x, pos.y);
-    planeEl.style.transform = `translate(-50%, -50%) rotate(${angle}deg) scale(${1 / zScale})`;
+    planeEl.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
 
     // ── Update active dashed flight path
     if (!activeFlightPathEl) return;

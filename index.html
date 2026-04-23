@@ -547,8 +547,13 @@
         <!-- ── RIGHT PANEL: WORLD MAP ── -->
         <div id="journey-right-panel">
           <div id="journey-map-wrapper">
-            <!-- ── STOP MARKERS (overlaid via JS positioning) ── -->
-            <div class="journey-map-stop" id="stop-argentina" style="left:34.22%;top:73.83%;">
+            <!-- SVG map injected here by world-journey.js -->
+          </div><!-- end #journey-map-wrapper -->
+
+          <!-- Overlay: stop markers + plane live here, NOT inside the zoomed map wrapper -->
+          <div id="journey-stops-overlay">
+
+            <div class="journey-map-stop" id="stop-argentina">
               <div class="journey-map-stop-label" id="label-argentina">
                 <span class="stop-label-flag">🇦🇷</span>
                 <span class="stop-label-city" data-lang="journeyArgName">Argentina</span>
@@ -556,7 +561,7 @@
               <div class="stop-dot"></div>
             </div>
 
-            <div class="journey-map-stop" id="stop-germany" style="left:52.43%;top:18.41%;">
+            <div class="journey-map-stop" id="stop-germany">
               <div class="journey-map-stop-label label-below" id="label-germany">
                 <span class="stop-label-flag">🇩🇪</span>
                 <span class="stop-label-city" data-lang="journeyGerName">Germany</span>
@@ -564,7 +569,7 @@
               <div class="stop-dot"></div>
             </div>
 
-            <div class="journey-map-stop" id="stop-dubai" style="left:64.32%;top:34.38%;">
+            <div class="journey-map-stop" id="stop-dubai">
               <div class="journey-map-stop-label" id="label-dubai">
                 <span class="stop-label-flag">🇦🇪</span>
                 <span class="stop-label-city" data-lang="journeyDubName">Dubai</span>
@@ -572,7 +577,7 @@
               <div class="stop-dot"></div>
             </div>
 
-            <div class="journey-map-stop" id="stop-porto" style="left:47.88%;top:24.48%;">
+            <div class="journey-map-stop" id="stop-porto">
               <div class="journey-map-stop-label" id="label-porto">
                 <span class="stop-label-flag">🇵🇹</span>
                 <span class="stop-label-city" data-lang="journeyPorName">Porto</span>
@@ -580,7 +585,6 @@
               <div class="stop-dot"></div>
             </div>
 
-            <!-- PLANE: SVG generado por el usuario — nariz apunta arriba, rotado 90° CW → apunta derecha -->
             <div id="journey-plane">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1008 1048">
                 <g transform="rotate(90,504,524)">
@@ -612,9 +616,9 @@
                   </g>
                 </g>
               </svg>
-            </div>
+            </div><!-- end #journey-plane -->
 
-          </div><!-- end #journey-map-wrapper -->
+          </div><!-- end #journey-stops-overlay -->
         </div><!-- end #journey-right-panel -->
 
         <!-- Progress bar -->

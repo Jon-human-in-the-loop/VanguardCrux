@@ -1833,3 +1833,89 @@ input:focus, textarea:focus {
     .pin-year { font-size: 0.5rem; }
     .pin-flag { font-size: 0.9rem; }
 }
+
+/* ══════════════════════════════════════════════
+   MOBILE CAROUSELS (Solutions, Testimonials, Pricing)
+   ══════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  /* ── Solutions grid → horizontal carousel ── */
+  #solutions .grid {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    scrollbar-width: none;
+  }
+  #solutions .grid::-webkit-scrollbar { display: none; }
+  #solutions .grid .service-card {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 82vw;
+    max-width: 340px;
+  }
+
+  /* ── Testimonials grid → horizontal carousel ── */
+  .testimonials-grid {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    scrollbar-width: none;
+    grid-template-columns: unset !important;
+  }
+  .testimonials-grid::-webkit-scrollbar { display: none; }
+  .testimonials-grid .testimonial-card {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 82vw;
+    max-width: 340px;
+  }
+
+  /* ── Pricing grid → horizontal carousel ── */
+  .pricing-grid {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    scrollbar-width: none;
+    grid-template-columns: unset !important;
+    max-width: unset !important;
+    margin: 0 !important;
+  }
+  .pricing-grid::-webkit-scrollbar { display: none; }
+  .pricing-grid .pricing-card {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 82vw;
+    max-width: 340px;
+  }
+
+  /* ── Dot indicators (injected by JS) ── */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(100, 255, 218, 0.2);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  .carousel-dot.active {
+    background: rgba(100, 255, 218, 0.85);
+    transform: scale(1.3);
+  }
+}

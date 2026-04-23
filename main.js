@@ -959,6 +959,53 @@ function initFintechCaseCard() {
 }
 
 /* =========================================================
+   MOBILE CAROUSELS
+   ========================================================= */
+
+function initMobileCarousels() {
+    if (window.innerWidth > 767) return;
+
+    const configs = [
+        { grid: document.querySelector('#solutions .grid'),  cardSel: '.service-card' },
+        { grid: document.querySelector('.testimonials-grid'), cardSel: '.testimonial-card' },
+        { grid: document.querySelector('.pricing-grid'),      cardSel: '.pricing-card' },
+    ];
+
+    configs.forEach(({ grid, cardSel }) => {
+        if (!grid) return;
+        const cards = Array.from(grid.querySelectorAll(cardSel));
+        if (cards.length < 2) return;
+
+        const dotsEl = document.createElement('div');
+        dotsEl.className = 'carousel-dots';
+
+        cards.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+            dot.addEventListener('click', () => {
+                grid.scrollTo({ left: cards[i].offsetLeft, behavior: 'smooth' });
+            });
+            dotsEl.appendChild(dot);
+        });
+
+        grid.parentNode.insertBefore(dotsEl, grid.nextSibling);
+
+        grid.addEventListener('scroll', () => {
+            let activeIdx = 0;
+            let minDist = Infinity;
+            cards.forEach((card, i) => {
+                const dist = Math.abs(card.offsetLeft - grid.scrollLeft);
+                if (dist < minDist) { minDist = dist; activeIdx = i; }
+            });
+            dotsEl.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === activeIdx);
+            });
+        }, { passive: true });
+    });
+}
+
+/* =========================================================
    ABOUT — PARALLAX JOURNEY
    ========================================================= */
 
@@ -1009,6 +1056,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLegalLinks();
     initKulturAtelierCard();
     initFintechCaseCard();
+    initMobileCarousels();
     initJourneyParallax();
 
     const detectedLang = detectBrowserLanguage();

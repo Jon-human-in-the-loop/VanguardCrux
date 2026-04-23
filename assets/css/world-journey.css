@@ -271,11 +271,21 @@
 
 /* Removed ugly fuzzy glow trail circle *
 
+/* ─── OVERLAY: stop markers + plane sit here, outside the zoomed map wrapper ─── */
+#journey-stops-overlay {
+  position: absolute;
+  top: 1rem;   /* matches #journey-right-panel padding */
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  pointer-events: none;
+  z-index: 25;
+}
+
 /* ─── STOP DOTS on the map ─── */
-/* Counter-scale so dots/labels stay the same visual size when the map zooms */
 .journey-map-stop {
   position: absolute;
-  transform: translate(-50%, -50%) scale(calc(1 / var(--map-zoom, 1)));
+  transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
   z-index: 25;
   pointer-events: none;
