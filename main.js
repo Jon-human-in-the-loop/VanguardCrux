@@ -179,7 +179,7 @@ if (menuBtn) {
    ========================================================= */
 
 // Pages with separate language-specific HTML files
-const PAGES_WITH_LANGUAGE_VERSIONS = ['kultur-atelier', 'fintech-case', 'vrykan-case', 'cruxanalytics-case', 'privacy-policy', 'terms', 'cookies'];
+const PAGES_WITH_LANGUAGE_VERSIONS = ['kultur-atelier', 'fintech-case', 'vrykan-case', 'cruxanalytics-case', 'video-production-case', 'privacy-policy', 'terms', 'cookies'];
 
 const translations = {
     en: {
@@ -287,6 +287,11 @@ const translations = {
         cruxanalyticsTechLabel: "Stack:",
         cruxanalyticsTech: "Node.js, React Native, DDD, XAI",
         cruxanalyticsDesc: "Open Source Business Intelligence platform for evaluating metric feasibility and generating high-level accounting analysis. Pure financial calculations with Explainable AI that translates complex logic into executive summaries.",
+        videoproductionTitle: "Video Production AI",
+        videoproductionSubtitle: "UGC Content Factory | 85% Cost Reduction",
+        videoproductionTechLabel: "Stack:",
+        videoproductionTech: "n8n, Pinecone, Gemini 2.5, HeyGen",
+        videoproductionDesc: "Automated UGC content production system generating high-impact ad variations at scale. Zero-touch factory leveraging RAG, generative AI, and digital avatar synthesis. Reduces production costs by 85% while maintaining quality.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | AI-Ready Architecture",
         case2TechLabel: "Tech:",
@@ -502,6 +507,11 @@ const translations = {
         cruxanalyticsTechLabel: "Stack:",
         cruxanalyticsTech: "Node.js, React Native, DDD, XAI",
         cruxanalyticsDesc: "Plataforma Open Source de Inteligencia de Negocios para evaluar factibilidad métrica y generar análisis contables de alto nivel. Cálculos financieros puros con IA Explicable que traduce lógica compleja en resúmenes ejecutivos.",
+        videoproductionTitle: "Producción de Video IA",
+        videoproductionSubtitle: "Factoría de Contenido UGC | 85% Ahorro de Costos",
+        videoproductionTechLabel: "Stack:",
+        videoproductionTech: "n8n, Pinecone, Gemini 2.5, HeyGen",
+        videoproductionDesc: "Sistema automatizado de producción de contenido UGC generando variaciones de anuncios a escala. Factoría Zero-Touch aprovechando RAG, IA generativa y síntesis de avatares digitales. Reduce costos de producción 85% manteniendo calidad.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | Arquitectura AI-Ready",
         case2TechLabel: "Tech:",
@@ -724,6 +734,11 @@ const translations = {
         cruxanalyticsTechLabel: "Stack:",
         cruxanalyticsTech: "Node.js, React Native, DDD, XAI",
         cruxanalyticsDesc: "Plataforma Open Source de Inteligência de Negócios para avaliar viabilidade métrica e gerar análises contábeis de alto nível. Cálculos financeiros puros com IA Explicável que traduz lógica complexa em resumos executivos.",
+        videoproductionTitle: "Produção de Vídeo IA",
+        videoproductionSubtitle: "Fábrica de Conteúdo UGC | 85% Economia de Custos",
+        videoproductionTechLabel: "Stack:",
+        videoproductionTech: "n8n, Pinecone, Gemini 2.5, HeyGen",
+        videoproductionDesc: "Sistema automatizado de produção de conteúdo UGC gerando variações de anúncios em escala. Fábrica Zero-Touch aproveitando RAG, IA generativa e síntese de avatares digitais. Reduz custos de produção 85% mantendo qualidade.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | Arquitetura AI-Ready",
         case2TechLabel: "Tech:",
@@ -1016,6 +1031,18 @@ function initCruxAnalyticsCaseCard() {
     });
 }
 
+function initVideoProductionCaseCard() {
+    document.querySelectorAll('.videoproduction-case-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('userLanguage') || 'en';
+            let targetPage = 'video-production-case.html';
+            if (currentLang === 'es') targetPage = 'video-production-case-es.html';
+            if (currentLang === 'pt') targetPage = 'video-production-case-pt.html';
+            window.location.href = targetPage;
+        });
+    });
+}
+
 /* =========================================================
    MOBILE CAROUSELS
    ========================================================= */
@@ -1214,6 +1241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFintechCaseCard();
     initVrykanCaseCard();
     initCruxAnalyticsCaseCard();
+    initVideoProductionCaseCard();
     initMobileCarousels();
     initSolutionsMobileCarousel();
     window.addEventListener('load', initSolutionsMobileCarousel, { once: true });

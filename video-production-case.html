@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Production Case Study | Vanguard Crux</title>
+    <meta name="description" content="Automated UGC content factory leveraging n8n, Pinecone RAG, Gemini AI, and HeyGen avatars. 85% production cost reduction with zero-touch video generation.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn active">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a1f35 0%, #2d1b4e 60%, #3d0f5c 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                Video AI
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Automated UGC Content Factory</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Zero-touch video production system generating high-impact ad variations at enterprise scale. Eliminates human actors, manual editing, and production bottlenecks through orchestrated AI pipelines and photorealistic digital avatars.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">n8n Orchestration</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Gemini 2.5 Scripts</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">HeyGen Avatars</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">The Challenge</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        E-commerce and social media teams need dozens of ad variations weekly: different angles, messaging, audiences, platforms. Traditional production requires casting, filming, editing—weeks of work and thousands per video. Scaling demand outpaces production capacity. Budget constraints force brands to reuse stale content. Performance metrics languish because iteration is impossible.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">4-8 weeks</div>
+                            <div class="text-sm text-gray-400">Production Timeline</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">$1000+</div>
+                            <div class="text-sm text-gray-400">Cost Per Video</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">1-3</div>
+                            <div class="text-sm text-gray-400">Variations Per Month</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Ad performance depends on constant variation testing. A/B tests demand 10+ creative variants. Winning hypotheses need rapid iteration. The bottleneck: humans. Casting actors, negotiating availability, managing shoots, supervising edits. Each video is a project, not a commodity.
+                        </p>
+                        <p class="text-gray-300">
+                            The solution required a factory: automated content production where inputs are trends + brand guidelines, outputs are finished videos, and human labor approaches zero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">The Solution</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Zero-Touch Content Orchestration</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">n8n Workflow Engine</h4>
+                        <p class="text-gray-300">Orchestrates the entire production pipeline. Ingests trends, brand context, and audience segments. Triggers AI stages in sequence. Monitors quality gates. Delivers final videos directly to cloud storage without human intervention.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Pinecone RAG Context</h4>
+                        <p class="text-gray-300">Vectorial memory of brand voice, campaign history, and audience insights. RAG (Retrieval-Augmented Generation) feeds relevant context into script generation. Ensures consistency across variants while maintaining freshness and personalization.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Gemini 2.5 Flash Scripts</h4>
+                        <p class="text-gray-300">Generates persuasive scripts tailored to platform, audience, and trend. Produces variations in seconds. Context-aware copy avoids repetition. Output is production-ready: pacing, tone, call-to-action all optimized.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">HeyGen Digital Avatars</h4>
+                        <p class="text-gray-300">Photorealistic synthetic presenters eliminate casting and talent logistics. Avatars speak in multiple languages. Lip-sync is perfect. Visual consistency across campaigns guaranteed. Performance equals professional actors at zero scheduling overhead.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Enterprise Scalability</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Input: 1 brief. Output: 20 video variants in hours. Variations span platforms (Instagram, TikTok, YouTube), audiences (segments A/B/C), and angles (benefit-driven, social-proof, urgency). Each video is unique. Each is broadcast-quality. Each ships instantly to CDN.
+                    </p>
+                    <p class="text-gray-300">
+                        Cost per video drops from $1000+ to $30-50. Timeline collapses from weeks to hours. Campaigns that required 30 person-days now require 1 briefing session. The factory runs 24/7. Production is infinite. Bottleneck moves from execution to creative strategy.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Impact Metrics</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">85%</div>
+                        <p class="text-gray-300">Cost Reduction</p>
+                        <p class="text-sm text-gray-400 mt-2">From $1000+ per video to $30-50</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">96%</div>
+                        <p class="text-gray-300">Time Savings</p>
+                        <p class="text-sm text-gray-400 mt-2">From 4-8 weeks to 2-4 hours per batch</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">∞</div>
+                        <p class="text-gray-300">Scalability</p>
+                        <p class="text-sm text-gray-400 mt-2">Variants per campaign from 1-3 to 20+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Results & Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Immediate ROI</h3>
+                    <p class="text-gray-300">First month production cost savings exceed implementation cost. Payback period: days. Brands recapture budget previously locked in production overhead and redirect to media spend.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Velocity Advantage</h3>
+                    <p class="text-gray-300">Campaigns launch in days instead of months. Trending topics become content within hours. First-mover advantage in seasonal markets. Rapid iteration discovers winning creative faster than competitors.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Creative Multiplication</h3>
+                    <p class="text-gray-300">Single creative brief becomes 20+ variants automatically. A/B testing moves from binary to continuous. Performance signals guide live optimization. Winning patterns scale instantly across channels.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Team Transformation</h3>
+                    <p class="text-gray-300">Frees creative teams from production logistics. Focus shifts from execution to strategy. Fewer approval layers. Faster feedback loops. Marketing velocity increases with zero additional headcount.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. All rights reserved.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Home</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Case Studies</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>
