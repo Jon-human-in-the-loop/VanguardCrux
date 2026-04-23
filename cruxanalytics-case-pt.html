@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CruxAnalytics Caso de Estudo Inteligência de Negócios | Vanguard Crux</title>
+    <meta name="description" content="Plataforma Open Source de Inteligência de Negócios com diagnóstico de fricção operacional. Arquitetura DDD com IA Explicável que traduz cálculos financeiros em resumos executivos.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn active">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Voltar ao Início</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1b4a5e 0%, #0a3d52 60%, #051d2a 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                CruxAnalytics
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Inteligência de Negócios Open Source</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Diagnóstico algorítmico de fricção operacional e ROI. Cálculos financeiros puros com IA Explicável que traduz lógica contábil complexa em resumos executivos claros para tomada de decisão baseada em dados.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Backend Node.js</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Interface React Native</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Arquitetura DDD</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">O Desafio</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Equipes executivas em empresas em crescimento dependem de planilhas Excel e cálculos manuais para decisões financeiras críticas. Quando métricas vivem em fontes de dados desatualizadas e não mantidas, a fricção operacional dispara. Gestores carecem de visibilidade em tempo real do verdadeiro ROI, centros de custo e lacunas de eficiência. Sem precisão algorítmica, diagnósticos empresariais tornam-se adivinhações.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">∞</div>
+                            <div class="text-sm text-gray-400">Dependência de Planilhas</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">0</div>
+                            <div class="text-sm text-gray-400">Métricas em Tempo Real</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                            <div class="text-sm text-gray-400">Risco de Interpretação Manual</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Painéis executivos dispersos entre departamentos. Um time calcula VPL diferente de outro. Modelos financeiros vivem em arquivos desconectados, atualizados esporadicamente por gerentes individuais. Cálculos críticos—ROI, período de payback, custos de fricção—dependem de fórmulas em planilhas que ninguém consegue auditar ou verificar. Um único erro em uma fórmula cascata através de relatórios trimestrais.
+                        </p>
+                        <p class="text-gray-300">
+                            A solução exigia uma plataforma onde cálculos financeiros são determinísticos, auditáveis e transparentes. Onde algoritmos—não interpretação humana—diagnosticam saúde operacional. Onde métricas contábeis complexas traduzem em linguagem que executivos entendem imediatamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">A Solução</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Arquitetura Financeira Orientada por Domínio</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Cálculos Financeiros Puros</h4>
+                        <p class="text-gray-300">Toda lógica contábil isolada em funções determinísticas Node.js. VPL, TIR, períodos de payback, custos de fricção calculados localmente sem dependências de banco de dados. Funções puras produzem resultados idênticos toda vez—sem surpresas de ponto flutuante, sem estado oculto.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Design Orientado por Domínio</h4>
+                        <p class="text-gray-300">Domínio financeiro modelado independentemente de preocupações de UI. Regras de negócio vivem na camada de cálculo. React Native consome esses resultados puros, assegurando independência de plataforma e testabilidade em mobile, desktop e web.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">IA Explicável (XAI)</h4>
+                        <p class="text-gray-300">Algoritmos generativos avaliam cálculos financeiros exatos e produzem diagnósticos em linguagem natural clara. Métricas complexas traduzem-se em texto acionável: "Custos operacionais estão 23% acima do benchmark industrial; aqui está por quê e o que consertar."</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Arquitetura Modular Assíncrona</h4>
+                        <p class="text-gray-300">Processamento matemático ocorre independentemente da renderização visual. Interface React Native permanece responsiva enquanto backend calcula análises multi-cenário complexas. Camadas desacopladas permitem processamento paralelo e escalabilidade independente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Insights de Grau Empresarial</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Diagnósticos financeiros em tempo real através de centros de custo, fluxos de receita e métricas operacionais. Motor de analytics unificado elimina fragmentação de planilhas. Cada número rastreável ao seu algoritmo fonte. Cada resultado auditável para compliance e precisão.
+                    </p>
+                    <p class="text-gray-300">
+                        Executivos acessam painéis em mobile ou desktop—mesmos dados, mesmos insights. Modelos preditivos identificam pontos de fricção antes de cascatarem. Narrativas geradas por IA traduzem métricas em estratégia. Velocidade de decisão aumenta; qualidade de decisão melhora.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Confiabilidade Open Source</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                        <p class="text-gray-300">Cálculos Determinísticos</p>
+                        <p class="text-sm text-gray-400 mt-2">Sem interpretação humana, puros algoritmos</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">∞</div>
+                        <p class="text-gray-300">Auditoria & Transparência</p>
+                        <p class="text-sm text-gray-400 mt-2">Cada número rastreável à sua fórmula fonte</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">XAI</div>
+                        <p class="text-gray-300">Inteligência Explicável</p>
+                        <p class="text-sm text-gray-400 mt-2">Algoritmos explicam-se em linguagem clara</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Resultados & Impacto</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Clareza Operacional</h3>
+                    <p class="text-gray-300">Eliminou caos de planilhas. Fonte única de verdade para cálculos financeiros em todos os departamentos. Painéis em tempo real substituem relatórios semanais. Ciclos de decisão aceleram de dias para minutos.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Precisão Algorítmica</h3>
+                    <p class="text-gray-300">Zero erros de fórmula, zero variação de cálculo. Cálculos de VPL, TIR e período de payback produzem resultados idênticos em todas as plataformas. Determinismo elimina erros custosos em modelagem financeira.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Agilidade Executiva</h3>
+                    <p class="text-gray-300">IA generativa traduz métricas complexas em insights prontos para estratégia. Liderança compreende saúde financeira sem treinamento em ciência de dados. Tomadores de decisão movem-se mais rápido, confiantes em precisão algorítmica.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Inteligência Escalável</h3>
+                    <p class="text-gray-300">Base Open Source permite que empresas adaptem, estendam e integrem. Analytics multi-tenant para organizações diversificadas. Plataforma cresce com complexidade empresarial sem sacrificar performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. Todos os direitos reservados.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Início</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Casos de Estudo</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>

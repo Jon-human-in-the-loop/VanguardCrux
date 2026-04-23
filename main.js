@@ -179,7 +179,7 @@ if (menuBtn) {
    ========================================================= */
 
 // Pages with separate language-specific HTML files
-const PAGES_WITH_LANGUAGE_VERSIONS = ['kultur-atelier', 'fintech-case', 'vrykan-case', 'privacy-policy', 'terms', 'cookies'];
+const PAGES_WITH_LANGUAGE_VERSIONS = ['kultur-atelier', 'fintech-case', 'vrykan-case', 'cruxanalytics-case', 'privacy-policy', 'terms', 'cookies'];
 
 const translations = {
     en: {
@@ -282,6 +282,11 @@ const translations = {
         vrykanTechLabel: "Stack:",
         vrykanTech: "Node.js, Drizzle ORM, CSP, Rate Limiting",
         vrykanDesc: "Transactional e-commerce backend engineered to sustain peak traffic campaigns (Black Friday) while blocking SQL injection and session hijacking by default. Proven at 10,000+ concurrent requests.",
+        cruxanalyticsTitle: "CruxAnalytics",
+        cruxanalyticsSubtitle: "Business Intelligence | Operational Friction Diagnostics",
+        cruxanalyticsTechLabel: "Stack:",
+        cruxanalyticsTech: "Node.js, React Native, DDD, XAI",
+        cruxanalyticsDesc: "Open Source Business Intelligence platform for evaluating metric feasibility and generating high-level accounting analysis. Pure financial calculations with Explainable AI that translates complex logic into executive summaries.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | AI-Ready Architecture",
         case2TechLabel: "Tech:",
@@ -492,6 +497,11 @@ const translations = {
         vrykanTechLabel: "Stack:",
         vrykanTech: "Node.js, Drizzle ORM, CSP, Rate Limiting",
         vrykanDesc: "Backend transaccional de e-commerce diseñado para sostener picos máximos de tráfico (Black Friday) y bloquear por defecto inyecciones SQL y secuestros de sesión. Probado con más de 10.000 requests simultáneos.",
+        cruxanalyticsTitle: "CruxAnalytics",
+        cruxanalyticsSubtitle: "Inteligencia de Negocios | Diagnóstico de Fricción Operacional",
+        cruxanalyticsTechLabel: "Stack:",
+        cruxanalyticsTech: "Node.js, React Native, DDD, XAI",
+        cruxanalyticsDesc: "Plataforma Open Source de Inteligencia de Negocios para evaluar factibilidad métrica y generar análisis contables de alto nivel. Cálculos financieros puros con IA Explicable que traduce lógica compleja en resúmenes ejecutivos.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | Arquitectura AI-Ready",
         case2TechLabel: "Tech:",
@@ -709,6 +719,11 @@ const translations = {
         vrykanTechLabel: "Stack:",
         vrykanTech: "Node.js, Drizzle ORM, CSP, Rate Limiting",
         vrykanDesc: "Backend transacional de e-commerce projetado para suportar picos máximos de tráfego (Black Friday) e bloquear por padrão injeções SQL e sequestros de sessão. Comprovado com mais de 10.000 requests simultâneos.",
+        cruxanalyticsTitle: "CruxAnalytics",
+        cruxanalyticsSubtitle: "Inteligência de Negócios | Diagnóstico de Fricção Operacional",
+        cruxanalyticsTechLabel: "Stack:",
+        cruxanalyticsTech: "Node.js, React Native, DDD, XAI",
+        cruxanalyticsDesc: "Plataforma Open Source de Inteligência de Negócios para avaliar viabilidade métrica e gerar análises contábeis de alto nível. Cálculos financeiros puros com IA Explicável que traduz lógica complexa em resumos executivos.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | Arquitetura AI-Ready",
         case2TechLabel: "Tech:",
@@ -989,6 +1004,18 @@ function initVrykanCaseCard() {
     });
 }
 
+function initCruxAnalyticsCaseCard() {
+    document.querySelectorAll('.cruxanalytics-case-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('userLanguage') || 'en';
+            let targetPage = 'cruxanalytics-case.html';
+            if (currentLang === 'es') targetPage = 'cruxanalytics-case-es.html';
+            if (currentLang === 'pt') targetPage = 'cruxanalytics-case-pt.html';
+            window.location.href = targetPage;
+        });
+    });
+}
+
 /* =========================================================
    MOBILE CAROUSELS
    ========================================================= */
@@ -1186,6 +1213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initKulturAtelierCard();
     initFintechCaseCard();
     initVrykanCaseCard();
+    initCruxAnalyticsCaseCard();
     initMobileCarousels();
     initSolutionsMobileCarousel();
     window.addEventListener('load', initSolutionsMobileCarousel, { once: true });

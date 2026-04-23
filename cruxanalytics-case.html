@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CruxAnalytics Business Intelligence Case Study | Vanguard Crux</title>
+    <meta name="description" content="Open Source Business Intelligence platform with operational friction diagnostics. DDD architecture with Explainable AI translating financial calculations into executive summaries.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn active">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1b4a5e 0%, #0a3d52 60%, #051d2a 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                CruxAnalytics
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Open Source Business Intelligence</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Algorithmic diagnosis of operational friction and ROI. Pure financial calculations with Explainable AI that translates complex accounting logic into clear executive summaries for data-driven decision-making.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Node.js Backend</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">React Native UI</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">DDD Architecture</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">The Challenge</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Management teams across growing enterprises rely on Excel spreadsheets and manual calculations for critical financial decisions. When metrics live in outdated, unmaintained data sources, operational friction skyrockets. Decision-makers lack real-time insight into true ROI, cost centers, and efficiency gaps. Without algorithmic precision, business diagnostics become guesswork.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">∞</div>
+                            <div class="text-sm text-gray-400">Spreadsheet Dependency</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">0</div>
+                            <div class="text-sm text-gray-400">Real-Time Metrics</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                            <div class="text-sm text-gray-400">Manual Interpretation Risk</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Executive dashboards scattered across departments. One team calculates NPV differently than another. Financial models live in disconnected files, updated sporadically by individual managers. Critical calculations—ROI, payback period, friction costs—depend on spreadsheet formulas no one can audit or verify. A single typo in a formula cascades across quarterly reports.
+                        </p>
+                        <p class="text-gray-300">
+                            The solution required a platform where financial calculations are deterministic, auditable, and transparent. Where algorithms—not human interpretation—diagnose operational health. Where complex accounting metrics translate into language executives immediately understand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">The Solution</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Domain-Driven Financial Architecture</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Pure Financial Calculations</h4>
+                        <p class="text-gray-300">All accounting logic isolated in deterministic Node.js functions. NPV, IRR, payback periods, friction costs calculated locally without database dependencies. Pure functions produce identical results every time—no floating-point surprises, no hidden state.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Domain-Driven Design</h4>
+                        <p class="text-gray-300">Financial domain modeled independently from UI concerns. Business rules live in the calculation layer. React Native consumes these pure results, ensuring platform-independence and testability across mobile, desktop, and web.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Explainable AI (XAI)</h4>
+                        <p class="text-gray-300">Generative algorithms evaluate the exact financial calculations and produce clear natural language diagnoses. Complex metrics translate into actionable text: "Operating costs are 23% above industry baseline; here's why and what to fix."</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Modular Async Architecture</h4>
+                        <p class="text-gray-300">Mathematical processing occurs independently from visual rendering. React Native UI remains responsive while backend calculates complex multi-scenario analyses. Decoupled layers enable parallel processing and independent scaling.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Enterprise-Grade Insights</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Real-time financial diagnostics across cost centers, revenue streams, and operational metrics. Unified analytics engine eliminates spreadsheet fragmentation. Every number traceable to its source algorithm. Every result auditable for compliance and accuracy.
+                    </p>
+                    <p class="text-gray-300">
+                        Executives access dashboards on mobile or desktop—same data, same insights. Predictive models identify friction points before they cascade. AI-generated narratives translate metrics into strategy. Decision velocity increases; decision quality improves.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Open Source Reliability</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                        <p class="text-gray-300">Deterministic Calculations</p>
+                        <p class="text-sm text-gray-400 mt-2">No human interpretation, pure algorithms</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">∞</div>
+                        <p class="text-gray-300">Auditability & Transparency</p>
+                        <p class="text-sm text-gray-400 mt-2">Every number traces to its source formula</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">XAI</div>
+                        <p class="text-gray-300">Explainable Intelligence</p>
+                        <p class="text-sm text-gray-400 mt-2">Algorithms explain themselves in plain language</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Results & Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Operational Clarity</h3>
+                    <p class="text-gray-300">Eliminated spreadsheet chaos. Single source of truth for financial calculations across all departments. Real-time dashboards replace weekly reports. Decision cycles accelerate from days to minutes.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Algorithmic Precision</h3>
+                    <p class="text-gray-300">Zero formula errors, zero calculation variance. NPV, IRR, and payback period calculations produce identical results across all platforms. Determinism eliminates costly mistakes in financial modeling.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Executive Agility</h3>
+                    <p class="text-gray-300">Generative AI translates complex metrics into strategy-ready insights. Leadership understands financial health without data science training. Decision-makers move faster, confident in algorithmic precision.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Scalable Intelligence</h3>
+                    <p class="text-gray-300">Open Source foundation allows enterprises to adapt, extend, and integrate. Multi-tenant analytics for diversified organizations. Platform grows with business complexity without sacrificing performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. All rights reserved.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Home</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Case Studies</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>
