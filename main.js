@@ -966,7 +966,7 @@ function initMobileCarousels() {
     if (window.innerWidth > 1023) return;
 
     const configs = [
-        { grid: document.querySelector('#solutions .grid'),  cardSel: '.service-card', startIdx: 0 },
+        { grid: document.getElementById('solutions-grid'),    cardSel: '.service-card', startIdx: 0 },
         { grid: document.querySelector('.testimonials-grid'), cardSel: '.testimonial-card', startIdx: 0 },
         { grid: document.querySelector('.pricing-grid'),      cardSel: '.pricing-card', startIdx: 1 },
     ];
@@ -975,8 +975,10 @@ function initMobileCarousels() {
         const card = cards[cardIdx];
         if (!card) return;
 
-        // Scroll so the target card's left edge aligns with the grid's left edge
-        grid.scrollLeft = card.offsetLeft - grid.offsetLeft;
+        // Scroll so the card is centered in the viewport
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const gridCenter = grid.clientWidth / 2;
+        grid.scrollLeft = cardCenter - gridCenter;
     }
 
     configs.forEach(({ grid, cardSel, startIdx }) => {

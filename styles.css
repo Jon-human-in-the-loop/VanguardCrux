@@ -1846,28 +1846,32 @@ input:focus, textarea:focus {
   }
 
   /* ── Solutions grid → horizontal carousel ── */
-  #solutions .grid {
+  #solutions-grid {
     display: flex !important;
     overflow-x: auto;
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 0;
-    padding: 0.5rem 1rem 1.25rem 1rem !important;
+    padding: 0.5rem 5vw 1.25rem 5vw !important;
     scrollbar-width: none;
     scroll-behavior: smooth;
   }
-  #solutions .grid::-webkit-scrollbar { display: none; }
-  #solutions .grid .service-card {
-    flex: 0 0 calc(100vw - 2rem);
-    width: calc(100vw - 2rem);
-    scroll-snap-align: start;
-    margin-right: 1rem;
+  #solutions-grid::-webkit-scrollbar { display: none; }
+  #solutions-grid .service-card {
+    flex: 0 0 90vw !important;
+    width: 90vw !important;
+    min-width: 90vw !important;
+    scroll-snap-align: center;
+    margin-right: 1.5rem;
+    position: relative;
+    z-index: 20;
+    flex-shrink: 0 !important;
   }
-  #solutions .grid .service-card:last-child {
+  #solutions-grid .service-card:last-child {
     margin-right: 0;
   }
-  #solutions .grid .service-card:hover {
+  #solutions-grid .service-card:hover {
     transform: none !important;
   }
 
@@ -1879,16 +1883,16 @@ input:focus, textarea:focus {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 0;
-    padding: 0.5rem 1rem 1.25rem 1rem !important;
+    padding: 0.5rem 5vw 1.25rem 5vw !important;
     scrollbar-width: none;
     grid-template-columns: unset !important;
     scroll-behavior: smooth;
   }
   .testimonials-grid::-webkit-scrollbar { display: none; }
   .testimonials-grid .testimonial-card {
-    flex: 0 0 calc(100vw - 2rem);
-    width: calc(100vw - 2rem);
-    scroll-snap-align: start;
+    flex: 0 0 90vw;
+    width: 90vw;
+    scroll-snap-align: center;
     margin-right: 1rem;
   }
   .testimonials-grid .testimonial-card:last-child {
@@ -1906,7 +1910,7 @@ input:focus, textarea:focus {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 0;
-    padding: 2rem 1rem 1.25rem 1rem !important;
+    padding: 2rem 5vw 1.25rem 5vw !important;
     scrollbar-width: none;
     grid-template-columns: unset !important;
     max-width: unset !important;
@@ -1915,9 +1919,9 @@ input:focus, textarea:focus {
   }
   .pricing-grid::-webkit-scrollbar { display: none; }
   .pricing-grid .pricing-card {
-    flex: 0 0 calc(100vw - 2rem);
-    width: calc(100vw - 2rem);
-    scroll-snap-align: start;
+    flex: 0 0 90vw;
+    width: 90vw;
+    scroll-snap-align: center;
     margin-right: 1rem;
   }
   .pricing-grid .pricing-card:last-child {

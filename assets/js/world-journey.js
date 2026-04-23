@@ -139,6 +139,12 @@
       cachedOffX = 0;
       cachedOffY = (cachedMapH - cachedRenderedH) / 2;
     }
+
+    // Reposition all static markers based on new layout
+    STOPS.forEach((stop, i) => {
+      const dot = stopEls[i];
+      if (dot) positionElementOnMap(dot, stop.x, stop.y);
+    });
   }
 
   // RAF throttle flag
@@ -297,24 +303,22 @@
     // ── Reveal stop markers + labels
     const arrivedIdx = (animProgress >= 1)
       ? STOPS.length - 1
-      : segIdx + (segT > 0.7 ? 1 : 0);
+      : segIdx + (segT > 0.9 ? 1 : 0);
 
     STOPS.forEach((stop, i) => {
       const dot = stopEls[i];
       const lbl = labelEls[i];
       if (!dot || !lbl) return;
 
-      // Keep stop markers correctly positioned despite SVG letterboxing
-      positionElementOnMap(dot, stop.x, stop.y);
-
       if (i <= arrivedIdx) {
         dot.classList.add('stop--active');
-        if (stop.isCurrent && i <= arrivedIdx) {
+        if (stop.isCurrent) {
           dot.classList.add('stop--current');
         }
       } else {
         dot.classList.remove('stop--active', 'stop--current');
       }
+      
       if (i <= arrivedIdx) {
         lbl.classList.add('stop-label--visible');
       } else {
@@ -408,8 +412,8 @@
     // Keep overlay grouped with map geometry
     const overlay = document.getElementById('journey-stops-overlay');
     if (overlay) {
-      overlay.style.transform = transformStr;
-      overlay.style.transformOrigin = 'center center';
+      // Overlay is now inside mapWrapper, so it inherits the transform perfectly.
+      // We only need to set the zoom variable for inverse scaling of dots/plane.
       overlay.style.setProperty('--map-zoom', scale);
     }
   }
