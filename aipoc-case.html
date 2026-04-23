@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI PoC - Maia Kode Digital Persona Case Study | Vanguard Crux</title>
+    <meta name="description" content="AI-driven persona validation framework using Gemini LLM and voice synthesis. Analyzed 16 influencers to generate optimal digital persona traits before full-scale influencer AI development.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn active">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a1f35 0%, #2d1b4e 60%, #3d0f5c 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                Maia Kode
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">AI-Driven Digital Persona Validation</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Proof-of-concept framework validating influencer AI viability before capital investment. Used Gemini LLM to analyze behavioral patterns of 16 industry leaders, synthesizing optimal persona traits. Reduced market validation risk and accelerated full-scale Maia Kode development.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Gemini API</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">LLM Analysis</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Voice Synthesis</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">The Challenge</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        EdTech brand considering $500K+ investment in virtual influencer AI. Uncertain which personality traits, communication style, and visual aesthetic would resonate in STEM education niche. Design assumptions untested. Risk of building wrong persona and wasting capital.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">$500K+</div>
+                            <div class="text-sm text-gray-400">Planned Investment Risk</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">16</div>
+                            <div class="text-sm text-gray-400">Reference Influencers</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">0</div>
+                            <div class="text-sm text-gray-400">Market Validation Data</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Building a virtual influencer requires decisions across multiple dimensions: personality archetype, tone of voice, visual identity, content approach. Each dimension affects audience retention differently. Wrong choices cost months and capital. No data exists to guide the design.
+                        </p>
+                        <p class="text-gray-300">
+                            The solution required a lightweight PoC: extract patterns from proven industry figures, synthesize an optimal persona, validate via prototyping. Reduce risk before committing full development budget.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">The Solution</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Data-Driven Persona Engineering</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Influencer Analysis Database</h4>
+                        <p class="text-gray-300">Curated 16 leading STEM educators and EdTech influencers. Structured data across 50+ traits: communication style, humor frequency, technical depth, accessibility, engagement patterns. Cross-referenced audience retention metrics and follower growth patterns.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Gemini LLM Pattern Inference</h4>
+                        <p class="text-gray-300">Processed qualitative data through Google Gemini API. LLM extracted behavioral archetypes, personality dimensions, and communication frameworks. Identified patterns correlating with high audience retention. Generated synthesis report mapping traits to audience preferences.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Voice Synthesis Iteration</h4>
+                        <p class="text-gray-300">Built Flask microservice integrating TTS engines. Rapid prototyping of 8+ voice variants generated by LLM prompts. A/B tested voice characteristics against audience retention predictions. Selected optimal tone and speech patterns.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Persona Specification Artifact</h4>
+                        <p class="text-gray-300">Synthesized findings into executable persona specification: personality archetype, voice parameters, content approach, visual identity direction, engagement framework. Handed to full-scale development team as validated blueprint reducing assumption-based design risk.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Validation Through Rapid Prototyping</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Created interactive dashboard presenting persona recommendations with supporting evidence. Visualized 16-influencer trait distributions. Displayed voice synthesis samples. Showed retention correlation analysis. Stakeholders reviewed in one session, approved persona specification, greenlighting full-scale development.
+                    </p>
+                    <p class="text-gray-300">
+                        Time to market: 3 weeks from project start to validated persona. Capital efficiency: $40K PoC investment saved $250K+ in misdirected development. Risk reduction: design decisions now backed by data analysis rather than assumption.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Impact Metrics</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">80%</div>
+                        <p class="text-gray-300">Risk Reduction</p>
+                        <p class="text-sm text-gray-400 mt-2">Data-backed design vs assumption-based</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">3 weeks</div>
+                        <p class="text-gray-300">Validation Timeline</p>
+                        <p class="text-sm text-gray-400 mt-2">From analysis to approved persona spec</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">$250K+</div>
+                        <p class="text-gray-300">Misdirection Prevention</p>
+                        <p class="text-sm text-gray-400 mt-2">Avoided through early validation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Results & Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Strategic Risk Mitigation</h3>
+                    <p class="text-gray-300">Transformed $500K investment from speculative to validated. Executive team confident in persona decisions backed by systematic analysis. Reduced stakeholder anxiety about market fit. Enabled full-scale development greenlight with aligned leadership.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Accelerated Development Timeline</h3>
+                    <p class="text-gray-300">Persona specification eliminated design iteration cycles. Development team started with validated blueprint instead of exploring 10+ alternatives. 6-month acceleration to first prototype. First-mover advantage in EdTech AI influencer space.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Reusable Analytics Framework</h3>
+                    <p class="text-gray-300">Persona validation system now used for market research across multiple projects. Competitor analysis dashboard. Audience segmentation studies. $40K PoC investment now generating value across portfolio. Framework license potential.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Maia Kode Launch Success</h3>
+                    <p class="text-gray-300">Virtual influencer launched with data-validated persona. Audience engagement metrics exceeded predictions derived from influencer analysis. Retention rates aligned with LLM synthesis recommendations. Foundation for sustainable long-term deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. All rights reserved.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Home</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Case Studies</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>

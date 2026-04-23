@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="vrykanMetaTitle">VRYKAN High-Traffic E-commerce Case Study | Vanguard Crux</title>
+    <meta name="description" data-lang="vrykanMetaDesc" content="Secure-by-design e-commerce backend built on Node.js with Drizzle ORM. Proven at 10,000+ concurrent requests during peak traffic campaigns.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn active">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors" data-lang="backToHome">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #0a1e30 0%, #123047 60%, #1b4a5e 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                VRYKAN
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light" data-lang="vrykanHeroSubtitle">High-Traffic E-commerce Platform</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" data-lang="vrykanHeroDesc">
+                Secure-by-design transactional backend engineered to sustain peak campaign traffic while blocking SQL injection and session hijacking by default.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Node.js Backend</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Drizzle ORM</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">10,000+ RPS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent" data-lang="vrykanChallengeTitle">The Challenge</h2>
+                    <p class="text-lg text-gray-300 mb-8" data-lang="vrykanChallengeDesc">
+                        High-volume e-commerce platforms face two critical threats: peak traffic during campaigns can overwhelm servers, and modern attack vectors (SQL injection, session hijacking, brute force) can compromise transaction integrity. Traditional backends require constant patching and monitoring.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">10K+</div>
+                            <div class="text-sm text-gray-400" data-lang="vrykanMetric1">Concurrent Requests Target</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">0 SQL</div>
+                            <div class="text-sm text-gray-400" data-lang="vrykanMetric2">Raw Query Risk</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                            <div class="text-sm text-gray-400" data-lang="vrykanMetric3">Session Protection</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4" data-lang="vrykanChallengeDetail">
+                            During Black Friday and heavy paid campaigns, transaction volume spikes unpredictably. Meanwhile, attackers probe for vulnerability vectors: SQL injection via user input, session token theft via unsecured cookies, credential stuffing via bot armies. A breach doesn't just lose transactions—it destroys customer trust and triggers compliance penalties.
+                        </p>
+                        <p class="text-gray-300" data-lang="vrykanChallengeDetail2">
+                            The solution required a backend architecture where security and scalability were inseparable, not bolted on after the fact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent" data-lang="vrykanSolutionTitle">The Solution</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest" data-lang="vrykanSolutionSubtitle">Secure-by-Design Architecture</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent" data-lang="vrykanArch1Title">Drizzle ORM Abstraction</h4>
+                        <p class="text-gray-300" data-lang="vrykanArch1Desc">All database queries generated from typed schemas, eliminating raw SQL and blocking injection by design. No string concatenation, no runtime query construction.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent" data-lang="vrykanArch2Title">Content Security Policy</h4>
+                        <p class="text-gray-300" data-lang="vrykanArch2Desc">Strict CSP headers prevent inline script execution and cross-origin attacks. Nonce-based script loading ensures only authorized assets execute in the browser.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent" data-lang="vrykanArch3Title">HttpOnly Token Security</h4>
+                        <p class="text-gray-300" data-lang="vrykanArch3Desc">Session tokens stored in secure, HttpOnly cookies with SameSite=Strict. Prevents JavaScript access and mitigates CSRF and cross-site token theft.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent" data-lang="vrykanArch4Title">Rate Limiting & DDoS Defense</h4>
+                        <p class="text-gray-300" data-lang="vrykanArch4Desc">Adaptive rate limiting thresholds distinguish legitimate buyers from bot attacks. Requests from compromised IPs are silently throttled without disrupting real customer checkout flows.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest" data-lang="vrykanPerformanceTitle">High-Availability Performance</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6" data-lang="vrykanPerformanceDesc">
+                        Node.js non-blocking I/O architecture handles concurrent connections efficiently. Each transaction is isolated within its own async context, preventing one slow query from blocking others. Horizontal scaling across multiple processes ensures no single point of failure.
+                    </p>
+                    <p class="text-gray-300" data-lang="vrykanPerformanceDesc2">
+                        Proven load testing shows sustained throughput of 10,000+ requests per second during simulated Black Friday scenarios, with sub-100ms P99 latency for successful transactions.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest" data-lang="vrykanCodeQualityTitle">Enterprise Code Quality</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                        <p class="text-gray-300" data-lang="vrykanQuality1">TypeScript Coverage</p>
+                        <p class="text-sm text-gray-400 mt-2">No implicit any, strict null checks</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">0</div>
+                        <p class="text-gray-300" data-lang="vrykanQuality2">Technical Debt</p>
+                        <p class="text-sm text-gray-400 mt-2">Clean architecture patterns, SOLID principles</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">Audit</div>
+                        <p class="text-gray-300" data-lang="vrykanQuality3">Ready Codebase</p>
+                        <p class="text-sm text-gray-400 mt-2">For multi-branch franchise scaling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent" data-lang="vrykanResultsTitle">Results & Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent" data-lang="vrykanResult1Title">Traffic Handling</h3>
+                    <p class="text-gray-300" data-lang="vrykanResult1Desc">Sustained Black Friday load (10,000+ RPS) without dropped transactions or customer timeouts. Zero degradation in checkout speed even during peak minutes.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent" data-lang="vrykanResult2Title">Security Posture</h3>
+                    <p class="text-gray-300" data-lang="vrykanResult2Desc">Zero successful injection attacks, zero session hijacks, zero compliance violations. Passes OWASP Top 10 security audits without remediation.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent" data-lang="vrykanResult3Title">Operational Efficiency</h3>
+                    <p class="text-gray-300" data-lang="vrykanResult3Desc">Reduced manual security monitoring overhead by 70%. DevOps teams focus on feature delivery, not firefighting vulnerability patches.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent" data-lang="vrykanResult4Title">Franchise Ready</h3>
+                    <p class="text-gray-300" data-lang="vrykanResult4Desc">Codebase structured for multi-branch deployment. Each franchise can spin up independent stores on the same proven backend infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p data-lang="footerCopy">© 2025 Vanguard Crux. All rights reserved.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Home</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors" data-lang="footerCaseStudies">Case Studies</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+    <script>
+        // On page load, apply translations
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = localStorage.getItem('userLanguage') || 'en';
+            applyTranslations(lang);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosistema de Agentes IA | Orquestación Inter-Plataforma | Vanguard Crux</title>
+    <meta name="description" content="Ecosistema unificado de Agentes IA conectando 14+ plataformas empresariales via Protocolo de Contexto de Modelo. Orquestación basada en MCP habilitando sincronización autónoma de datos y ejecución de tareas consciente del contexto.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn active">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #2d1a4e 0%, #3d2a5e 60%, #1a3d5c 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                Ecosistema de Agentes IA
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Orquestación Unificada Inter-Plataforma</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Red inteligente de Agentes IA conectando 14+ plataformas empresariales vía Protocolo de Contexto de Modelo. Comandos en lenguaje natural desde Slack orquestan flujos complejos a través de Notion, Jira, Google Drive, GitHub y más. Sincronización de datos en tiempo real, ejecución consciente del contexto, y tool calling autónomo eliminan operaciones de transferencia manual de datos completamente.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Protocolo MCP</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">14+ Integraciones</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Tool Calling</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">El Desafío</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Equipos empresariales manejan 14+ plataformas desconectadas: Slack para comunicación, Jira para tickets, Notion para documentación, Google Drive para archivos, GitHub para código. Datos existen en silos. Flujos requieren transferencias manuales—copiar datos de una app, pegar en otra, disparar manualmente el siguiente paso. Coordinación de equipo se rompe; información crítica dispersa crea fricción y error.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">14+</div>
+                            <div class="text-sm text-gray-400">Plataformas Desconectadas</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">30%</div>
+                            <div class="text-sm text-gray-400">Tiempo en Transferencia de Datos</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">∞</div>
+                            <div class="text-sm text-gray-400">Latencia de Flujo de Trabajo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Un ingeniero de soporte recibe ticket en Jira pero no puede acceder contexto de cliente en Notion sin abandonar Jira, navegar a Notion, buscar registro, y contextualizar el problema. Gerente de producto necesita actualizar estado del equipo en Slack basado en estado de lanzamiento en GitHub, pero debe verificar ambos sistemas manualmente y mantenerlos sincronizados. Desarrollador asigna tarea en Jira pero documenta supuestos de flujo en Google Drive—sin link entre tarea y docs. Conocimiento permanece fragmentado.
+                        </p>
+                        <p class="text-gray-300">
+                            La solución requería capa de agente unificada: middleware inteligente que entienda intención en lenguaje natural, acceda datos a través de todas plataformas simultáneamente, ejecute acciones coordinadas, y mantenga sincronización en tiempo real sin intervención humana. Agente único sirviendo como puente inteligente, sincronizando ecosistema completo autónomamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">La Solución</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Capa de Inteligencia Agente Unificada</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Protocolo de Contexto de Modelo (MCP)</h4>
+                        <p class="text-gray-300">Interfaz estandarizada para que agentes IA accedan herramientas externas y fuentes de datos. MCP habilita cualquier agente entender interactuar con APIs de Slack, Jira, Notion, Google Drive, GitHub uniformemente. Cada plataforma mapeada como endpoint de contexto discreto, permitiendo agentes razonar a través de múltiples fuentes simultáneamente. Protocolo asegura compatibilidad a través de proveedores de LLM.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Tool Calling Inteligente</h4>
+                        <p class="text-gray-300">Agentes IA equipados con capacidad de invocación de función para invocar acciones específicas de plataforma autónomamente. Agente recibe instrucción en lenguaje natural desde Slack, evalúa qué herramientas invocar (leer Notion, actualizar Jira, buscar GitHub), las ejecuta en secuencia correcta, y sintetiza resultados. Cero intervención humana en cadena de ejecución.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Sincronización de Contexto en Tiempo Real</h4>
+                        <p class="text-gray-300">Agentes mantienen contexto unificado a través de todas plataformas. Cuando ticket se actualiza en Jira, agente automáticamente refleja estado en hilo Slack, actualiza documentos Notion relacionados, y notifica GitHub PR si está relacionado con código. Sincronización bidireccional asegura consistencia de datos sin reconciliación manual. Contexto fluye en tiempo real, nunca obsoleto.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Orquestación en Lenguaje Natural</h4>
+                        <p class="text-gray-300">Equipos interactúan con ecosistema completo vía Slack. "Mover ticket XYZ a en-progreso, actualizar estado Notion, crear issue GitHub para tarea relacionada"—mensaje Slack único dispara acciones coordinadas a través de cuatro plataformas. Agente analiza intención, resuelve entidades, ejecuta flujo, reporta completación. Cero configuración necesaria por usuario.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Unificación Operacional</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Ecosistema de plataformas opera como unidad cohesiva única. Agente actúa como sistema nervioso inteligente: percibe estado de plataforma, toma decisiones basadas en contexto unificado, ejecuta acciones cross-plataforma autónomamente. Equipos trabajan en interfaz preferida (Slack, Jira, Notion) mientras agente asegura todos sistemas permanecenan sincronizados. Transferencia de datos manual eliminada completamente.
+                    </p>
+                    <p class="text-gray-300">
+                        Resultado: Flujos completan 10× más rápido. Tiempo gastado en sincronización de datos cae de 30% a casi cero. Coordinación de equipo se vuelve instantánea. Conocimiento fluye entre plataformas automáticamente. Fuente única de verdad emerge a través de 14+ sistemas. Organización opera como inteligencia unificada, no colección de herramientas fragmentada.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Métricas de Impacto</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">10×</div>
+                        <p class="text-gray-300">Velocidad de Flujo</p>
+                        <p class="text-sm text-gray-400 mt-2">Transferencia de datos de 30% sobrecarga a &lt;1%</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">99%</div>
+                        <p class="text-gray-300">Precisión de Sincronización</p>
+                        <p class="text-sm text-gray-400 mt-2">Consistencia tiempo real a través de 14+ plataformas</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">0</div>
+                        <p class="text-gray-300">Transferencias Manuales</p>
+                        <p class="text-sm text-gray-400 mt-2">Orquestración cross-plataforma autónoma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Resultados e Impacto</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Velocidad Organizacional</h3>
+                    <p class="text-gray-300">Flujos se comprimen de días a horas. Cambio de contexto de equipo eliminado; todo accesible desde Slack. Decisiones tomadas más rápido con información unificada. Overhead de coordinación desaparece. Negocio responde a cambios de mercado en tiempo real a través de sincronización instantánea y ejecución autónoma. Agilidad competitiva se multiplica.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Unificación de Conocimiento</h3>
+                    <p class="text-gray-300">Información fluye naturalmente entre plataformas. Tickets Jira vinculan a docs Notion automáticamente. Issues GitHub aparecen en canales Slack relevantes. Cambios Google Drive disparan actualizaciones de estado. Organización desarrolla memoria unificada a través de todas herramientas. Sin más silos de información. Conocimiento se vuelve accesible en todas partes simultáneamente.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Liberación de Productividad del Equipo</h3>
+                    <p class="text-gray-300">Ingenieros recuperan 30% de tiempo previamente gastado en transferencia manual de datos. Equipos de soporte sirven clientes más rápido con contexto completo. Gerentes de producto toman decisiones con datos unificados en tiempo real. Sin más entrada de datos duplicada o trabajo de reconciliación. Talento humano redirigido a trabajo estratégico de alto valor.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Operaciones Multi-Plataforma Escalables</h3>
+                    <p class="text-gray-300">Arquitectura escala horizontalmente a través de plataformas. Agregar herramienta nueva a ecosistema requiere solo registrar endpoint MCP. Agentes existentes instantáneamente ganan capacidad de orquestar plataforma nueva. Sin reconstrucción de lógica de sincronización. Organización crece huella de plataforma sin agregar complejidad operacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. Todos los derechos reservados.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Inicio</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Casos de Estudio</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>

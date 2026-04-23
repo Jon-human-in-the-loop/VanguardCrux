@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso de Estudio ClawSuite Auditoría de Seguridad | Vanguard Crux</title>
+    <meta name="description" content="Auditoría forense y blindaje de seguridad de plataformas de agentes IA locales. Mitigación RCE, sandboxing, parcheado ReDoS, protección CSRF dual con encriptación PBKDF.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn active">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a1f35 0%, #2d1b4e 60%, #3d0f5c 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                ClawSuite
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Auditoría de Seguridad & Blindaje</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Auditoría forense y blindaje de seguridad de plataformas de agentes IA locales. Mitiga riesgos de Ejecución de Código Remoto (RCE) mediante sandboxing, elimina vulnerabilidades ReDoS, e implementa protección CSRF de doble capa con identidades encriptadas con PBKDF.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Marco Tauri</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Seguridad Rust</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Encriptación PBKDF</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">El Desafío</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Las plataformas de agentes IA locales operando en dispositivos enfrentan amenazas de seguridad únicas: ataques RCE explotando la generación de procesos, ReDoS a través de patrones regex en entradas, movimiento lateral mediante acceso ilimitado al sistema de archivos, secuestro de sesiones, ataques CSRF. Los patrones de seguridad SaaS tradicionales fallan. Los agentes deben estar aislados a nivel del SO mientras se mantiene rendimiento.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">Crítico</div>
+                            <div class="text-sm text-gray-400">Exposición Riesgo RCE</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">Sin Límites</div>
+                            <div class="text-sm text-gray-400">Acceso Sistema de Archivos</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">Cero</div>
+                            <div class="text-sm text-gray-400">Aislamiento de Sesiones</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Los agentes IA locales se ejecutan con privilegios del host, amplificando la superficie de ataque. Un único punto de inyección se convierte en compromiso de todo el sistema. Los patrones regex en análisis de lenguaje natural exponen ReDoS. Las variables de entorno filtran credenciales. Los puntos finales CSRF carecen de validación de estado. Los tokens de sesión usan hashing débil.
+                        </p>
+                        <p class="text-gray-300">
+                            La solución requería hardening arquitectónico en tres vectores: aislamiento de procesos mediante sandboxing a nivel OS, gestión de sesiones criptográficas, y validación de entrada que derrota patrones de explotación comunes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">La Solución</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Marco de Hardening Multicapa</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Sandboxing Tauri</h4>
+                        <p class="text-gray-300">Aislamiento de procesos a nivel OS. Generación de agentes restringida a límites del sandbox. Acceso al sistema de archivos limitado a directorios permitidos. Comunicación de procesos hijo vía IPC con seguridad basada en capacidades. Ataques RCE confinados a sandbox; integridad del sistema preservada.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Mitigación ReDoS</h4>
+                        <p class="text-gray-300">Patrones regex auditados para backtracking polinómico. Longitud de entrada acotada antes de coincidencia de patrones. Guardias de timeout en ejecución regex. Reemplazo de patrones peligrosos con validadores de estado finito. Retroceso catastrófico eliminado; DoS regex imposible.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Encriptación de Sesión PBKDF</h4>
+                        <p class="text-gray-300">Tokens de sesión hasheados con PBKDF2 (100k iteraciones). Entropía criptográficamente fuerte para generación de token. Rotación de token en cambios de privilegios. Validación de sesión lado servidor. Manipulación de token detectable; ataques de repetición imposibles.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Protección CSRF Dual</h4>
+                        <p class="text-gray-300">Patrón de token sincronizador con validación de estado. Verificación CSRF basada en encabezado secundaria (SameSite). Verificación de origen de solicitud. Vinculación de nonce a contexto de sesión. Ataques CSRF capturados en primera y segunda capa; ninguna ruta de explotación permanece.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Reducción de Superficie de Ataque</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Antes: Superficie de ataque = sistema de archivos completo + creación de procesos + estado de sesión + IPC. Después: Superficie de ataque = acceso a directorio limitado + comunicación de procesos solo IPC + sesiones encriptadas + cambios de estado validados CSRF. Cada vector endurecido independientemente. No hay punto único de compromiso.
+                    </p>
+                    <p class="text-gray-300">
+                        Resultado: Ataques RCE fallan en límite del sandbox. Ataques ReDoS agotan el tiempo o fallan la coincidencia de patrones. Secuestro de sesión requiere derivación de clave PBKDF (impracticable). CSRF requiere token de estado válido Y token de encabezado. Movimiento lateral bloqueado por restricciones de sistema de archivos. Defensa en profundidad: múltiples capas deben fallar simultáneamente.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Métricas de Impacto</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">100%</div>
+                        <p class="text-gray-300">Contención RCE</p>
+                        <p class="text-sm text-gray-400 mt-2">Ataques de exploits confinados al sandbox</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">0</div>
+                        <p class="text-gray-300">Vulnerabilidades ReDoS</p>
+                        <p class="text-sm text-gray-400 mt-2">Todos los patrones regex endurecidos o reemplazados</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">Grado</div>
+                        <p class="text-gray-300">Militar Cripto</p>
+                        <p class="text-sm text-gray-400 mt-2">Protección de sesión basada en PBKDF</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Resultados e Impacto</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Eliminación de Vectores de Ataque</h3>
+                    <p class="text-gray-300">Todas las rutas RCE identificadas neutralizadas mediante sandboxing. Superficie de ataque ReDoS eliminada mediante hardening de regex. Secuestro de sesión hecho criptográficamente impracticable. Defensa CSRF validada mediante pruebas de penetración. Cero vectores explotables conocidos restantes.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Cumplimiento & Certificación</h3>
+                    <p class="text-gray-300">La plataforma cumple ahora con línea base de seguridad para despliegue de agentes IA en producción. Pasa revisión OWASP Top 10. Soporta marcos de cumplimiento (SOC 2, ISO 27001). Certificable como lista para empresa. Preocupaciones de seguros y responsabilidad abordadas.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Preservación de Desempeño</h3>
+                    <p class="text-gray-300">Overhead de sandboxing < 5%. Operaciones criptográficas se ejecutan en threads en background (no-bloqueante). Verificaciones CSRF añaden < 1ms latencia. Capacidad de respuesta del agente mantenida. La seguridad no compromete UX.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Arquitectura a Prueba del Futuro</h3>
+                    <p class="text-gray-300">Diseño de defensa en profundidad sobrevive a descubrimiento de nuevos exploits. Hardening modular permite actualizaciones de seguridad sin redespliegue. La arquitectura soporta panorama de amenazas próximo. Escalable a entornos de despliegue más grandes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. Todos los derechos reservados.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Inicio</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Casos de Estudio</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>

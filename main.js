@@ -179,7 +179,7 @@ if (menuBtn) {
    ========================================================= */
 
 // Pages with separate language-specific HTML files
-const PAGES_WITH_LANGUAGE_VERSIONS = ['kultur-atelier', 'fintech-case', 'vrykan-case', 'cruxanalytics-case', 'video-production-case', 'privacy-policy', 'terms', 'cookies'];
+const PAGES_WITH_LANGUAGE_VERSIONS = ['kultur-atelier', 'fintech-case', 'vrykan-case', 'cruxanalytics-case', 'video-production-case', 'clawsuite-case', 'aipoc-case', 'edtech-case', 'selfhealing-case', 'aiagent-case', 'privacy-policy', 'terms', 'cookies'];
 
 const translations = {
     en: {
@@ -292,6 +292,31 @@ const translations = {
         videoproductionTechLabel: "Stack:",
         videoproductionTech: "n8n, Pinecone, Gemini 2.5, HeyGen",
         videoproductionDesc: "Automated UGC content production system generating high-impact ad variations at scale. Zero-touch factory leveraging RAG, generative AI, and digital avatar synthesis. Reduces production costs by 85% while maintaining quality.",
+        clawsuiteTitle: "ClawSuite",
+        clawsuiteSubtitle: "Security Audit & Hardening | Local AI Agents",
+        clawsuiteTechLabel: "Stack:",
+        clawsuiteTech: "Tauri, Rust, PBKDF, Security Hardening",
+        clawsuiteDesc: "Forensic security audit and hardening of local AI agent platforms. Mitigated RCE risks, implemented sandboxing, patched ReDoS vulnerabilities, and deployed dual-layer CSRF protection with PBKDF encryption.",
+        aipocTitle: "AI PoC - Maia Kode",
+        aipocSubtitle: "Digital Persona Validation | Gemini LLM Analysis",
+        aipocTechLabel: "Stack:",
+        aipocTech: "Gemini API, Flask, TTS Synthesis, Data Analysis",
+        aipocDesc: "AI-driven persona validation framework analyzing 16 industry influencers to generate optimal digital persona traits. Integrated Gemini LLM for behavioral pattern inference and TTS for rapid voice iteration. Reduced market validation risk before full-scale influencer AI development.",
+        edtechTitle: "EdTech AI Ecosystem",
+        edtechSubtitle: "Interactive Avatar Platform | Zero-Touch Content",
+        edtechTechLabel: "Stack:",
+        edtechTech: "ElevenLabs, Vercel, Node.js, AI Avatar, Serverless",
+        edtechDesc: "Full-scale AI-driven educational ecosystem with interactive avatar, automated content generation, and advanced voice synthesis. Serverless architecture ensures 24/7 availability and handles concurrent learners at scale. Eliminates physical production logistics while maintaining natural voice quality.",
+        shTitle: "Self-Healing n8n",
+        shSubtitle: "Autonomous Repair | Dynamic Error Resolution",
+        shTechLabel: "Stack:",
+        shTech: "Python, GPT-4, n8n, Smart Rate-Limit Handling",
+        shDesc: "Autonomous self-healing system for n8n workflow automation using GPT-4 reasoning. Detects and repairs corrupted data and code dynamically, implements intelligent rate-limit handling, and ensures 99.99% uptime by eliminating manual DevOps intervention for common failure patterns.",
+        aiagentTitle: "AI Agent Ecosystem",
+        aiagentSubtitle: "Inter-Platform Orchestration | 14+ Connected Apps",
+        aiagentTechLabel: "Stack:",
+        aiagentTech: "MCP Protocol, Python Agents, n8n, GPT-4, Tool Calling",
+        aiagentDesc: "Unified AI Agent ecosystem connecting 14+ enterprise platforms via Model Context Protocol. Natural language commands from Slack trigger intelligent orchestration across Notion, Jira, Google Drive, GitHub. Real-time data synchronization, context-aware task execution, and autonomous tool calling eliminate manual data transfer workflows.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | AI-Ready Architecture",
         case2TechLabel: "Tech:",
@@ -512,6 +537,31 @@ const translations = {
         videoproductionTechLabel: "Stack:",
         videoproductionTech: "n8n, Pinecone, Gemini 2.5, HeyGen",
         videoproductionDesc: "Sistema automatizado de producción de contenido UGC generando variaciones de anuncios a escala. Factoría Zero-Touch aprovechando RAG, IA generativa y síntesis de avatares digitales. Reduce costos de producción 85% manteniendo calidad.",
+        clawsuiteTitle: "ClawSuite",
+        clawsuiteSubtitle: "Auditoría de Seguridad & Blindaje | Agentes IA Locales",
+        clawsuiteTechLabel: "Stack:",
+        clawsuiteTech: "Tauri, Rust, PBKDF, Hardening de Seguridad",
+        clawsuiteDesc: "Auditoría forense y blindaje de seguridad de plataformas de agentes IA locales. Mitigó riesgos RCE, implementó sandboxing, parcheó vulnerabilidades ReDoS, y desplegó protección CSRF de doble capa con encriptación PBKDF.",
+        aipocTitle: "PoC IA - Maia Kode",
+        aipocSubtitle: "Validación de Persona Digital | Análisis Gemini LLM",
+        aipocTechLabel: "Stack:",
+        aipocTech: "API Gemini, Flask, Síntesis TTS, Análisis de Datos",
+        aipocDesc: "Marco de validación de persona digital impulsado por IA analizando 16 influencers de la industria para generar rasgos de persona digital óptimos. Integró LLM Gemini para inferencia de patrones de comportamiento y TTS para iteración rápida de voces. Redujo riesgo de validación de mercado antes de desarrollo a escala de influencer IA.",
+        edtechTitle: "Ecosistema EdTech IA",
+        edtechSubtitle: "Plataforma Avatar Interactivo | Contenido Zero-Touch",
+        edtechTechLabel: "Stack:",
+        edtechTech: "ElevenLabs, Vercel, Node.js, Avatar IA, Serverless",
+        edtechDesc: "Ecosistema educativo a escala impulsado por IA con avatar interactivo, generación de contenido automatizado y síntesis de voz avanzada. Arquitectura serverless garantiza disponibilidad 24/7 y maneja estudiantes concurrentes a escala. Elimina logística de producción física manteniendo calidad de voz natural.",
+        shTitle: "Auto-Recuperación n8n",
+        shSubtitle: "Reparación Autónoma | Resolución Dinámica de Errores",
+        shTechLabel: "Stack:",
+        shTech: "Python, GPT-4, n8n, Manejo Inteligente de Rate-Limits",
+        shDesc: "Sistema de auto-recuperación autónomo para automatizaciones n8n usando razonamiento de GPT-4. Detecta y repara datos y código corrupto dinámicamente, implementa manejo inteligente de rate-limits, y asegura 99.99% uptime eliminando intervención manual de DevOps para patrones de fallos comunes.",
+        aiagentTitle: "Ecosistema de Agentes IA",
+        aiagentSubtitle: "Orquestación Inter-Plataforma | 14+ Aplicaciones Conectadas",
+        aiagentTechLabel: "Stack:",
+        aiagentTech: "Protocolo MCP, Agentes Python, n8n, GPT-4, Tool Calling",
+        aiagentDesc: "Ecosistema unificado de Agentes IA conectando 14+ plataformas empresariales vía Protocolo de Contexto de Modelo. Comandos en lenguaje natural desde Slack disparan orquestación inteligente a través de Notion, Jira, Google Drive, GitHub. Sincronización de datos en tiempo real, ejecución de tareas consciente del contexto, y tool calling autónomo eliminan flujos manuales de transferencia de datos.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | Arquitectura AI-Ready",
         case2TechLabel: "Tech:",
@@ -739,6 +789,31 @@ const translations = {
         videoproductionTechLabel: "Stack:",
         videoproductionTech: "n8n, Pinecone, Gemini 2.5, HeyGen",
         videoproductionDesc: "Sistema automatizado de produção de conteúdo UGC gerando variações de anúncios em escala. Fábrica Zero-Touch aproveitando RAG, IA generativa e síntese de avatares digitais. Reduz custos de produção 85% mantendo qualidade.",
+        clawsuiteTitle: "ClawSuite",
+        clawsuiteSubtitle: "Auditoria de Segurança & Blindagem | Agentes IA Locais",
+        clawsuiteTechLabel: "Stack:",
+        clawsuiteTech: "Tauri, Rust, PBKDF, Endurecimento de Segurança",
+        clawsuiteDesc: "Auditoria forense e blindagem de segurança de plataformas de agentes IA locais. Mitigou riscos RCE, implementou sandboxing, remendou vulnerabilidades ReDoS, e implantou proteção CSRF de dupla camada com criptografia PBKDF.",
+        aipocTitle: "PoC IA - Maia Kode",
+        aipocSubtitle: "Validação de Persona Digital | Análise Gemini LLM",
+        aipocTechLabel: "Stack:",
+        aipocTech: "API Gemini, Flask, Síntese TTS, Análise de Dados",
+        aipocDesc: "Framework de validação de persona digital impulsionado por IA analisando 16 influenciadores da indústria para gerar traços de persona digital ideais. Integrou LLM Gemini para inferência de padrões de comportamento e TTS para iteração rápida de vozes. Reduziu risco de validação de mercado antes de desenvolvimento em larga escala de influenciador IA.",
+        edtechTitle: "Ecossistema EdTech IA",
+        edtechSubtitle: "Plataforma Avatar Interativo | Conteúdo Zero-Touch",
+        edtechTechLabel: "Stack:",
+        edtechTech: "ElevenLabs, Vercel, Node.js, Avatar IA, Serverless",
+        edtechDesc: "Ecossistema educacional em larga escala impulsionado por IA com avatar interativo, geração de conteúdo automatizado e síntese de voz avançada. Arquitetura serverless garante disponibilidade 24/7 e lida com alunos concorrentes em escala. Elimina logística de produção física mantendo qualidade de voz natural.",
+        shTitle: "Auto-Recuperação n8n",
+        shSubtitle: "Reparo Autônomo | Resolução Dinâmica de Erros",
+        shTechLabel: "Stack:",
+        shTech: "Python, GPT-4, n8n, Tratamento Inteligente de Rate-Limits",
+        shDesc: "Sistema de auto-recuperação autônomo para automações n8n usando raciocínio de GPT-4. Detecta e repara dados e código corrompido dinamicamente, implementa tratamento inteligente de rate-limits, e garante 99.99% uptime eliminando intervenção manual de DevOps para padrões de falha comuns.",
+        aiagentTitle: "Ecossistema de Agentes IA",
+        aiagentSubtitle: "Orquestração Inter-Plataforma | 14+ Aplicações Conectadas",
+        aiagentTechLabel: "Stack:",
+        aiagentTech: "Protocolo MCP, Agentes Python, n8n, GPT-4, Tool Calling",
+        aiagentDesc: "Ecossistema unificado de Agentes IA conectando 14+ plataformas empresariais via Protocolo de Contexto de Modelo. Comandos em linguagem natural do Slack disparam orquestração inteligente através de Notion, Jira, Google Drive, GitHub. Sincronização de dados em tempo real, execução de tarefas consciente de contexto, e tool calling autônomo eliminam fluxos manuais de transferência de dados.",
         case2Title: "Business Case Analyzer Pro",
         case2Subtitle: "Fintech SaaS | Arquitetura AI-Ready",
         case2TechLabel: "Tech:",
@@ -1044,6 +1119,78 @@ function initVideoProductionCaseCard() {
 }
 
 /* =========================================================
+   CLAWSUITE CASE CARD CLICK HANDLER
+   ========================================================= */
+
+function initClawSuiteCaseCard() {
+    document.querySelectorAll('.clawsuite-case-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('userLanguage') || 'en';
+            let targetPage = 'clawsuite-case.html';
+            if (currentLang === 'es') targetPage = 'clawsuite-case-es.html';
+            if (currentLang === 'pt') targetPage = 'clawsuite-case-pt.html';
+            window.location.href = targetPage;
+        });
+    });
+}
+
+/* =========================================================
+   AI POC CASE CARD CLICK HANDLER
+   ========================================================= */
+
+function initAIPoCCaseCard() {
+    document.querySelectorAll('.aipoc-case-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('userLanguage') || 'en';
+            let targetPage = 'aipoc-case.html';
+            if (currentLang === 'es') targetPage = 'aipoc-case-es.html';
+            if (currentLang === 'pt') targetPage = 'aipoc-case-pt.html';
+            window.location.href = targetPage;
+        });
+    });
+}
+
+/* =========================================================
+   EDTECH ECOSYSTEM CASE CARD CLICK HANDLER
+   ========================================================= */
+
+function initEdTechCaseCard() {
+    document.querySelectorAll('.edtech-case-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('userLanguage') || 'en';
+            let targetPage = 'edtech-case.html';
+            if (currentLang === 'es') targetPage = 'edtech-case-es.html';
+            if (currentLang === 'pt') targetPage = 'edtech-case-pt.html';
+            window.location.href = targetPage;
+        });
+    });
+}
+
+function initSelfHealingCaseCard() {
+    document.querySelectorAll('.selfhealing-case-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('userLanguage') || 'en';
+            let targetPage = 'selfhealing-case.html';
+            if (currentLang === 'es') targetPage = 'selfhealing-case-es.html';
+            if (currentLang === 'pt') targetPage = 'selfhealing-case-pt.html';
+            window.location.href = targetPage;
+        });
+    });
+}
+
+function initAIAgentCaseCard() {
+    document.querySelectorAll('.aiagent-case-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const currentLang = localStorage.getItem('userLanguage') || 'en';
+            let targetPage = 'aiagent-case.html';
+            if (currentLang === 'es') targetPage = 'aiagent-case-es.html';
+            if (currentLang === 'pt') targetPage = 'aiagent-case-pt.html';
+            window.location.href = targetPage;
+        });
+    });
+}
+
+/* =========================================================
    MOBILE CAROUSELS
    ========================================================= */
 
@@ -1242,6 +1389,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initVrykanCaseCard();
     initCruxAnalyticsCaseCard();
     initVideoProductionCaseCard();
+    initClawSuiteCaseCard();
+    initAIPoCCaseCard();
+    initEdTechCaseCard();
+    initSelfHealingCaseCard();
+    initAIAgentCaseCard();
     initMobileCarousels();
     initSolutionsMobileCarousel();
     window.addEventListener('load', initSolutionsMobileCarousel, { once: true });

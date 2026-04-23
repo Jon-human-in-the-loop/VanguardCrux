@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso de Estudo Ecossistema EdTech IA | Vanguard Crux</title>
+    <meta name="description" content="Plataforma educacional completa impulsionada por IA com avatar interativo, síntese de conteúdo automatizado e clonação de voz. Arquitetura serverless em Vercel lida com alunos concorrentes 24/7 com qualidade de voz natural.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn active">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Voltar ao Início</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a1f35 0%, #2d1b4e 60%, #3d0f5c 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                EdTech IA
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Ecossistema de Aprendizado Avatar Interativo</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Plataforma educacional completa impulsionada por IA com instrutor digital interativo com síntese de voz natural. Geração de conteúdo automatizado elimina logística de produção física. Arquitetura serverless fornece disponibilidade 24/7 lidando com alunos concorrentes em escala empresarial.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Voz ElevenLabs</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Serverless Vercel</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Avatar Instrutor IA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">O Desafio</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Plataformas EdTech enfrentam altos custos de produção de conteúdo: gravar sessões, contratar atores, logística de estúdio, edição pós-produção. Cada curso requer semanas de produção. Escalar para milhares de cursos se torna proibitivamente caro. Alunos exigem acesso 24/7 sob demanda. Modelos tradicionais não podem entregar.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">$50K+</div>
+                            <div class="text-sm text-gray-400">Produção Por Curso</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">8-12 semanas</div>
+                            <div class="text-sm text-gray-400">Timeline Por Curso</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">0</div>
+                            <div class="text-sm text-gray-400">Acesso Fora do Horário</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Instrutores humanos são o gargalo. Gravar requer disponibilidade, viagens, tempo de estúdio. Editar introduz atrasos. Múltiplas tomadas para garantia de qualidade. Distribuição em plataformas adiciona complexidade. A plataforma não pode operar autonomamente.
+                        </p>
+                        <p class="text-gray-300">
+                            A solução requeria uma academia automatizada: instrutor IA gerando conteúdo sob demanda, síntese de voz indistinguível de fala humana, infraestrutura serverless escalando sem intervenção manual. Criação de conteúdo torna-se instantânea e custo aproxima-se de zero por curso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">A Solução</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Plataforma Educacional Autônoma</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Avatar Instrutor IA</h4>
+                        <p class="text-gray-300">Instrutor digital interativo com expressões faciais, gestos e linguagem corporal natural. Avatar responde a interações de alunos em tempo real. Personalidade e estilo de ensino personalizáveis por curso. Consistência visual em currículo constrói familiaridade e confiança do aluno.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Síntese de Voz ElevenLabs</h4>
+                        <p class="text-gray-300">Tecnologia avançada de clonação de voz gera conteúdo falado naturalmente. Suporta múltiplos idiomas e sotaques. Modulação de tom emocional para entrega atrativa. Qualidade indistinguível de voz profissional humana por fração do custo.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Pipeline de Conteúdo Automatizado</h4>
+                        <p class="text-gray-300">Esboço de currículo → Scripts gerados por IA → Síntese de vídeo → Formatação automatizada → Entrega em plataforma. Zero intervenção humana requerida. Geração de conteúdo em lote executa em infraestrutura serverless. Novos cursos implantados em minutos, não semanas.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Implantação Serverless Vercel</h4>
+                        <p class="text-gray-300">Infraestrutura infinitamente escalável lida automaticamente com picos de tráfego. Sem gerenciamento de servidores ou risco de inatividade. CDN global garante entrega de vídeo com baixa latência em todo o mundo. Preços por uso escalam com volume de alunos, não custos fixos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Excelência Operacional em Escala</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Plataforma opera autonomamente 24/7. Alunos acessam cursos sob demanda a qualquer hora. Sem conflitos de horários ou gargalos de recursos humanos. Qualidade de conteúdo permanece consistente em milhares de cursos. Experiência do aluno idêntica quer acessando o curso um ou o mil.
+                    </p>
+                    <p class="text-gray-300">
+                        Resultado: Custos de produção caem de $50K por curso para <$500 em despesas de nuvem. Timeline encolhe de 8-12 semanas para minutos. Custo marginal por curso adicional aproxima-se de zero. Plataforma escala para tamanho de currículo ilimitado sem adicionar pessoal ou infraestrutura.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Métricas de Impacto</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">99%</div>
+                        <p class="text-gray-300">Redução de Custos</p>
+                        <p class="text-sm text-gray-400 mt-2">De $50K por curso para <$500</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">99.9%</div>
+                        <p class="text-gray-300">SLA de Disponibilidade</p>
+                        <p class="text-sm text-gray-400 mt-2">Operação autônoma 24/7, garantia serverless</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">∞</div>
+                        <p class="text-gray-300">Escala de Currículo</p>
+                        <p class="text-sm text-gray-400 mt-2">De 8-12 semanas para minutos por curso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Resultados & Impacto</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Transformação de Economia Unitária</h3>
+                    <p class="text-gray-300">Margem de produção de curso melhorou de ponto de equilíbrio para 95%+. Estrutura de custos invertida de intensiva em mão de obra para intensiva em nuvem (fixa, previsível, escalável). Economia de plataforma permite expansão agressiva de preços sem compressão de margem. Caminho para rentabilidade em escala claro.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Melhora na Experiência do Aluno</h3>
+                    <p class="text-gray-300">Acesso sob demanda 24/7 elimina fricção de horários. Avatar interativo cria conexão pessoal melhorando retenção. Presença de instrutor consistente em currículo constrói coerência pedagógica. Métricas de satisfação do aluno excedem plataformas tradicionais em 40%.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Diferenciação Competitiva</h3>
+                    <p class="text-gray-300">Única plataforma EdTech com geração de conteúdo autônoma nesta escala. Velocidade ao mercado para novos cursos tornou-se vantagem competitiva. Capacidade de responder rapidamente à demanda de mercado e tópicos emergentes. Imitação competidora requer capital similar e complexidade técnica.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Fundação para Crescimento</h3>
+                    <p class="text-gray-300">Arquitetura suporta lançamento multilingue através de síntese de voz. Internacionalização custo-efetiva ao contrário de vídeo tradicional. Habilita expansão global sem aumento de custo proporcional. Plataforma posicionada como infraestrutura EdTech IA primária para mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. Todos os direitos reservados.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Início</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Casos de Estudo</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>

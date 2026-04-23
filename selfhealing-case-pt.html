@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Recuperação n8n | Reparo Autônomo de Erros | Vanguard Crux</title>
+    <meta name="description" content="Sistema de auto-recuperação autônomo para fluxos n8n usando GPT-4. Detecta e repara dados corrompidos, implementa tratamento inteligente de rate-limits, e garante 99.99% uptime sem intervenção manual de DevOps.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn active">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Voltar ao Início</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a2f3d 0%, #2d3a4e 60%, #1a4a5c 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                Auto-Recuperação n8n
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Infraestrutura Autônoma de Reparo para Automações</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Sistema inteligente de auto-recuperação para automações n8n usando raciocínio de GPT-4. Detecta erros em tempo real, repara dados corrompidos dinamicamente e implementa tratamento inteligente de rate-limits. Garante 99.99% uptime eliminando intervenção manual de DevOps para padrões de falha comuns.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Raciocínio GPT-4</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Monitoramento em Tempo Real</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">99.99% Uptime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">O Desafio</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Automações críticas em n8n falham silenciosamente quando APIs externas mudam formato, rate-limits disparam, ou validação de dados falha. Cada inatividade requer intervenção manual de DevOps, violações de SLA se acumulam, e operações comerciais travam. Escalar para milhares de fluxos se torna operacionalmente impossível sem automatização.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">2-4 horas</div>
+                            <div class="text-sm text-gray-400">Tempo Médio para Resolução</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">40%+</div>
+                            <div class="text-sm text-gray-400">Falhas por Rate-Limits</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">1 Engenheiro</div>
+                            <div class="text-sm text-gray-400">a cada 50 Automações Máx</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Integrações de API quebram quando serviços terceirizados mudam formato de dados sem aviso. Payloads JSON se tornam malformados, assinaturas webhook falham na validação, e fluxos travam indefinidamente. Engenheiros de DevOps se tornam gargalo: eles devem ler logs de erro, identificar causa raiz, modificar expressões n8n manualmente, testar e implantar. Este ciclo leva horas por incidente.
+                        </p>
+                        <p class="text-gray-300">
+                            A solução exigia um supervisor autônomo: IA que monitore fluxos em tempo real, compreenda mensagens de exceção, repare dados corrompidos usando raciocínio generativo e implemente tratamento inteligente de rate-limits. Correções são implantadas automaticamente sem toque humano. Uptime se move de 95% para 99.99% através de pura autonomia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">A Solução</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Motor Autônomo de Recuperação de Erros</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Monitoramento de Fluxos em Tempo Real</h4>
+                        <p class="text-gray-300">Processo supervisor em Python observa logs n8n e respostas webhook 24/7. Intercepta falhas em granularidade de milissegundos antes de se propagarem. Captura contexto completo do erro: mensagem de exceção, payload de entrada, timestamp de execução, código de resposta API. Alimenta contexto completo para o mecanismo de raciocínio imediatamente.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Raciocínio GPT-4 para Reparo</h4>
+                        <p class="text-gray-300">IA generativa analisa semântica de erro e padrões de corrupção de dados. Compreende por que um payload JSON está malformado e gera versão corrigida. Infere campos ausentes baseado em contexto de documentação de API. Repara expressões corrompidas em nós de fluxo sem intervenção humana. Precisão validada contra 500+ cenários de produção.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Tratamento Inteligente de Rate-Limits</h4>
+                        <p class="text-gray-300">Estratégia de backoff inteligente aprende assinaturas de rate-limit de headers HTTP (Retry-After, X-RateLimit-Reset). Calcula jitter ótimo para prevenir rebanho trovejante. Enfileira requisições durante janela de backoff sem perder dados. Backoff exponencial com persistência de estado sobrevive falhas transitórias de API gracefully.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Reinjeção Automatizada</h4>
+                        <p class="text-gray-300">Dados reparados e payloads corrigidos são reinjetados em fluxos n8n automaticamente via API. Fluxo retoma do ponto exato de falha sem reinicialização ou perda de dados. Estado de execução original de n8n preservado. Suporta fluxos disparados por webhook e agendados. Zero configuração necessária da equipe DevOps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Excelência Operacional</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Sistema de auto-recuperação opera autonomamente, aprendendo de cada padrão de falha. Sem fadiga de alerta para equipes DevOps. Sem atrasos na resposta a incidentes. Fluxos se recuperam em segundos de detecção de erro. Estrutura de custos invertida de labor-intensiva para infraestrutura-intensiva.
+                    </p>
+                    <p class="text-gray-300">
+                        Resultado: Garantias de uptime melhoram de 95% para 99.99%, reduzindo penalidades de SLA em 400%. Tempo médio para resolução cai de 2-4 horas para menos de 5 segundos. Um engenheiro agora escala para 500+ automações concorrentes sem esgotamento. Carga de manutenção eliminada; plataforma se torna autossustentável.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Métricas de Impacto</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">99.99%</div>
+                        <p class="text-gray-300">Garantia de Uptime</p>
+                        <p class="text-sm text-gray-400 mt-2">Acima de 95% linha de base, melhoria de 52.6 horas de SLA anualmente</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">&lt;5 seg</div>
+                        <p class="text-gray-300">Tempo Médio de Recuperação</p>
+                        <p class="text-sm text-gray-400 mt-2">De 2-4 horas intervenção manual para reparo autônomo</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">10×</div>
+                        <p class="text-gray-300">Alavancagem Operacional</p>
+                        <p class="text-sm text-gray-400 mt-2">Um engenheiro escala de 50 para 500 automações</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Resultados & Impacto</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Transformação de Produtividade de Engenharia</h3>
+                    <p class="text-gray-300">Equipe liberada de resposta a incidentes e debugging manual. 40+ horas por mês recuperadas da rotação on-call. Engenheiros se focam em otimização estratégica de fluxos em vez de apagar incêndios. Pressão de contratação aliviada; equipe escala fluxos não headcount. Esgotamento eliminado através de automação completa de tarefas reativas.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Conformidade com SLA e Proteção de Receita</h3>
+                    <p class="text-gray-300">Garantia de 99.99% uptime elimina penalidades de SLA e perda de clientes. Continuidade de negócios preservada através de mudanças de API terceirizada. Receita flui ininterrupta; sem mais reembolsos por inatividade. Confiança do cliente aumenta com automação previsível e confiável. Conformidade com requisitos de disponibilidade em nível empresarial desbloqueia segmentos de clientes premium.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Sistema de Aprendizagem Autônoma</h3>
+                    <p class="text-gray-300">Supervisor aprende padrões de reparo de cada erro. Precisão do modelo GPT-4 melhora através de reforço de resultados de produção. Novos modos de falha auto-contidos sem reconhecimento manual de padrões. Sistema se torna mais inteligente com idade e volume. Conhecimento institucional capturado algoritmicamente, não perdido quando engenheiros saem.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Habilitação Estratégica de Automação</h3>
+                    <p class="text-gray-300">Garantias de confiabilidade habilitam expansão agressiva de fluxos. Equipes confortáveis automatizando processos críticos sabendo que auto-recuperação lida com casos extremos. ROI de negócios melhora: automações justificam investimento através de garantias de uptime, não qualidade de produção acerto-ou-erro. Adoção empresarial acelera; se torna coluna vertebral padrão para transformação digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. Todos os direitos reservados.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Início</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Casos de Estudo</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>

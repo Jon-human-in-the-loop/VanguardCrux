@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso de Estudo PoC IA - Maia Kode Persona Digital | Vanguard Crux</title>
+    <meta name="description" content="Framework de validação de persona digital impulsionado por IA usando LLM Gemini e síntese de voz. Analisou 16 influenciadores para gerar traços de persona digital ideais antes do desenvolvimento em larga escala de influenciador IA.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn active">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Voltar ao Início</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a1f35 0%, #2d1b4e 60%, #3d0f5c 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                Maia Kode
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Validação de Persona Digital Impulsionada por IA</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Framework de prova de conceito validando viabilidade de influenciador IA antes de investimento de capital. Usou LLM Gemini para analisar padrões de comportamento de 16 líderes da indústria, sintetizando traços ideais de persona. Reduziu risco de validação de mercado e acelerou desenvolvimento em larga escala de Maia Kode.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">API Gemini</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Análise LLM</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Síntese de Voz</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">O Desafio</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Marca EdTech considerando investimento de $500K+ em IA de influenciador virtual. Incerto quais traços de personalidade, estilo de comunicação e identidade visual ressoariam em nicho de educação STEM. Suposições de design não testadas. Risco de construir persona errada e desperdiçar capital.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">$500K+</div>
+                            <div class="text-sm text-gray-400">Risco Investimento Planejado</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">16</div>
+                            <div class="text-sm text-gray-400">Influenciadores de Referência</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">0</div>
+                            <div class="text-sm text-gray-400">Dados de Validação de Mercado</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            Construir um influenciador virtual requer decisões em múltiplas dimensões: arquétipo de personalidade, tom de voz, identidade visual, abordagem de conteúdo. Cada dimensão afeta diferentes retenção de audiência. Decisões erradas custam meses e capital. Nenhum dado existe para guiar o design.
+                        </p>
+                        <p class="text-gray-300">
+                            A solução requeria um PoC leve: extrair padrões de figuras da indústria comprovadas, sintetizar uma persona ideal, validar através de prototipagem. Reduzir risco antes de comprometer orçamento de desenvolvimento completo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">A Solução</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Engenharia de Persona Orientada por Dados</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Base de Dados de Análise de Influenciadores</h4>
+                        <p class="text-gray-300">Curou 16 educadores STEM líderes e influenciadores EdTech. Dados estruturados em 50+ traços: estilo de comunicação, frequência de humor, profundidade técnica, acessibilidade, padrões de engajamento. Referenciou métricas de retenção de audiência e padrões de crescimento de seguidores.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Inferência de Padrão LLM Gemini</h4>
+                        <p class="text-gray-300">Processou dados qualitativos através de API do Google Gemini. LLM extraiu arquétipos de comportamento, dimensões de personalidade e estruturas de comunicação. Identificou padrões correlacionando com alta retenção de audiência. Gerou relatório de síntese mapeando traços a preferências de audiência.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Iteração de Síntese de Voz</h4>
+                        <p class="text-gray-300">Construiu microsserviço Flask integrando mecanismos TTS. Prototipagem rápida de 8+ variantes de voz geradas por prompts LLM. Teste A/B de características de voz contra previsões de retenção de audiência. Selecionou tom e padrões de fala ideais.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Artefato de Especificação de Persona</h4>
+                        <p class="text-gray-300">Sintetizou achados em especificação de persona executável: arquétipo de personalidade, parâmetros de voz, abordagem de conteúdo, direção de identidade visual, estrutura de engajamento. Entregue ao time de desenvolvimento em larga escala como especificação validada reduzindo risco de design baseado em suposições.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Validação Através de Prototipagem Rápida</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Criou painel interativo apresentando recomendações de persona com evidência de apoio. Visualizou distribuições de traços de 16 influenciadores. Mostrou amostras de síntese de voz. Mostrou análise de correlação de retenção. Stakeholders revisaram em uma sessão, aprovaram especificação de persona, habilitando desenvolvimento em larga escala.
+                    </p>
+                    <p class="text-gray-300">
+                        Tempo ao mercado: 3 semanas do início do projeto a persona validada. Eficiência de capital: investimento de $40K em PoC evitou $250K+ em desenvolvimento mal direcionado. Redução de risco: decisões de design agora respaldadas por análise de dados em vez de suposição.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Métricas de Impacto</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">80%</div>
+                        <p class="text-gray-300">Redução de Risco</p>
+                        <p class="text-sm text-gray-400 mt-2">Design apoiado em dados vs baseado em suposições</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">3 semanas</div>
+                        <p class="text-gray-300">Timeline de Validação</p>
+                        <p class="text-sm text-gray-400 mt-2">De análise a especificação de persona aprovada</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">$250K+</div>
+                        <p class="text-gray-300">Prevenção de Mau Direcionamento</p>
+                        <p class="text-sm text-gray-400 mt-2">Evitado através de validação antecipada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Resultados & Impacto</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Mitigação de Risco Estratégico</h3>
+                    <p class="text-gray-300">Transformou investimento de $500K de especulativo para validado. Time executivo confiante em decisões de persona respaldadas por análise sistemática. Reduziu ansiedade de stakeholders sobre market fit. Habilitou aprovação de desenvolvimento em larga escala com liderança alinhada.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Timeline de Desenvolvimento Acelerado</h3>
+                    <p class="text-gray-300">Especificação de persona eliminou ciclos de iteração de design. Time de desenvolvimento começou com especificação validada em vez de explorar 10+ alternativas. Aceleração de 6 meses para primeiro protótipo. Vantagem do primeiro a se mover no espaço de influenciador IA EdTech.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Framework de Análise Reutilizável</h3>
+                    <p class="text-gray-300">Sistema de validação de persona agora usado para pesquisa de mercado em múltiplos projetos. Painel de análise competitivo. Estudos de segmentação de audiência. Investimento de $40K em PoC agora gerando valor em portfolio. Potencial de licença de framework.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Sucesso de Lançamento de Maia Kode</h3>
+                    <p class="text-gray-300">Influenciador virtual lançado com persona validada por dados. Métricas de engajamento de audiência superaram previsões derivadas de análise de influenciador. Taxas de retenção alinhadas com recomendações de síntese LLM. Fundação para implantação sustentável de longo prazo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. Todos os direitos reservados.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Início</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Casos de Estudo</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Healing n8n Automation | Autonomous Error Repair | Vanguard Crux</title>
+    <meta name="description" content="Autonomous self-healing system for n8n workflows using GPT-4. Detects and repairs corrupted data, implements smart rate-limit handling, and achieves 99.99% uptime without manual DevOps intervention.">
+
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="assets/css/immersive-effects.css">
+    <link rel="stylesheet" href="assets/css/animations-premium.css">
+</head>
+<body class="bg-dark text-light">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="font-display font-bold text-xl text-accent">
+                    Vanguard Crux
+                </a>
+
+                <!-- Language Switcher & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <div id="language-switcher" class="language-switcher hidden sm:flex">
+                        <button onclick="setLanguage('en')" class="language-btn active">
+                            <div class="flag-icon flag-en"></div>
+                            <span>EN</span>
+                        </button>
+                        <button onclick="setLanguage('pt')" class="language-btn">
+                            <div class="flag-icon flag-pt"></div>
+                            <span>PT</span>
+                        </button>
+                        <button onclick="setLanguage('es')" class="language-btn">
+                            <div class="flag-icon flag-es"></div>
+                            <span>ES</span>
+                        </button>
+                    </div>
+                    <a href="index.html" class="text-accent hover:text-lightest transition-colors">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen overflow-hidden flex items-center justify-center mt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a2f3d 0%, #2d3a4e 60%, #1a4a5c 100%);"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 class="font-display font-bold text-6xl sm:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
+                Self-Healing n8n
+            </h1>
+            <p class="text-2xl sm:text-3xl text-lightest mb-8 font-light">Autonomous Repair Infrastructure for Workflow Automation</p>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Intelligent self-healing system for n8n automations using GPT-4 reasoning. Detects errors in real-time, repairs corrupted data dynamically, and implements smart rate-limit handling. Achieves 99.99% uptime while eliminating manual DevOps intervention for common failure patterns.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">GPT-4 Reasoning</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">Real-Time Monitoring</span>
+                <span class="bg-light-navy px-4 py-2 rounded-full text-accent">99.99% Uptime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-24 self-start">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-accent">The Challenge</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Mission-critical n8n automations fail silently when external APIs change format, rate-limits trigger, or data validation fails. Each outage requires manual DevOps intervention, SLA breaches pile up, and business operations stall. Scaling to thousands of workflows becomes operationally impossible without automation.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">2-4 hours</div>
+                            <div class="text-sm text-gray-400">Mean Time to Resolution</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">40%+</div>
+                            <div class="text-sm text-gray-400">Failures from Rate-Limits</div>
+                        </div>
+                        <div class="bg-light-navy p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-accent mb-2">1 Engineer</div>
+                            <div class="text-sm text-gray-400">per 50 Automations Max</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-8">
+                    <div class="bg-light-navy p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-4">
+                            API integrations break when third-party services change data format without notice. JSON payloads become malformed, webhook signatures fail validation, and workflows hang indefinitely. DevOps engineers become bottleneck: they must read error logs, identify root cause, modify n8n expressions manually, test, and deploy. This cycle takes hours per incident.
+                        </p>
+                        <p class="text-gray-300">
+                            The solution required an autonomous supervisor: AI that monitors flows in real-time, understands exception messages, repairs broken data using generative reasoning, and implements context-aware rate-limit handling. Corrections deploy automatically without human touch. Uptime moves from 95% to 99.99% through pure autonomy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-light-navy">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">The Solution</h2>
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Autonomous Error Recovery Engine</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Real-Time Flow Monitoring</h4>
+                        <p class="text-gray-300">Python supervisor process watches n8n logs and webhook responses 24/7. Intercepts failures at millisecond granularity before they propagate downstream. Captures full error context: exception message, input payload, execution timestamp, API response code. Feeds all context to reasoning engine immediately.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">GPT-4 Reasoning for Repair</h4>
+                        <p class="text-gray-300">Generative AI analyzes error semantics and data corruption patterns. Understands why a JSON payload is malformed and generates corrected version. Infers missing fields based on API documentation context. Repairs corrupted expressions in workflow nodes without human intervention. Accuracy validated against 500+ production scenarios.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Smart Rate-Limit Handling</h4>
+                        <p class="text-gray-300">Intelligent backoff strategy learns rate-limit signatures from HTTP headers (Retry-After, X-RateLimit-Reset). Calculates optimal jitter to prevent thundering herd. Queues requests during backoff window without losing data. Exponential backoff with state persistence survives API transient failures gracefully.</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg">
+                        <h4 class="text-xl font-bold mb-3 text-accent">Automated Reinjection</h4>
+                        <p class="text-gray-300">Repaired data and corrected payloads reinjected into n8n flows automatically via API. Workflow resumes from exact failure point without restart or data loss. Original n8n execution state preserved. Supports both webhook-triggered and scheduled flows. Zero configuration required from DevOps team.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Operational Excellence</h3>
+                <div class="bg-dark p-8 rounded-lg">
+                    <p class="text-gray-300 mb-6">
+                        Self-healing system operates autonomously, learning from every failure pattern. No alert fatigue for DevOps teams. No incident response delays. Flows recover within seconds of error detection. Cost structure flipped from labor-intensive (engineer on-call) to infrastructure-intensive (cloud compute for monitoring and repair).
+                    </p>
+                    <p class="text-gray-300">
+                        Result: Uptime guarantees improve from 95% to 99.99%, reducing SLA penalties by 400%. Mean time to resolution drops from 2-4 hours to under 5 seconds. Single engineer now scales to 500+ concurrent automations without burnout. Maintenance burden eliminated; platform becomes self-sustaining.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold mb-6 text-lightest">Impact Metrics</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">99.99%</div>
+                        <p class="text-gray-300">Uptime Guarantee</p>
+                        <p class="text-sm text-gray-400 mt-2">Up from 95% baseline, 52.6 hours SLA improvement annually</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">&lt;5 sec</div>
+                        <p class="text-gray-300">Mean Time to Recovery</p>
+                        <p class="text-sm text-gray-400 mt-2">From 2-4 hours manual intervention to autonomous repair</p>
+                    </div>
+                    <div class="bg-dark p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold text-accent mb-2">10×</div>
+                        <p class="text-gray-300">Operational Leverage</p>
+                        <p class="text-sm text-gray-400 mt-2">One engineer scales from 50 to 500 automations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-center text-accent">Results & Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Engineering Productivity Transformation</h3>
+                    <p class="text-gray-300">Team freed from incident response and manual debugging. 40+ hours per month reclaimed from on-call rotation. Engineers focus on strategic workflow optimization instead of firefighting. Hiring pressure eased; team scales workflows not headcount. Burnout eliminated through full automation of reactive tasks.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">SLA Compliance & Revenue Protection</h3>
+                    <p class="text-gray-300">99.99% uptime guarantee eliminates SLA penalties and customer churn. Business continuity preserved across third-party API changes. Revenue flows uninterrupted; no more downtime-driven refunds. Customer trust increases with predictable, reliable automation. Compliance with enterprise-grade availability requirements unlocks premium customer segments.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Autonomous Learning System</h3>
+                    <p class="text-gray-300">Supervisor learns repair patterns from every error. GPT-4 model accuracy improves through reinforcement from production outcomes. New failure modes self-contained without manual pattern recognition. System becomes smarter with age and volume. Institutional knowledge captured algorithmically, not lost when engineers leave.</p>
+                </div>
+                <div class="bg-light-navy p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-accent">Strategic Automation Enablement</h3>
+                    <p class="text-gray-300">Reliability guarantees enable aggressive workflow expansion. Teams comfortable automating critical processes knowing self-healing handles edge cases. Business ROI improves: automations justify investment through uptime guarantees, not hit-or-miss production quality. Enterprise adoption accelerates; becomes standard backbone for digital transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-light-navy border-t border-gray-700">
+        <div class="max-w-7xl mx-auto text-center text-gray-400">
+            <p>© 2025 Vanguard Crux. All rights reserved.</p>
+            <p class="mt-4">
+                <a href="index.html" class="text-accent hover:text-lightest transition-colors">Home</a> •
+                <a href="index.html#case-studies" class="text-accent hover:text-lightest transition-colors">Case Studies</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js?v=4"></script>
+</body>
+</html>
