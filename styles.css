@@ -1837,7 +1837,13 @@ input:focus, textarea:focus {
 /* ══════════════════════════════════════════════
    MOBILE CAROUSELS (Solutions, Testimonials, Pricing)
    ══════════════════════════════════════════════ */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
+  /* Override max-w-* constraints for carousel sections */
+  #solutions .max-w-7xl,
+  #testimonials .max-w-6xl,
+  #pricing .max-w-5xl {
+    max-width: unset !important;
+  }
 
   /* ── Solutions grid → horizontal carousel ── */
   #solutions .grid {
@@ -1848,6 +1854,7 @@ input:focus, textarea:focus {
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
     padding: 0 !important;
+    padding-left: 0 !important;
     padding-top: 0;
     padding-bottom: 1.25rem;
     scrollbar-width: none;

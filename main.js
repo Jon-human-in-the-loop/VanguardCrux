@@ -963,7 +963,7 @@ function initFintechCaseCard() {
    ========================================================= */
 
 function initMobileCarousels() {
-    if (window.innerWidth > 767) return;
+    if (window.innerWidth > 1023) return;
 
     const configs = [
         { grid: document.querySelector('#solutions .grid'),  cardSel: '.service-card', startIdx: 0 },
