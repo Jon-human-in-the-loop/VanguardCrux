@@ -423,5 +423,14 @@
   .stop-label-flag { font-size: 0.7rem; }
   .stop-label-city { font-size: 0.7rem; letter-spacing: 0.06rem; }
   .journey-map-stop-label { padding: 3px 7px; }
+  /* Porto sits just south of Germany; on mobile the labels overlap, so flip Porto below. */
+  #label-porto {
+    bottom: auto;
+    top: calc(100% + 12px);
+    transform: translateX(-50%) translateY(-8px);
+  }
+  #label-porto.stop-label--visible {
+    transform: translateX(-50%) translateY(0);
+  }
   #journey-section-wrapper { height: 550vh; }
 }
