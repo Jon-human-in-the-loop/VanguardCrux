@@ -548,9 +548,12 @@
         <div id="journey-right-panel">
           <div id="journey-map-wrapper">
             <!-- SVG map injected here by world-journey.js -->
-            
-            <!-- Overlay: stop markers + plane live here, INSIDE the zoomed map wrapper for perfect sync -->
-            <div id="journey-stops-overlay">
+          </div><!-- end #journey-map-wrapper -->
+
+          <!-- Overlay: stop markers + plane live here, OUTSIDE the zoomed map wrapper.
+               JS keeps the overlay transform synced to the map so coordinates stay aligned
+               while dots/flags never get clipped by the map-wrapper overflow/clip. -->
+          <div id="journey-stops-overlay">
 
               <div class="journey-map-stop" id="stop-argentina">
                 <div class="journey-map-stop-label" id="label-argentina">
@@ -601,8 +604,8 @@
                   </g>
                 </svg>
               </div>
- 
-          </div><!-- end #journey-map-wrapper -->
+
+          </div><!-- end #journey-stops-overlay -->
         </div><!-- end #journey-right-panel -->
 
         <!-- Progress bar -->
