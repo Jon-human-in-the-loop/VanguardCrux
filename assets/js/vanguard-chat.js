@@ -114,38 +114,29 @@ async function sendVanguardChatMessage() {
     vanguardChatHistory.push({ role: 'user', content: msg });
     if (vanguardChatHistory.length > 16) vanguardChatHistory = vanguardChatHistory.slice(-16);
 
-    // Call Grok API via your backend
-    const res = await fetch('/api/vanguard-chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        messages: vanguardChatHistory,
-        lang: vanguardCurrentLang,
-        stage: vanguardSalesStage,
-        systemPrompt: vanguardPrompts.system[vanguardCurrentLang]
-      })
+    // Call Grok via Puter.js
+    const response = await puter.ai.chat(msg, {
+      model: 'x-ai/grok-4-1-fast',
+      system: vanguardPrompts.system[vanguardCurrentLang],
+      temperature: 0.7,
+      max_tokens: 500
     });
 
     document.getElementById(loaderId)?.remove();
 
-    if (res.ok) {
-      const data = await res.json();
-      const reply = data.reply;
-      vanguardChatHistory.push({ role: 'assistant', content: reply });
+    const reply = response.message?.content || 'No response received';
+    vanguardChatHistory.push({ role: 'assistant', content: reply });
 
-      // Check if it's time for CTA
-      vanguardSalesStage++;
-      if (vanguardSalesStage >= 4) {
-        addVanguardCTAMessage();
-      } else {
-        addVanguardMessage(reply, 'bot');
-      }
+    // Check if it's time for CTA
+    vanguardSalesStage++;
+    if (vanguardSalesStage >= 4) {
+      addVanguardCTAMessage();
     } else {
-      addVanguardMessage('Error al procesar tu mensaje. Intenta más tarde.', 'bot');
+      addVanguardMessage(reply, 'bot');
     }
   } catch (error) {
     document.getElementById(loaderId)?.remove();
-    addVanguardMessage('Error de conexión. Por favor, recarga la página.', 'bot');
+    addVanguardMessage('Error al conectar con Grok. Por favor, intenta de nuevo.', 'bot');
   }
   scrollVanguardChat();
 }
