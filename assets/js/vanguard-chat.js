@@ -126,16 +126,20 @@ function updateLanguagePlaceholders() {
 
 // Observer para cambios de idioma
 document.addEventListener('languageChanged', (e) => {
+  const previousLang = vanguardCurrentLang;
   vanguardCurrentLang = e.detail.lang;
   updateLanguagePlaceholders();
   updateVanguardChatUI();
-  // Reset conversation when language changes to prevent context bias
-  vanguardChatHistory = [];
-  vanguardSalesStage = 0;
-  const body = document.getElementById('vanguardChatBody');
-  if (body) {
-    body.innerHTML = '';
-    addVanguardMessage(vanguardPrompts.greeting[vanguardCurrentLang], 'bot');
+
+  // Only reset chat if user has actually interacted AND language really changed
+  if (vanguardChatHistory.length > 0 && previousLang !== vanguardCurrentLang) {
+    vanguardChatHistory = [];
+    vanguardSalesStage = 0;
+    const body = document.getElementById('vanguardChatBody');
+    if (body) {
+      body.innerHTML = '';
+      addVanguardMessage(vanguardPrompts.greeting[vanguardCurrentLang], 'bot');
+    }
   }
 });
 
