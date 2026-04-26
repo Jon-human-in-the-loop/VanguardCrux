@@ -1028,7 +1028,14 @@ function setLanguage(lang) {
         const keywordsMeta = document.querySelector('meta[name="keywords"]');
         if (keywordsMeta) keywordsMeta.setAttribute('content', metaKeywords);
     }
-    
+
+    // Update html lang attribute so other systems can detect the language
+    document.documentElement.lang = lang;
+
+    // Dispatch language change event so chatbot and other components can react
+    document.dispatchEvent(new CustomEvent('languageChanged', {
+        detail: { lang: lang }
+    }));
 }
 
 /* =========================================================

@@ -93,15 +93,22 @@ function handleVanguardChatKeypress(e) {
 }
 
 function detectCurrentLanguage() {
-  // Read the currently active language button in real time
+  // PRIMARY: Read the currently active language button in real time
   const langBtn = document.querySelector('.language-btn.active');
   if (langBtn) {
     const langText = langBtn.textContent.trim().toLowerCase();
-    if (langText.includes('pt')) vanguardCurrentLang = 'pt';
-    else if (langText.includes('es')) vanguardCurrentLang = 'es';
-    else if (langText.includes('en')) vanguardCurrentLang = 'en';
+    if (langText.includes('pt')) {
+      vanguardCurrentLang = 'pt';
+      return;
+    } else if (langText.includes('es')) {
+      vanguardCurrentLang = 'es';
+      return;
+    } else if (langText.includes('en')) {
+      vanguardCurrentLang = 'en';
+      return;
+    }
   }
-  // Also check html lang attribute as fallback
+  // FALLBACK: Only use html lang if no active button found
   const htmlLang = document.documentElement.lang;
   if (htmlLang && ['es', 'pt', 'en'].includes(htmlLang)) {
     vanguardCurrentLang = htmlLang;
@@ -122,6 +129,14 @@ document.addEventListener('languageChanged', (e) => {
   vanguardCurrentLang = e.detail.lang;
   updateLanguagePlaceholders();
   updateVanguardChatUI();
+  // Reset conversation when language changes to prevent context bias
+  vanguardChatHistory = [];
+  vanguardSalesStage = 0;
+  const body = document.getElementById('vanguardChatBody');
+  if (body) {
+    body.innerHTML = '';
+    addVanguardMessage(vanguardPrompts.greeting[vanguardCurrentLang], 'bot');
+  }
 });
 
 function updateVanguardChatUI() {
@@ -156,7 +171,21 @@ async function sendVanguardChatMessage() {
 
     // Build context message with system prompt, sales stage and language enforcement
     const langName = { es: 'Spanish', pt: 'Portuguese', en: 'English' }[vanguardCurrentLang];
-    const contextMsg = `[SYSTEM: ${vanguardPrompts.system[vanguardCurrentLang]}]\n[STAGE: ${vanguardSalesStage}]\n[IMPORTANT: ALWAYS respond in ${langName}, never switch language]\n\nUser: ${msg}`;
+    const langExample = {
+      es: 'Example reply: "¡Claro! ¿En qué puedo ayudarte hoy?"',
+      pt: 'Example reply: "Claro! Em que posso ajudar você hoje?"',
+      en: 'Example reply: "Sure! How can I help you today?"'
+    }[vanguardCurrentLang];
+
+    const contextMsg = `CRITICAL LANGUAGE RULE: You MUST respond ONLY in ${langName}. Do NOT use any other language. ${langExample}
+
+${vanguardPrompts.system[vanguardCurrentLang]}
+
+[Conversation stage: ${vanguardSalesStage}]
+
+User says: ${msg}
+
+Your response in ${langName}:`;
 
     // Call Grok via Puter.js
     const response = await puter.ai.chat(contextMsg, {
