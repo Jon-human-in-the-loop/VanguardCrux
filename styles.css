@@ -2010,6 +2010,10 @@ input:focus, textarea:focus {
 }
 
 .vanguard-chat-label {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 0.75rem;
   color: #f2f2f2;
   font-weight: 700;
@@ -2021,6 +2025,7 @@ input:focus, textarea:focus {
   background: rgba(0, 0, 0, 0.7);
   padding: 8px 14px;
   border-radius: 4px;
+  pointer-events: none;
 }
 
 .vanguard-chat-bubble:hover .vanguard-chat-label {
