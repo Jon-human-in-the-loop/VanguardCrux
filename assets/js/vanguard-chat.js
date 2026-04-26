@@ -114,10 +114,12 @@ async function sendVanguardChatMessage() {
     vanguardChatHistory.push({ role: 'user', content: msg });
     if (vanguardChatHistory.length > 16) vanguardChatHistory = vanguardChatHistory.slice(-16);
 
+    // Build context message with system prompt and sales stage
+    const contextMsg = `[SYSTEM: ${vanguardPrompts.system[vanguardCurrentLang]}]\n[STAGE: ${vanguardSalesStage}]\n\nUser: ${msg}`;
+
     // Call Grok via Puter.js
-    const response = await puter.ai.chat(msg, {
+    const response = await puter.ai.chat(contextMsg, {
       model: 'x-ai/grok-4-1-fast',
-      system: vanguardPrompts.system[vanguardCurrentLang],
       temperature: 0.7,
       max_tokens: 500
     });

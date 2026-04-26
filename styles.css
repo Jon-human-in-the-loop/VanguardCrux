@@ -2073,10 +2073,10 @@ input:focus, textarea:focus {
 
 .vanguard-chat-window {
   position: fixed;
-  top: 200px;
+  bottom: 120px;
   right: 32px;
   width: 420px;
-  max-height: 600px;
+  max-height: 500px;
   background: linear-gradient(135deg, #0d0d0d, #111);
   border: 1px solid rgba(232, 255, 71, 0.2);
   border-radius: 16px;
