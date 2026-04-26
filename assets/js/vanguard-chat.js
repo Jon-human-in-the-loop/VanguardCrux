@@ -19,11 +19,14 @@ QUÉ HACER:
 - Si te dan un dolor → profundiza con UNA pregunta concreta sobre el impacto (números, tiempo, dinero perdido).
 - NO preguntes sobre cursos, alumnos, productos específicos. Céntrate en el DOLOR del negocio.
 - Conecta el dolor con la solución: IA, automatización, sistemas que escalan.
+- CRÍTICO: Revisa el historial antes de preguntar. Si ya preguntaste sobre dinero perdido/impacto mensual, pasa a la siguiente etapa: solución. NO REPITAS preguntas similares.
+- Progresión: 1) Desafío → 2) Impacto/números → 3) Frecuencia del problema → 4) Solución propuesta → 5) CTA.
 
 QUÉ EVITAR:
 - Adular el negocio del cliente.
 - Preguntas operativas irrelevantes (qué cursos venden, etc.).
 - Generalidades. Sé específico.
+- REPETIR preguntas sobre lo mismo con palabras diferentes (dinero perdido, impacto mensual, valor de leads = misma pregunta).
 
 EJEMPLO bueno: "¿Cuántos leads pierden al mes por no poder atenderlos?"
 EJEMPLO malo: "¡Qué bien que tengan academia! ¿Qué cursos ofrecen?"`,
@@ -42,11 +45,14 @@ O QUE FAZER:
 - Se derem uma dor → aprofunde com UMA pergunta concreta sobre o impacto (números, tempo, dinheiro perdido).
 - NÃO pergunte sobre cursos, alunos, produtos específicos. Foque na DOR do negócio.
 - Conecte a dor à solução: IA, automação, sistemas que escalam.
+- CRÍTICO: Revise o histórico antes de perguntar. Se já perguntou sobre dinheiro perdido/impacto mensal, passe para a próxima etapa: solução. NÃO REPITA perguntas similares.
+- Progressão: 1) Desafio → 2) Impacto/números → 3) Frequência do problema → 4) Solução proposta → 5) CTA.
 
 O QUE EVITAR:
 - Bajular o negócio do cliente.
 - Perguntas operacionais irrelevantes.
 - Generalidades. Seja específico.
+- REPETIR perguntas sobre o mesmo com palavras diferentes (dinheiro perdido, impacto mensal, valor de leads = mesma pergunta).
 
 EXEMPLO bom: "Quantos leads perdem por mês por não conseguir atender?"
 EXEMPLO ruim: "Que legal a academia! Quais cursos oferecem?"`,
@@ -65,11 +71,14 @@ WHAT TO DO:
 - If they share a pain → dig with ONE concrete question about impact (numbers, time, money lost).
 - DO NOT ask about courses, students, specific products. Focus on the BUSINESS PAIN.
 - Connect pain to solution: AI, automation, systems that scale.
+- CRITICAL: Review history before asking. If you already asked about money lost/monthly impact, move to next stage: solution. DO NOT REPEAT similar questions.
+- Progression: 1) Challenge → 2) Impact/numbers → 3) Problem frequency → 4) Solution proposed → 5) CTA.
 
 WHAT TO AVOID:
 - Flattering the client's business.
 - Irrelevant operational questions.
 - Generalities. Be specific.
+- REPEATING questions about the same thing with different words (money lost, monthly impact, lead value = same question).
 
 GOOD example: "How many leads do you lose monthly by not being able to attend them?"
 BAD example: "Cool academy! What courses do you offer?"`
@@ -268,9 +277,61 @@ function addVanguardCTAMessage() {
   scrollVanguardChat();
 }
 
-function openCalendlyBooking() {
-  // Replace with your actual Calendly URL
-  window.open('https://calendly.com/strategy-vanguardcrux/30min', '_blank');
+async function openCalendlyBooking() {
+  // Prompt for user information
+  const name = prompt('¿Cuál es tu nombre? / What\'s your name?');
+  if (!name || name.trim() === '') return;
+
+  const email = prompt('¿Cuál es tu email? / What\'s your email?');
+  if (!email || email.trim() === '') return;
+
+  // Show loading state
+  const ctaButton = event?.target;
+  if (ctaButton) {
+    ctaButton.disabled = true;
+    ctaButton.textContent = 'Guardando...';
+  }
+
+  try {
+    // Save chat history to backend
+    const response = await fetch('/api/save-chat-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name.trim(),
+        email: email.trim(),
+        language: vanguardCurrentLang,
+        chatHistory: vanguardChatHistory
+      })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      console.warn('Failed to save chat history:', result);
+      // Continue anyway - don't block Calendly booking
+    } else {
+      console.log('Chat history saved:', result.leadId);
+    }
+
+    // Open Calendly with pre-filled information
+    const calendlyUrl = new URL('https://calendly.com/strategy-vanguardcrux/30min');
+    calendlyUrl.searchParams.append('name', name.trim());
+    calendlyUrl.searchParams.append('email', email.trim());
+
+    window.open(calendlyUrl.toString(), '_blank');
+
+  } catch (error) {
+    console.error('Error saving conversation:', error);
+    // Open Calendly anyway if save fails
+    window.open('https://calendly.com/strategy-vanguardcrux/30min', '_blank');
+  } finally {
+    if (ctaButton) {
+      ctaButton.disabled = false;
+      const langData = vanguardPrompts.cta[vanguardCurrentLang] || vanguardPrompts.cta.es;
+      ctaButton.textContent = langData.button;
+    }
+  }
 }
 
 function scrollVanguardChat() {

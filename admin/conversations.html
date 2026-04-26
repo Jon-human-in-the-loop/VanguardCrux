@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanguardIA - Chat Conversations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0a0e27;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #1e3a8a;
+        }
+
+        h1 {
+            color: #06b6d4;
+            font-size: 28px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="email"] {
+            padding: 10px 15px;
+            border: 1px solid #1e3a8a;
+            background: #1a1f3a;
+            color: #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #06b6d4;
+            color: #0a0e27;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #0891b2;
+        }
+
+        button:disabled {
+            background: #4b5563;
+            cursor: not-allowed;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #06b6d4;
+        }
+
+        .error {
+            background: #7f1d1d;
+            border: 1px solid #dc2626;
+            color: #fecaca;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .conversations-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .conversation-card {
+            background: #1a1f3a;
+            border: 1px solid #1e3a8a;
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .conversation-card:hover {
+            border-color: #06b6d4;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-lang {
+            background: #1e40af;
+            color: #93c5fd;
+        }
+
+        .badge-date {
+            background: #1e3a2f;
+            color: #6ee7b7;
+        }
+
+        .card-content {
+            max-height: 300px;
+            overflow-y: auto;
+            background: #0f172a;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #1e3a8a;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .message.user {
+            color: #06b6d4;
+        }
+
+        .message.assistant {
+            color: #a78bfa;
+        }
+
+        .message-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 4px;
+        }
+
+        .message-text {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .card-footer {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .email-display {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .copy-btn {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .message-count {
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .search-box {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            input[type="email"],
+            button {
+                width: 100%;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 VanguardIA Conversations</h1>
+            <div class="search-box">
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Search by email..."
+                    autocomplete="off"
+                >
+                <button onclick="searchConversations()">Search</button>
+            </div>
+        </header>
+
+        <div id="content">
+            <div class="error" style="display: none;" id="errorMessage"></div>
+            <div class="conversations-grid" id="conversationsList"></div>
+        </div>
+    </div>
+
+    <script>
+        async function searchConversations() {
+            const email = document.getElementById('emailInput').value.trim();
+            const errorDiv = document.getElementById('errorMessage');
+            const conversationsList = document.getElementById('conversationsList');
+
+            if (!email) {
+                errorDiv.style.display = 'block';
+                errorDiv.textContent = 'Please enter an email address';
+                return;
+            }
+
+            // Show loading
+            conversationsList.innerHTML = '<div class="loading">Loading conversations...</div>';
+            errorDiv.style.display = 'none';
+
+            try {
+                const response = await fetch(`/api/get-chat-leads?email=${encodeURIComponent(email)}`);
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to fetch conversations');
+                }
+
+                if (!data.leads || data.leads.length === 0) {
+                    conversationsList.innerHTML = '<div class="loading">No conversations found</div>';
+                    return;
+                }
+
+                // Render conversations
+                conversationsList.innerHTML = data.leads
+                    .map(lead => `
+                        <div class="conversation-card">
+                            <div class="card-header">
+                                <div class="card-title">${escapeHtml(lead.name)}</div>
+                                <div class="card-meta">
+                                    <span class="badge badge-lang">${lead.language.toUpperCase()}</span>
+                                    <span class="badge badge-date">${new Date(lead.createdAt).toLocaleDateString()}</span>
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                ${lead.chatHistory
+                                    .map(msg => `
+                                        <div class="message ${msg.role}">
+                                            <div class="message-label">${msg.role === 'user' ? 'Client' : 'VanguardIA'}</div>
+                                            <div class="message-text">${escapeHtml(msg.content)}</div>
+                                        </div>
+                                    `)
+                                    .join('')}
+                            </div>
+
+                            <div class="card-footer">
+                                <div style="flex: 1;">
+                                    <div class="email-display">${escapeHtml(lead.email)}</div>
+                                    <div class="message-count">${lead.chatHistory.length} messages</div>
+                                </div>
+                                <button class="copy-btn" onclick="copyToClipboard('${escapeHtml(JSON.stringify(lead, null, 2))}')">
+                                    Copy JSON
+                                </button>
+                            </div>
+                        </div>
+                    `)
+                    .join('');
+
+            } catch (error) {
+                errorDiv.style.display = 'block';
+                errorDiv.textContent = `Error: ${error.message}`;
+                conversationsList.innerHTML = '';
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Conversation copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        // Allow Enter key to search
+        document.getElementById('emailInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchConversations();
+            }
+        });
+
+        // Focus on input load
+        window.addEventListener('load', () => {
+            document.getElementById('emailInput').focus();
+        });
+    </script>
+</body>
+</html>
