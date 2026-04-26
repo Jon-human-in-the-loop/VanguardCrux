@@ -14,15 +14,10 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'System prompt is required' });
     }
 
-    const apiKey = process['GROK_API_KEY'];
-    if (!apiKey) {
-      return res.status(500).json({ error: 'API key not configured' });
-    }
-
-    const grokUrl = 'https://api.x.ai/v1/chat/completions';
+    const pureUrl = 'https://api.puter.com/v1/chat/completions';
 
     const requestBody = {
-      model: 'grok-beta',
+      model: 'grok-2',
       messages: [
         { role: 'system', content: systemPrompt },
         ...messages
@@ -31,11 +26,10 @@ export default async function handler(req, res) {
       max_tokens: 500
     };
 
-    const response = await fetch(grokUrl, {
+    const response = await fetch(pureUrl, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(requestBody)
     });
