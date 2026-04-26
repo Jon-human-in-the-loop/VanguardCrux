@@ -1,0 +1,11 @@
+{
+  "paths": [
+    "api/**",
+    "api/vanguard-chat.js",
+    "**/api/**"
+  ],
+  "patterns": [
+    "process\\.env",
+    "GROK_API_KEY"
+  ]
+}

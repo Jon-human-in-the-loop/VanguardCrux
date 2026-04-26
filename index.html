@@ -914,6 +914,34 @@
     </div>
 </footer>
 
+    <!-- VANGUARD IA CHAT WIDGET -->
+    <div class="vanguard-chat-bubble">
+        <span class="vanguard-chat-label" data-es="VanguardIA" data-pt="VanguardIA" data-en="VanguardIA">VanguardIA</span>
+        <button class="vanguard-chat-toggle" onclick="toggleVanguardChat()">
+            <img src="assets/icons/robot.png" alt="VanguardIA Chat" class="vanguard-robot-icon">
+        </button>
+    </div>
+
+    <div class="vanguard-chat-window" id="vanguardChatWindow">
+        <div class="vanguard-chat-header">
+            <div class="vanguard-chat-header-left">
+                <div class="vanguard-dot"></div>
+                <div>
+                    <h4 data-es="VanguardIA - Tu Asesor" data-pt="VanguardIA - Seu Consultor" data-en="VanguardIA - Your Advisor">VanguardIA - Tu Asesor</h4>
+                    <span data-es="En línea" data-pt="Online" data-en="Online">En línea</span>
+                </div>
+            </div>
+            <button class="vanguard-chat-close" onclick="toggleVanguardChat()">×</button>
+        </div>
+        <div class="vanguard-chat-body" id="vanguardChatBody"></div>
+        <div class="vanguard-chat-input-wrap">
+            <input type="text" id="vanguardChatInput" placeholder="Escribe tu pregunta..." onkeypress="handleVanguardChatKeypress(event)">
+            <button class="vanguard-chat-send" onclick="sendVanguardChatMessage()">
+                <svg viewBox="0 0 24 24"><path d="M3 13h16v-2H3v2zm8-8v-2l6 4-6 4v-2H1v-4h10z" fill="#080808"/></svg>
+            </button>
+        </div>
+    </div>
+
     <script src="main.js?v=4"></script>
     <script src="assets/js/map-data.js"></script>
     <script src="assets/js/world-journey.js?v=4"></script>
@@ -922,5 +950,6 @@
     <script src="assets/js/cursor-effects.js"></script>
     <script src="assets/js/background-music.js"></script>
     <script src="assets/js/helix-team-360.js"></script>
+    <script src="assets/js/vanguard-chat.js"></script>
 </body>
 </html>

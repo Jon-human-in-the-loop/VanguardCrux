@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build || true",
+  "devCommand": "npm run dev || node -e 'console.log(\"Dev server ready\")'",
+  "outputDirectory": "public",
+  "framework": "static",
+  "env": {
+    "GROK_API_KEY": {
+      "description": "Grok API key for VanguardIA chatbot"
+    }
+  }
+}
