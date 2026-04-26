@@ -1999,7 +1999,7 @@ input:focus, textarea:focus {
 /* VANGUARD IA CHAT WIDGET */
 .vanguard-chat-bubble {
   position: fixed;
-  top: 120px;
+  bottom: calc(2rem + 56px + 1.5rem);
   right: 32px;
   z-index: 9998;
   display: flex;
@@ -2029,17 +2029,22 @@ input:focus, textarea:focus {
 .vanguard-chat-toggle {
   width: 70px;
   height: 70px;
-  background: none;
-  border: none;
+  background: radial-gradient(circle, rgba(232, 255, 71, 0.08), rgba(232, 255, 71, 0.02));
+  border: 1px solid rgba(232, 255, 71, 0.15);
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+  box-shadow: 0 0 30px rgba(232, 255, 71, 0.1),
+              inset 0 0 20px rgba(232, 255, 71, 0.05);
 }
 
 .vanguard-chat-toggle:hover {
   transform: scale(1.12);
+  box-shadow: 0 0 50px rgba(232, 255, 71, 0.2),
+              inset 0 0 20px rgba(232, 255, 71, 0.08);
 }
 
 .vanguard-chat-toggle svg {
@@ -2052,7 +2057,16 @@ input:focus, textarea:focus {
   width: 60px;
   height: 60px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(232, 255, 71, 0.3));
+  filter: drop-shadow(0 0 20px rgba(232, 255, 71, 0.6))
+          drop-shadow(0 0 40px rgba(232, 255, 71, 0.3))
+          drop-shadow(0 8px 16px rgba(0, 0, 0, 0.8));
+  transition: filter 0.3s ease;
+}
+
+.vanguard-chat-toggle:hover .vanguard-robot-icon {
+  filter: drop-shadow(0 0 30px rgba(232, 255, 71, 0.8))
+          drop-shadow(0 0 60px rgba(232, 255, 71, 0.4))
+          drop-shadow(0 12px 24px rgba(0, 0, 0, 0.9));
 }
 
 .vanguard-chat-window {
