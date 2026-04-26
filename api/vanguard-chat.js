@@ -14,10 +14,10 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'System prompt is required' });
     }
 
-    const pureUrl = 'https://api.puter.com/v1/chat/completions';
+    const puterUrl = 'https://api.puter.com/v1/llm/chat/completions';
 
     const requestBody = {
-      model: 'grok-2',
+      model: 'grok',
       messages: [
         { role: 'system', content: systemPrompt },
         ...messages
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
       max_tokens: 500
     };
 
-    const response = await fetch(pureUrl, {
+    const response = await fetch(puterUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -35,9 +35,11 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
-      const errorData = await response.text();
+      const errorText = await response.text();
+      console.error('Puter API Error:', response.status, errorText);
       return res.status(response.status).json({
-        error: 'Failed to process message'
+        error: 'API request failed',
+        details: errorText
       });
     }
 
@@ -47,8 +49,10 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply, stage, lang });
 
   } catch (error) {
+    console.error('Chatbot error:', error.message);
     return res.status(500).json({
-      error: 'Internal server error'
+      error: 'Internal server error',
+      details: error.message
     });
   }
 }

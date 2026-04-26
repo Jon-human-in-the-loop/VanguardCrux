@@ -2000,14 +2000,13 @@ input:focus, textarea:focus {
 .vanguard-chat-bubble {
   position: fixed;
   bottom: calc(2rem + 56px + 1.5rem);
-  right: 2rem;
+  right: 0.5rem;
   z-index: 9998;
   display: flex;
   align-items: center;
   gap: 14px;
   flex-direction: row-reverse;
   width: auto;
-  left: auto;
 }
 
 .vanguard-chat-label {
