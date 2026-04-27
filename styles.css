@@ -658,11 +658,11 @@ input:focus, textarea:focus {
 }
 
 .swiper-button-prev {
-    left: -20px;
+    left: 10px;
 }
 
 .swiper-button-next {
-    right: -20px;
+    right: 10px;
 }
 
 .swiper-button-prev svg,
