@@ -305,6 +305,26 @@ async function sendVanguardChatMessage() {
     vanguardChatHistory.push({ role: 'user', content: msg });
     if (vanguardChatHistory.length > 16) vanguardChatHistory = vanguardChatHistory.slice(-16);
 
+    // FORCE solution + CTA if client already gave us enough info (deterministic flow)
+    const coverage = analyzeConversationCoverage();
+    if (coverage.hasBusiness && coverage.hasMoney && coverage.hasNumbers && vanguardChatHistory.length >= 4) {
+      document.getElementById(loaderId)?.remove();
+
+      const solutionMessages = {
+        es: 'Perfecto. Con IA podemos automatizar la atención de leads 24/7, recuperar el dinero perdido y escalar sin contratar más personal. Vanguard Crux ya implementó esto para academias y agencias en Europa.',
+        pt: 'Perfeito. Com IA podemos automatizar o atendimento de leads 24/7, recuperar o dinheiro perdido e escalar sem contratar mais pessoal. Vanguard Crux já implementou isso para academias e agências na Europa.',
+        en: 'Perfect. With AI we can automate lead handling 24/7, recover lost money and scale without hiring more staff. Vanguard Crux has already implemented this for academies and agencies in Europe.'
+      };
+
+      const solutionMsg = solutionMessages[vanguardCurrentLang] || solutionMessages.es;
+      vanguardChatHistory.push({ role: 'assistant', content: solutionMsg });
+      addVanguardMessage(solutionMsg, 'bot');
+
+      // Show CTA after a brief pause
+      setTimeout(() => addVanguardCTAMessage(), 1200);
+      return;
+    }
+
     // Build context message with system prompt, sales stage and language enforcement
     const langName = { es: 'Spanish', pt: 'Portuguese', en: 'English' }[vanguardCurrentLang];
     const langExample = {
@@ -329,11 +349,11 @@ User says: ${msg}
 
 Your response in ${langName}:`;
 
-    // Call Grok via Puter.js
+    // Use GPT-4o-mini for better instruction following (Grok was repeating questions)
     const response = await puter.ai.chat(contextMsg, {
-      model: 'x-ai/grok-4-1-fast',
-      temperature: 0.7,
-      max_tokens: 500
+      model: 'gpt-4o-mini',
+      temperature: 0.3,
+      max_tokens: 300
     });
 
     document.getElementById(loaderId)?.remove();
