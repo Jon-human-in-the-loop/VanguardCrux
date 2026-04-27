@@ -575,14 +575,16 @@ input:focus, textarea:focus {
 
 /* Swiper */
 .project-swiper {
-    overflow: hidden;
+    overflow: visible;
     position: relative;
+    padding: 0 30px;
 }
 
 .swiper-wrapper {
     display: flex;
     flex-wrap: nowrap;
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .swiper-slide {
@@ -658,11 +660,11 @@ input:focus, textarea:focus {
 }
 
 .swiper-button-prev {
-    left: 10px;
+    left: -22px;
 }
 
 .swiper-button-next {
-    right: 10px;
+    right: -22px;
 }
 
 .swiper-button-prev svg,
