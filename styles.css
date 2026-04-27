@@ -574,17 +574,26 @@ input:focus, textarea:focus {
 .to-red-400 { --bg-color-to: #f87171; }
 
 /* Swiper */
-.project-swiper {
-    overflow: visible;
+.project-swiper-outer {
     position: relative;
-    padding: 0 30px;
+    padding: 0 50px;
+}
+
+.project-swiper {
+    overflow: hidden;
+    position: relative;
 }
 
 .swiper-wrapper {
     display: flex;
     flex-wrap: nowrap;
     transition: transform 0.3s ease;
-    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .project-swiper-outer {
+        padding: 0 40px;
+    }
 }
 
 .swiper-slide {
@@ -660,11 +669,11 @@ input:focus, textarea:focus {
 }
 
 .swiper-button-prev {
-    left: -22px;
+    left: 0;
 }
 
 .swiper-button-next {
-    right: -22px;
+    right: 0;
 }
 
 .swiper-button-prev svg,
@@ -683,11 +692,11 @@ input:focus, textarea:focus {
     }
 
     .swiper-button-prev {
-        left: 5px;
+        left: 0;
     }
 
     .swiper-button-next {
-        right: 5px;
+        right: 0;
     }
 }
 

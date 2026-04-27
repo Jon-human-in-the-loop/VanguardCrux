@@ -40,19 +40,29 @@ function initProjectSwiper() {
     let currentSlide = 0;
     const totalSlides = slides.length;
 
+    // Wrap swiper in outer container so arrows can sit outside the cards
+    let outer = swiper.parentElement;
+    if (!outer.classList.contains('project-swiper-outer')) {
+        outer = document.createElement('div');
+        outer.className = 'project-swiper-outer';
+        swiper.parentNode.insertBefore(outer, swiper);
+        outer.appendChild(swiper);
+    }
+
     // Crear botones de navegación
     const prevBtn = document.createElement('button');
     prevBtn.className = 'swiper-button-prev';
     prevBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>';
     prevBtn.setAttribute('aria-label', 'Previous slide');
-    
+
     const nextBtn = document.createElement('button');
     nextBtn.className = 'swiper-button-next';
     nextBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>';
     nextBtn.setAttribute('aria-label', 'Next slide');
-    
-    swiper.appendChild(prevBtn);
-    swiper.appendChild(nextBtn);
+
+    // Append to OUTER wrapper, not swiper itself, so they don't get clipped
+    outer.appendChild(prevBtn);
+    outer.appendChild(nextBtn);
 
     // Ajustar visibilidad de los slides por tamaño de pantalla
     function updateSlidesPerView() {
