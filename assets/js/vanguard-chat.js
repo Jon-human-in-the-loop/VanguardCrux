@@ -230,6 +230,60 @@ function updateVanguardChatUI() {
   });
 }
 
+// Analizar qué se cubrió ya en la conversación
+function analyzeConversationCoverage() {
+  const conversationText = vanguardChatHistory.map(m => m.content.toLowerCase()).join(' ');
+
+  const coverage = {
+    hasBusiness: /negocio|academia|agencia|empresa|startup|ecommerce|tienda|plataforma|app|saas/i.test(conversationText),
+    hasMoney: /€|euros?|dinero|\$|dólares?|pesos?|libras?|dinheiro|ganancia|pérdida|pierde|pierden/i.test(conversationText),
+    hasFrequency: /mes|monthly|semanal|weekly|diario|daily|mensual|cada|siempre|regularmente|sempre|semana|semaan/i.test(conversationText),
+    hasNumbers: /\d+/i.test(conversationText),
+  };
+
+  return coverage;
+}
+
+// Generar instrucciones basadas en lo que ya se sabe
+function generateStageBriefing() {
+  const coverage = analyzeConversationCoverage();
+  const briefings = {
+    es: {
+      all: 'RESUME: El cliente ya dijo: negocio, dinero perdido, y frecuencia. NO hagas más preguntas. VENDE DIRECTO la solución de IA/automación.',
+      business_money: 'RESUME: El cliente dijo negocio + dinero perdido. Pregunta si ocurre regularmente (1 pregunta). Luego VENDE.',
+      business_only: 'RESUME: El cliente dijo negocio. Pregunta por dinero perdido mensualmente (1 pregunta). Luego sigue.',
+      money_frequency: 'RESUME: El cliente dijo dinero + frecuencia. Pregunta qué tipo de negocio (1 pregunta). Luego VENDE.',
+    },
+    pt: {
+      all: 'RESUMO: Cliente já disse: negócio, dinheiro perdido, e frequência. NÃO faça mais perguntas. VENDA DIRETO a solução de IA/automação.',
+      business_money: 'RESUMO: Cliente disse negócio + dinheiro perdido. Pergunte se acontece regularmente (1 pergunta). Depois VENDA.',
+      business_only: 'RESUMO: Cliente disse negócio. Pergunte por dinheiro perdido mensalmente (1 pergunta). Depois siga.',
+      money_frequency: 'RESUMO: Cliente disse dinheiro + frequência. Pergunte que tipo de negócio (1 pergunta). Depois VENDA.',
+    },
+    en: {
+      all: 'SUMMARY: Client already said: business, money lost, and frequency. DON\'T ask more questions. SELL DIRECTLY the AI/automation solution.',
+      business_money: 'SUMMARY: Client said business + money lost. Ask if it happens regularly (1 question). Then SELL.',
+      business_only: 'SUMMARY: Client said business. Ask about monthly money lost (1 question). Then continue.',
+      money_frequency: 'SUMMARY: Client said money + frequency. Ask what type of business (1 question). Then SELL.',
+    }
+  };
+
+  const lang = vanguardCurrentLang;
+  const b = briefings[lang] || briefings.en;
+
+  if (coverage.hasBusiness && coverage.hasMoney && coverage.hasFrequency) {
+    return b.all;
+  } else if (coverage.hasBusiness && coverage.hasMoney) {
+    return b.business_money;
+  } else if (coverage.hasBusiness && coverage.hasFrequency) {
+    return b.money_frequency;
+  } else if (coverage.hasBusiness) {
+    return b.business_only;
+  }
+
+  return '';
+}
+
 async function sendVanguardChatMessage() {
   const input = document.getElementById('vanguardChatInput');
   const msg = input.value.trim();
@@ -259,11 +313,17 @@ async function sendVanguardChatMessage() {
       en: 'Example reply: "Sure! How can I help you today?"'
     }[vanguardCurrentLang];
 
+    const stageBriefing = generateStageBriefing();
+
     const contextMsg = `CRITICAL LANGUAGE RULE: You MUST respond ONLY in ${langName}. Do NOT use any other language. ${langExample}
 
 ${vanguardPrompts.system[vanguardCurrentLang]}
 
 [Conversation stage: ${vanguardSalesStage}]
+${stageBriefing ? `[${stageBriefing}]` : ''}
+
+CONVERSATION HISTORY (for reference):
+${vanguardChatHistory.slice(-6).map(m => `${m.role === 'user' ? 'CLIENT' : 'YOU'}: ${m.content}`).join('\n')}
 
 User says: ${msg}
 
